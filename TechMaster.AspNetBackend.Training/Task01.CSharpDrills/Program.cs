@@ -10,7 +10,13 @@ namespace Task01.CSharpDrills
             //Drill02_GradeCalculator.Run();
             //Drill03_SimpleLoginValidator.Run();
             //Drill04_EvenOddAnalyzer.Run();
-            Drill05_MaximumAndMinimumFinder.Run();
+            //Drill05_MaximumAndMinimumFinder.Run();
+            //Drill06_WordCounter.Run();
+            //Drill07_NameFormatter.Run();
+            //Drill08_PasswordStrengthChecker.Run();
+            //Drill09_ShoppingCartTotal.Run();
+            //Drill10_SimpleATMMenu.Run();
+            Drill11_DuplicateNumberDetector.Run();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Task01.CSharpDrills.Drills
                 {
                     for(int i =1; i <= count; i++)
                     {
-                        Console.WriteLine("Enter number "+i +": ");
+                        Console.Write("Enter number "+i +": ");
                         string numinput = Console.ReadLine();
                         int number;
                         if(int.TryParse(numinput,out number))
