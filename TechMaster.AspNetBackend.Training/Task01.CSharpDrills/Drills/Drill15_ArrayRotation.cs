@@ -25,10 +25,6 @@ namespace Task01.CSharpDrills.Drills
                     {
                         Console.Write("Enter number " + (i + 1) + ": ");
                         if (!int.TryParse(Console.ReadLine(), out numbers[i]))
-                        //{
-                        //    // Valid input
-                        //}
-                        //else
                         {
                             Console.WriteLine("Invalid number.");
                             i--;

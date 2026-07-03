@@ -20,7 +20,12 @@ namespace Task01.CSharpDrills
             //Drill12_EmailValidator.Run();
             //Drill13_PalindromeChecker.Run();
             //Drill14_SimpleExpenseTracker.Run();
-            Drill15_ArrayRotation.Run();
+            //Drill15_ArrayRotation.Run();
+            //Drill16_FrequencyCounter.Run();
+            //Drill17_SimpleSearchEngine.Run();
+            //Drill18_NumberStatistics.Run();
+            //Drill19_SimpleTicketPriceCalculator.Run();
+            Drill20_MethodRefactoringChallenge.Run();
         }
     }
 }
