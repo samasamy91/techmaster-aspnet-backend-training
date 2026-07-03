@@ -16,7 +16,11 @@ namespace Task01.CSharpDrills
             //Drill08_PasswordStrengthChecker.Run();
             //Drill09_ShoppingCartTotal.Run();
             //Drill10_SimpleATMMenu.Run();
-            Drill11_DuplicateNumberDetector.Run();
+            //Drill11_DuplicateNumberDetector.Run();
+            //Drill12_EmailValidator.Run();
+            //Drill13_PalindromeChecker.Run();
+            //Drill14_SimpleExpenseTracker.Run();
+            Drill15_ArrayRotation.Run();
         }
     }
 }
