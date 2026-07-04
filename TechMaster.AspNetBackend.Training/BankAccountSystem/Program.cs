@@ -1,10 +1,12 @@
-﻿namespace BankAccountSystem
+﻿using BankAccountSystem.UI;
+namespace BankAccountSystem
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ConsoleMenu menu = new ConsoleMenu();
+            menu.Start();
         }
     }
 }

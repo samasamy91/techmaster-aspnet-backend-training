@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BankAccountSystem.Models
 {
-    internal class TransactionType
+    public enum TransactionType
     {
+        Deposit,
+        Withdraw,
+        TransferIn,
+        TransferOut
     }
 }
