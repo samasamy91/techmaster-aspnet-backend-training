@@ -24,6 +24,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-csharp-drills", "ta
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-bank-account-system", "task-02-bank-account-system", "{7D998A09-4069-45A2-A7C1-5A8765291C24}"
+	ProjectSection(SolutionItems) = preProject
+		README02.md = README02.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-employee-management", "task-03-employee-management", "{9A12EEEE-DFDC-4F43-8836-25EBF914E22A}"
 EndProject
@@ -34,6 +37,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-sql-erd-starter", "task-06-sql-erd-starter", "{C13196F6-6F7F-482A-8B49-B9E23A015CAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-interview-answers", "task-07-interview-answers", "{33A7234C-CEE7-4DE8-BF62-FD177DFC6E1B}"
+	ProjectSection(SolutionItems) = preProject
+		InterviewAnswers.txt = InterviewAnswers.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01.CSharpDrills", "Task01.CSharpDrills\Task01.CSharpDrills.csproj", "{8B6FBFB7-67DF-4F2F-9BC3-68766A17F924}"
 EndProject
@@ -43,6 +49,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountSystem", "BankAccountSystem\BankAccountSystem.csproj", "{85C5F145-16BB-4B32-8AF9-39C003322114}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement", "EmployeeManagement\EmployeeManagement.csproj", "{81B653F3-E718-4162-8541-16BA706C77AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +66,10 @@ Global
 		{85C5F145-16BB-4B32-8AF9-39C003322114}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85C5F145-16BB-4B32-8AF9-39C003322114}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85C5F145-16BB-4B32-8AF9-39C003322114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B653F3-E718-4162-8541-16BA706C77AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B653F3-E718-4162-8541-16BA706C77AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B653F3-E718-4162-8541-16BA706C77AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B653F3-E718-4162-8541-16BA706C77AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +85,7 @@ Global
 		{33A7234C-CEE7-4DE8-BF62-FD177DFC6E1B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{8B6FBFB7-67DF-4F2F-9BC3-68766A17F924} = {C4442D49-FAB2-4F55-88E1-784F78726413}
 		{85C5F145-16BB-4B32-8AF9-39C003322114} = {7D998A09-4069-45A2-A7C1-5A8765291C24}
+		{81B653F3-E718-4162-8541-16BA706C77AA} = {9A12EEEE-DFDC-4F43-8836-25EBF914E22A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
