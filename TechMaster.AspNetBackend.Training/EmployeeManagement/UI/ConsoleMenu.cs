@@ -130,7 +130,6 @@ namespace EmployeeManagement.UI
                 return;
             }
             Department? department = ChooseDepartment();
-
             if (department == null)
             {
                 Console.WriteLine("Invalid department.");
@@ -200,7 +199,6 @@ namespace EmployeeManagement.UI
                 return;
             }
             Department? department = ChooseDepartment();
-
             if (department == null)
             {
                 Console.WriteLine("Invalid department.");
