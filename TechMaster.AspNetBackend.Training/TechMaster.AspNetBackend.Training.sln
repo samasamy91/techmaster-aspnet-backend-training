@@ -34,6 +34,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-employee-management
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-product-catalog-linq", "task-04-product-catalog-linq", "{49DE1708-8E41-4780-9AB7-B7806545080C}"
+	ProjectSection(SolutionItems) = preProject
+		README04.txt = README04.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-debug-refactor-pack", "task-05-debug-refactor-pack", "{3A236EC0-0B34-49D9-8C11-D3C42BCD0293}"
 EndProject
@@ -57,6 +60,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement", "Emplo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogLinq", "ProductCatalogLinq\ProductCatalogLinq.csproj", "{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "original-bad-code", "original-bad-code\original-bad-code.csproj", "{E9130865-19FA-4A2B-8740-754E3C3CCF34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactored", "Refactored\Refactored.csproj", "{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +86,14 @@ Global
 		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9130865-19FA-4A2B-8740-754E3C3CCF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9130865-19FA-4A2B-8740-754E3C3CCF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9130865-19FA-4A2B-8740-754E3C3CCF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9130865-19FA-4A2B-8740-754E3C3CCF34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +111,8 @@ Global
 		{85C5F145-16BB-4B32-8AF9-39C003322114} = {7D998A09-4069-45A2-A7C1-5A8765291C24}
 		{81B653F3-E718-4162-8541-16BA706C77AA} = {9A12EEEE-DFDC-4F43-8836-25EBF914E22A}
 		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954} = {49DE1708-8E41-4780-9AB7-B7806545080C}
+		{E9130865-19FA-4A2B-8740-754E3C3CCF34} = {3A236EC0-0B34-49D9-8C11-D3C42BCD0293}
+		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C} = {3A236EC0-0B34-49D9-8C11-D3C42BCD0293}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}

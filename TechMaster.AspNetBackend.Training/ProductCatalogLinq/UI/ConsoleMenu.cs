@@ -374,6 +374,7 @@ namespace ProductCatalogLinq.UI
                 foreach(Product product in result)
                     Console.WriteLine($"{product.ProductId} - {product.Name} | {product.Price:C}");
             }
+            Pause();
         }
     }
 }
