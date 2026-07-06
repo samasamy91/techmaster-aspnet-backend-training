@@ -29,6 +29,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-bank-account-system
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-employee-management", "task-03-employee-management", "{9A12EEEE-DFDC-4F43-8836-25EBF914E22A}"
+	ProjectSection(SolutionItems) = preProject
+		README03.txt = README03.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-product-catalog-linq", "task-04-product-catalog-linq", "{49DE1708-8E41-4780-9AB7-B7806545080C}"
 EndProject

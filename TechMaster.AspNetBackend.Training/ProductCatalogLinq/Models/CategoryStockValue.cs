@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProductCatalogLinq.Models
 {
-    internal class CategoryStockValue
+    public class CategoryStockValue
     {
+        public string Category { get; set; }
+        public decimal StockValue { get; set; }
     }
 }
