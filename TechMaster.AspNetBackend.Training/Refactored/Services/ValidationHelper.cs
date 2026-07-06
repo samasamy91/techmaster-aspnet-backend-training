@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Refactored.Services
 {
-    internal class ValidationHelper
+    public class ValidationHelper
     {
+        public string CustomerName { get; set; }
+        public string ProductName { get; set; }
+        public decimal Price { get; set; }  
+        public int Quantity { get; set; }
     }
 }
