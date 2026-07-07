@@ -1,0 +1,97 @@
+Task 07 - Interview Answers 
+---------------------------------
+
+1. A class that defines properties and methods. An object instance created from that class.
+
+Ex: "BankAccount" is class, while Ahmed's bank account is object.
+
+
+2. Encapsulation means hiding internal data and allowing access only through controlled methods.
+
+Ex: In the Bank Account System, the balance is changed only through Deposit() and Withdraw() methods.
+
+
+3. If the balance were public, anyone could change it directly, to invalid value like a negative balance.
+
+Using methods ensures all business rules are validated before changing the balance.
+
+
+4. A field stores data directly inside a class. A property provides controlled access to that data using get and set.
+
+Properties are safer because validation can be added.
+
+
+5. Constructors initialize objects when they are created.
+
+They allow us to assign default values or require important information during object creation.
+
+
+6. A service class contains the application's business logic.
+
+In my project,"BankService" handles account creation, deposits, withdrawals, transfers, and account searches.
+
+
+7. A large Main method becomes difficult to read, test, and maintain.
+
+Instead, responsibilities should be divided into methods and classes.
+
+
+8. An array has a fixed size after creation but List can grow or shrink dynamically and provides many useful methods like Add() and Remove().
+
+
+9. Dictionary is used when we need fast lookup using a key.
+
+Ex: Counting the frequency of numbers.
+
+
+10. LINQ is used to query and manipulate collections in a simple and readable way allows filtering, sorting, grouping, and selecting data.
+
+
+11. Where filters data. Select transforms data into another form.
+Ex:
+
+students.Where(s => s.Age > 18);
+students.Select(s => s.Name);
+
+
+12. GroupBy groups items that have the same value.
+
+Ex: Group employees by department.
+
+
+13. Skip ignores a number of records. Take returns a specified number of records.
+
+
+14. A primary key uniquely identifies each record in a table can not be repeated.
+
+Ex: CustomerId.
+
+
+15. A foreign key links one table to another. It creates relationships between related data.
+
+
+16. One record in one table can be related to many records in another table.
+
+Ex: One customer can have many bank accounts.
+
+
+17. A JOIN combines data from multiple tables based on a related column.
+
+
+18. A table exists in the database. An entity is the class in the application that represents that table in Models.
+
+Ex: Customer class represents the Customers table.
+
+
+19. GitHub stores project code online, tracks changes using Git, and makes collaboration easier.
+
+
+20. A good README explains the project, features, technologies used, project structure, and how to run the application helps understand project quickly.
+
+
+21. Multiple commits show the project's progress and make it easier to track changes or fix mistakes.
+
+
+22. Professional delivery makes the project easier to review and understand.
+
+Using clean code, meaningful commit messages, documentation, and organized folders creates a better impression during interviews and code reviews.

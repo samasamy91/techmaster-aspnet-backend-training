@@ -39,6 +39,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-product-catalog-lin
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-debug-refactor-pack", "task-05-debug-refactor-pack", "{3A236EC0-0B34-49D9-8C11-D3C42BCD0293}"
+	ProjectSection(SolutionItems) = preProject
+		README05.txt = README05.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-sql-erd-starter", "task-06-sql-erd-starter", "{C13196F6-6F7F-482A-8B49-B9E23A015CAC}"
 EndProject
