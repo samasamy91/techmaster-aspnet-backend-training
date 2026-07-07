@@ -67,6 +67,30 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "original-bad-code", "origin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactored", "Refactored\Refactored.csproj", "{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06A-LibraryManagement", "Task06A-LibraryManagement", "{E882CCB0-66A6-4839-A203-0FFB09D40D01}"
+	ProjectSection(SolutionItems) = preProject
+		LibraryManagement.sql = LibraryManagement.sql
+		Queries.sql = Queries.sql
+		READMEA.txt = READMEA.txt
+		SeedData.sql = SeedData.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06B-SimpleStore", "Task06B-SimpleStore", "{DA9A2DF8-29F8-4A96-8EA8-8ACD19A4A072}"
+	ProjectSection(SolutionItems) = preProject
+		QueriesB.sql = QueriesB.sql
+		READMEB.txt = READMEB.txt
+		SeedDataB.sql = SeedDataB.sql
+		SimpleStore.sql = SimpleStore.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06C- TrainingCenterRegistration", "Task06C- TrainingCenterRegistration", "{713820CA-81ED-4E42-862B-83D15655D7CA}"
+	ProjectSection(SolutionItems) = preProject
+		QueriesC.sql = QueriesC.sql
+		READMEC.txt = READMEC.txt
+		SeedDataC.sql = SeedDataC.sql
+		TrainingCenter.sql = TrainingCenter.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -116,6 +140,9 @@ Global
 		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954} = {49DE1708-8E41-4780-9AB7-B7806545080C}
 		{E9130865-19FA-4A2B-8740-754E3C3CCF34} = {3A236EC0-0B34-49D9-8C11-D3C42BCD0293}
 		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C} = {3A236EC0-0B34-49D9-8C11-D3C42BCD0293}
+		{E882CCB0-66A6-4839-A203-0FFB09D40D01} = {C13196F6-6F7F-482A-8B49-B9E23A015CAC}
+		{DA9A2DF8-29F8-4A96-8EA8-8ACD19A4A072} = {C13196F6-6F7F-482A-8B49-B9E23A015CAC}
+		{713820CA-81ED-4E42-862B-83D15655D7CA} = {C13196F6-6F7F-482A-8B49-B9E23A015CAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
