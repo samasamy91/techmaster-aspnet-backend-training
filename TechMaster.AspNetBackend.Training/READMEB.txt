@@ -157,6 +157,8 @@ This data allows all required SQL queries to be tested.
 
 # SQL Queries Implemented
 
+The SQL file [Queries] inculdes all the queries
+
 1. Select all products.
 2. Select available products.
 3. Select products by category.

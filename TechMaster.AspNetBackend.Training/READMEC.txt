@@ -141,6 +141,8 @@ The inserted data allows all required SQL queries to be executed and tested succ
 
 # SQL Queries Implemented
 
+The SQL file [Queries] inculdes all the queries
+
 The project includes the following SQL queries:
 
 1. Select all students.
