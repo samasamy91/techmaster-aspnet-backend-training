@@ -72,6 +72,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06A-LibraryManagement",
 		LibraryManagement.sql = LibraryManagement.sql
 		Queries.sql = Queries.sql
 		READMEA.txt = READMEA.txt
+		C:\Users\hp\Downloads\Scenario A - Library Management System.drawio (1).pdf = C:\Users\hp\Downloads\Scenario A - Library Management System.drawio (1).pdf
 		SeedData.sql = SeedData.sql
 	EndProjectSection
 EndProject
@@ -79,6 +80,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06B-SimpleStore", "Task
 	ProjectSection(SolutionItems) = preProject
 		QueriesB.sql = QueriesB.sql
 		READMEB.txt = READMEB.txt
+		C:\Users\hp\Downloads\Scenario B - Simple Store & Orders System.drawio.pdf = C:\Users\hp\Downloads\Scenario B - Simple Store & Orders System.drawio.pdf
 		SeedDataB.sql = SeedDataB.sql
 		SimpleStore.sql = SimpleStore.sql
 	EndProjectSection
@@ -87,6 +89,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06C- TrainingCenterRegi
 	ProjectSection(SolutionItems) = preProject
 		QueriesC.sql = QueriesC.sql
 		READMEC.txt = READMEC.txt
+		C:\Users\hp\Downloads\Scenario C - Training Center Registration System.drawio.pdf = C:\Users\hp\Downloads\Scenario C - Training Center Registration System.drawio.pdf
 		SeedDataC.sql = SeedDataC.sql
 		TrainingCenter.sql = TrainingCenter.sql
 	EndProjectSection

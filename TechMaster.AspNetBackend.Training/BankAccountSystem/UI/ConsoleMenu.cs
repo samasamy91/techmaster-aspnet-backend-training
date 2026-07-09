@@ -110,7 +110,11 @@ namespace BankAccountSystem.UI
             Console.Write("Account Number: ");
             string account = Console.ReadLine();
             Console.Write("Amount: ");
-            decimal.TryParse(Console.ReadLine(), out decimal amount);
+            decimal amount;
+            while (!decimal.TryParse(Console.ReadLine(), out amount))
+            {
+                Console.Write("Invalid amount. Enter again: ");
+            }
             if (bankService.Deposit(account, amount))
                 Console.WriteLine("Deposit successful.");
             else
@@ -121,7 +125,11 @@ namespace BankAccountSystem.UI
             Console.Write("Account Number: ");
             string account = Console.ReadLine();
             Console.Write("Amount: ");
-            decimal.TryParse(Console.ReadLine(), out decimal amount);
+            decimal amount;
+            while (!decimal.TryParse(Console.ReadLine(), out amount))
+            {
+                Console.Write("Invalid amount. Enter again: ");
+            }
             if (bankService.Withdraw(account, amount))
                 Console.WriteLine("Withdrawal successful.");
             else
@@ -134,7 +142,11 @@ namespace BankAccountSystem.UI
             Console.Write("Destination Account: ");
             string to = Console.ReadLine();
             Console.Write("Amount: ");
-            decimal.TryParse(Console.ReadLine(), out decimal amount);
+            decimal amount;
+            while (!decimal.TryParse(Console.ReadLine(), out amount))
+            {
+                Console.Write("Invalid amount. Enter again: ");
+            }
             if (bankService.Transfer(from, to, amount))
                 Console.WriteLine("Transfer successful.");
             else
