@@ -1,0 +1,6 @@
+@ApiRoutingDrills_HostAddress = http://localhost:5282
+
+GET {{ApiRoutingDrills_HostAddress}}
+Accept: application/json
+
+###
