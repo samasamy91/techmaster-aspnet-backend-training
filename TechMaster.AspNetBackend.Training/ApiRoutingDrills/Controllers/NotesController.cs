@@ -75,5 +75,46 @@ namespace ApiRoutingDrills.Controllers
             Notes.Remove(note);
             return NoContent();
         }
+        //Drill11
+        [HttpGet("search")]
+        public IActionResult Search([FromQuery] string keyword)
+        {
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                return BadRequest(new
+                {
+                    error = "Keyword cannot be empty"
+                });
+            }
+            var matching = Notes.Where(n => n.Title.Contains(keyword, StringComparison.OrdinalIgnoreCase) ||
+            (n.Content != null && n.Content.Contains(keyword, StringComparison.OrdinalIgnoreCase)))
+                .ToList();
+            return Ok(matching);
+        }
+        //Drill12
+        [HttpGet("pages")]
+        public IActionResult GetAllPages([FromQuery] int pageNum = 1, [FromQuery] int pageSize = 10)
+        {
+            if(pageNum <= 0)
+            {
+                return BadRequest(new
+                {
+                    error = "Page number must be greater than 0"
+                });
+            }
+            if (pageSize <1 || pageSize >50)
+            {
+                return BadRequest(new
+                {
+                    error = "Page size must be between 1 and 50"
+                });
+            }
+            int totalCount = Notes.Count;
+            var items = Notes.Skip((pageNum -1)* pageSize).Take(pageSize).ToList();
+            return Ok(new
+            {
+                pageNum,pageSize,totalCount,items
+            });
+        }
     }
 }
