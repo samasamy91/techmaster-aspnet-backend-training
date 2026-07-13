@@ -105,6 +105,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-rest-routing-drills
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-student-management-api", "task-02-student-management-api", "{07C632DD-459D-4D26-AB73-CCD0E83C8F07}"
+	ProjectSection(SolutionItems) = preProject
+		README022.md = README022.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-products-categories-api", "task-03-products-categories-api", "{B6770E0A-CE15-42AA-9846-B785E19958A9}"
 EndProject
