@@ -125,6 +125,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRoutingDrills", "ApiRout
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagement", "StudentManagement\StudentManagement.csproj", "{57DC6F09-0846-4941-B991-FC92E0DDE3E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsCategoriesApi", "ProductsCategoriesApi\ProductsCategoriesApi.csproj", "{25F43963-309C-411A-BBEB-E0C1D332DF70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +169,10 @@ Global
 		{57DC6F09-0846-4941-B991-FC92E0DDE3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57DC6F09-0846-4941-B991-FC92E0DDE3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57DC6F09-0846-4941-B991-FC92E0DDE3E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -200,6 +206,7 @@ Global
 		{57F39DF8-1042-4284-833C-DA7253960DEE} = {D2363AEE-31D1-44B2-B7FE-936E6E5911E9}
 		{C60DE103-FD7B-4459-8BAC-97695CB674B3} = {8356867F-AB3B-43DA-8670-7234615FEA4E}
 		{57DC6F09-0846-4941-B991-FC92E0DDE3E5} = {07C632DD-459D-4D26-AB73-CCD0E83C8F07}
+		{25F43963-309C-411A-BBEB-E0C1D332DF70} = {B6770E0A-CE15-42AA-9846-B785E19958A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
