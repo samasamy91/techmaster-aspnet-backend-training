@@ -110,8 +110,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-student-management-
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-products-categories-api", "task-03-products-categories-api", "{B6770E0A-CE15-42AA-9846-B785E19958A9}"
+	ProjectSection(SolutionItems) = preProject
+		README032.md = README032.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-book-store-api", "task-04-book-store-api", "{57254EC2-D2AF-46A0-B196-66ED7BA9F8EA}"
+	ProjectSection(SolutionItems) = preProject
+		README04_2.md = README04_2.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-postman-swagger-evidence", "task-05-postman-swagger-evidence", "{9D9DE862-0864-416C-B07D-1FA133C3E1C3}"
 EndProject
@@ -126,6 +132,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagement", "StudentManagement\StudentManagement.csproj", "{57DC6F09-0846-4941-B991-FC92E0DDE3E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsCategoriesApi", "ProductsCategoriesApi\ProductsCategoriesApi.csproj", "{25F43963-309C-411A-BBEB-E0C1D332DF70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreApi", "BookStoreApi\BookStoreApi.csproj", "{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +181,10 @@ Global
 		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -207,6 +219,7 @@ Global
 		{C60DE103-FD7B-4459-8BAC-97695CB674B3} = {8356867F-AB3B-43DA-8670-7234615FEA4E}
 		{57DC6F09-0846-4941-B991-FC92E0DDE3E5} = {07C632DD-459D-4D26-AB73-CCD0E83C8F07}
 		{25F43963-309C-411A-BBEB-E0C1D332DF70} = {B6770E0A-CE15-42AA-9846-B785E19958A9}
+		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27} = {57254EC2-D2AF-46A0-B196-66ED7BA9F8EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
