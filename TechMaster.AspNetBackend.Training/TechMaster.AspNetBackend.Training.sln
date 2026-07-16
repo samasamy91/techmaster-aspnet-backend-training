@@ -120,8 +120,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-book-store-api", "t
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-postman-swagger-evidence", "task-05-postman-swagger-evidence", "{9D9DE862-0864-416C-B07D-1FA133C3E1C3}"
+	ProjectSection(SolutionItems) = preProject
+		README05_2.md = README05_2.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-api-standards-refactor-pack", "task-06-api-standards-refactor-pack", "{12B5913F-941C-4E43-9C72-8CBD69EEB9C1}"
+	ProjectSection(SolutionItems) = preProject
+		README06_2.md = README06_2.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-interview-answers", "task-07-interview-answers", "{90956488-B566-4FB3-8AEF-724FC0AD1741}"
 EndProject
@@ -134,6 +140,58 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsCategoriesApi", "ProductsCategoriesApi\ProductsCategoriesApi.csproj", "{25F43963-309C-411A-BBEB-E0C1D332DF70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreApi", "BookStoreApi\BookStoreApi.csproj", "{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Evidence", "Evidence", "{3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collections", "Collections", "{40463952-54C0-4006-A278-CFC3A6D0C891}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\TechMasterDrive\TechMaster ASP.NET Phase 02.postman_collection.json = ..\..\..\TechMasterDrive\TechMaster ASP.NET Phase 02.postman_collection.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Swagger", "Swagger", "{B6EA3F18-D4A3-4328-97FC-A5E29659D4B7}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022022.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022022.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022105.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022105.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022158.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022158.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022439.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022439.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022642.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Swagger\Screenshot 2026-07-14 022642.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 021731.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 021731.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 021740.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 021740.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 021907.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 021907.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022020.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022020.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022101.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022101.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022527.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022527.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022634.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022634.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022748.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022748.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022940.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 022940.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 023111.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Swagger\Screenshot 2026-07-15 023111.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{328CF59B-1C19-4A8B-B7B3-130BD4CE3B80}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022039.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022039.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022309.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022309.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022531.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022531.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022744.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022744.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022832.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task03\Postman\Screenshot 2026-07-14 022832.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 021832.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 021832.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022001.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022001.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022049.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022049.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022142.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022142.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022556.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022556.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022729.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022729.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022824.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 022824.png
+		..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 023044.png = ..\..\..\TechMasterDrive\Phase02\Screenshots\Task04\Postman\Screenshot 2026-07-15 023044.png
+		..\..\..\..\F\screenshots\Screenshot 2026-07-15 210047.png = ..\..\..\..\F\screenshots\Screenshot 2026-07-15 210047.png
+		..\..\..\..\F\screenshots\Screenshot 2026-07-15 210426.png = ..\..\..\..\F\screenshots\Screenshot 2026-07-15 210426.png
+		..\..\..\..\F\screenshots\Screenshot 2026-07-15 210636.png = ..\..\..\..\F\screenshots\Screenshot 2026-07-15 210636.png
+		..\..\..\..\F\screenshots\Screenshot 2026-07-15 210928.png = ..\..\..\..\F\screenshots\Screenshot 2026-07-15 210928.png
+		..\..\..\..\F\screenshots\Screenshot 2026-07-15 211049.png = ..\..\..\..\F\screenshots\Screenshot 2026-07-15 211049.png
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginalBadCode", "OriginalBadCode\OriginalBadCode.csproj", "{FB591BC0-B741-4E99-910D-17E106C79D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredApi", "RefactoredApi\RefactoredApi.csproj", "{3E95D753-7A2E-4AF7-915F-9C9938142C7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -185,6 +243,14 @@ Global
 		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB591BC0-B741-4E99-910D-17E106C79D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB591BC0-B741-4E99-910D-17E106C79D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB591BC0-B741-4E99-910D-17E106C79D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB591BC0-B741-4E99-910D-17E106C79D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -220,6 +286,12 @@ Global
 		{57DC6F09-0846-4941-B991-FC92E0DDE3E5} = {07C632DD-459D-4D26-AB73-CCD0E83C8F07}
 		{25F43963-309C-411A-BBEB-E0C1D332DF70} = {B6770E0A-CE15-42AA-9846-B785E19958A9}
 		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27} = {57254EC2-D2AF-46A0-B196-66ED7BA9F8EA}
+		{3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC} = {9D9DE862-0864-416C-B07D-1FA133C3E1C3}
+		{40463952-54C0-4006-A278-CFC3A6D0C891} = {3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC}
+		{B6EA3F18-D4A3-4328-97FC-A5E29659D4B7} = {3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC}
+		{328CF59B-1C19-4A8B-B7B3-130BD4CE3B80} = {3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC}
+		{FB591BC0-B741-4E99-910D-17E106C79D62} = {12B5913F-941C-4E43-9C72-8CBD69EEB9C1}
+		{3E95D753-7A2E-4AF7-915F-9C9938142C7C} = {12B5913F-941C-4E43-9C72-8CBD69EEB9C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
