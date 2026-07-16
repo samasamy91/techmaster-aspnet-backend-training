@@ -6,8 +6,6 @@
 
 * **Name:** Sama Samy
 * **Track:** ASP.NET Backend Career Training
-* **University:** Helwan University – Faculty of Computers and Artificial Intelligence
-* **Scholarship:** DEPI Full Stack .NET
 * **Language & Framework:** C# / ASP.NET Core (.NET 8)
 
 ---
