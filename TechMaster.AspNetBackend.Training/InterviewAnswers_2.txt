@@ -1,0 +1,104 @@
+Interview Answers Phase 02
+=========================
+
+REST & HTTP
+
+1-REST id Representational State Transfer the architecture style for building web APIs using standard HTTP methods 
+treats data as resource accessed through URL like Products,Students and other exposed through RESTful endpoints like /api/students.
+
+2-
+	GET : Retrieves data without changing it
+	Post : Create new resource
+	Put : Update existing resource completely
+	Patch : Update only specific fields of resource
+	Delete : Remove resource
+
+	ex:Get/api/students || Post/api/products to create new product
+
+3-
+	200 Ok : Request completed successfully
+	201 Created : New resource created successfully
+	204 No Content : Delete or update completed without returning data
+	400 Bad Request : Invalid request, failed validation
+	404 Not Found : Requested resource not exist
+
+	ex: Creating student return 201 Created, search wirh id not found return 404 Not Found
+
+Routing 
+
+4-Route identify specific resource api/books/5
+, Query filter or modify returned data api/books?search=clean
+
+Controller
+
+5-Controller recieves HTTP requests endpoints no buisness logic only communicate with services
+
+DTOs
+
+6-DTOs define what exacty client can send or receive like CreateStudentRequest this keeps API clean and prevents exposing internal models
+
+Service 
+
+7-Controllers should stay small and focus on HTTP coommunication make logic in services 
+ make it easier maintain ,test , reusable and cleaner
+
+DI
+
+8-Dependancy Injection allow ASP.NET Core to create and provide service objects automatically 
+ instead of creating services manually register them in program.cs reduce coupling and improve maintainability
+
+Validation
+
+9-Validation can happen using Data Annotetions on DTOs,inside service layer for business rules,
+ inside controllers for request check
+ ex:[Required] for name,existing category and author before create product
+
+Swagger
+
+10-Swagger automatically documents API endpoints allow view endpoints and execute requests used to test in every project
+
+Postman
+
+11-Postman id better for organizing requests into collections,testing error cases,
+ sharing requests with teammates i created collection for phase 02
+
+Response Shape
+
+12-Professional API should return consistent JSON, use proper status codes, include meaningfull messages
+
+Search & Filtering
+
+13-I use optional query parameters with LINQ ,sevice applies filters only when values provided
+
+Pagination
+
+14-Pagination prevents returning thousands of records in one request for faster response ,low memory usage using Skip() and Take()
+
+Architecture
+
+15-
+	UI collects user input,
+	Controller hanldes HTTP request and response endpoints
+	Service contains business logic
+	Data Storage stores application data
+
+GitHub
+
+16-Reviewers should see small commits,meaningful commit messages, gradual progress
+
+Delivery
+
+17-I inculde swagger screenshots, postman collection, README documentation, demo video this is enough evidence API works correctly
+
+Debugging
+
+18-I check exception message, stack trace, breakpoints, request body, model validation
+
+Security Awareness
+
+19-Bescause it may contain missing, invalid every request should be validated before processing like required fields 
+ validation protects application from incorrect data
+
+Next Phase Prep
+
+20-Because it loses all data when application stops and cannot be shared between multiple users or servers
