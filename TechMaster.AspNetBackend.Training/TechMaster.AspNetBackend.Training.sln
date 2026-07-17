@@ -130,6 +130,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-api-standards-refac
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-interview-answers", "task-07-interview-answers", "{90956488-B566-4FB3-8AEF-724FC0AD1741}"
+	ProjectSection(SolutionItems) = preProject
+		InterviewAnswers_2.txt = InterviewAnswers_2.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagementAPI", "StudentManagementAPI\StudentManagementAPI.csproj", "{57F39DF8-1042-4284-833C-DA7253960DEE}"
 EndProject
