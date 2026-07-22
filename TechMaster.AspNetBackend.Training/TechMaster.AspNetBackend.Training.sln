@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "phase-02-web-api-basics", "phase-02-web-api-basics", "{DEDB3C4A-5A26-40D8-AEE8-D743574CD9DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "phase-03-database-and-ef-core", "phase-03-database-and-ef-core", "{1F421612-D266-40B9-9B90-3BC406C757AB}"
+	ProjectSection(SolutionItems) = preProject
+		README_3.md = README_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "phase-04-auth-and-architecture", "phase-04-auth-and-architecture", "{70D5CB64-BEF0-4D05-952A-BB4A31235A65}"
 EndProject
@@ -15,32 +18,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "final-capstone", "final-cap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-00-setup", "task-00-setup", "{8A23ED36-C277-4B87-AB0D-B8EDB2F84719}"
 	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
+		README00_1.md = README00_1.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-csharp-drills", "task-01-csharp-drills", "{C4442D49-FAB2-4F55-88E1-784F78726413}"
 	ProjectSection(SolutionItems) = preProject
-		README01.md = README01.md
+		README01_1.md = README01_1.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-bank-account-system", "task-02-bank-account-system", "{7D998A09-4069-45A2-A7C1-5A8765291C24}"
 	ProjectSection(SolutionItems) = preProject
-		README02.md = README02.md
+		README02_1.md = README02_1.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-employee-management", "task-03-employee-management", "{9A12EEEE-DFDC-4F43-8836-25EBF914E22A}"
 	ProjectSection(SolutionItems) = preProject
-		README03.txt = README03.txt
+		README03_1.txt = README03_1.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-product-catalog-linq", "task-04-product-catalog-linq", "{49DE1708-8E41-4780-9AB7-B7806545080C}"
 	ProjectSection(SolutionItems) = preProject
-		README04.txt = README04.txt
+		README04_1.txt = README04_1.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-debug-refactor-pack", "task-05-debug-refactor-pack", "{3A236EC0-0B34-49D9-8C11-D3C42BCD0293}"
 	ProjectSection(SolutionItems) = preProject
-		README05.txt = README05.txt
+		README05_1.txt = README05_1.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-sql-erd-starter", "task-06-sql-erd-starter", "{C13196F6-6F7F-482A-8B49-B9E23A015CAC}"
@@ -71,7 +74,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06A-LibraryManagement",
 	ProjectSection(SolutionItems) = preProject
 		LibraryManagement.sql = LibraryManagement.sql
 		Queries.sql = Queries.sql
-		READMEA.txt = READMEA.txt
+		README06A_1.txt = README06A_1.txt
 		C:\Users\hp\Downloads\Scenario A - Library Management System.drawio (1).pdf = C:\Users\hp\Downloads\Scenario A - Library Management System.drawio (1).pdf
 		SeedData.sql = SeedData.sql
 	EndProjectSection
@@ -79,7 +82,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06B-SimpleStore", "Task06B-SimpleStore", "{DA9A2DF8-29F8-4A96-8EA8-8ACD19A4A072}"
 	ProjectSection(SolutionItems) = preProject
 		QueriesB.sql = QueriesB.sql
-		READMEB.txt = READMEB.txt
+		README06B_1.txt = README06B_1.txt
 		C:\Users\hp\Downloads\Scenario B - Simple Store & Orders System.drawio.pdf = C:\Users\hp\Downloads\Scenario B - Simple Store & Orders System.drawio.pdf
 		SeedDataB.sql = SeedDataB.sql
 		SimpleStore.sql = SimpleStore.sql
@@ -88,7 +91,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06C- TrainingCenterRegistration", "Task06C- TrainingCenterRegistration", "{713820CA-81ED-4E42-862B-83D15655D7CA}"
 	ProjectSection(SolutionItems) = preProject
 		QueriesC.sql = QueriesC.sql
-		READMEC.txt = READMEC.txt
+		README06C_1.txt = README06C_1.txt
 		C:\Users\hp\Downloads\Scenario C - Training Center Registration System.drawio.pdf = C:\Users\hp\Downloads\Scenario C - Training Center Registration System.drawio.pdf
 		SeedDataC.sql = SeedDataC.sql
 		TrainingCenter.sql = TrainingCenter.sql
@@ -96,22 +99,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06C- TrainingCenterRegi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-00-api-setup", "task-00-api-setup", "{D2363AEE-31D1-44B2-B7FE-936E6E5911E9}"
 	ProjectSection(SolutionItems) = preProject
-		README002.md = README002.md
+		README00_2.md = README00_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-rest-routing-drills", "task-01-rest-routing-drills", "{8356867F-AB3B-43DA-8670-7234615FEA4E}"
 	ProjectSection(SolutionItems) = preProject
-		README012.md = README012.md
+		README01_2.md = README01_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-student-management-api", "task-02-student-management-api", "{07C632DD-459D-4D26-AB73-CCD0E83C8F07}"
 	ProjectSection(SolutionItems) = preProject
-		README022.md = README022.md
+		README02_2.md = README02_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-products-categories-api", "task-03-products-categories-api", "{B6770E0A-CE15-42AA-9846-B785E19958A9}"
 	ProjectSection(SolutionItems) = preProject
-		README032.md = README032.md
+		README03_2.md = README03_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-book-store-api", "task-04-book-store-api", "{57254EC2-D2AF-46A0-B196-66ED7BA9F8EA}"
@@ -196,6 +199,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginalBadCode", "Original
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredApi", "RefactoredApi\RefactoredApi.csproj", "{3E95D753-7A2E-4AF7-915F-9C9938142C7C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-00-workspace-environment-setup", "task-00-workspace-environment-setup", "{7168466D-997C-4CDB-8789-0B77D3207A84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-ef-core-modeling-drills", "task-01-ef-core-modeling-drills", "{BCA1D789-E4CE-4227-8499-BC25F72AB102}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-requirements-to-erd", "task-02-requirements-to-erd", "{DC587314-1C3B-4F87-9751-A93288D35680}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-training-center-database-api", "task-03-training-center-database-api", "{2C63DC7E-E9D6-49CC-8657-BDBFC990079F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-querying-filtering-reporting", "task-04-querying-filtering-reporting", "{BBC52524-4938-4364-9DFD-47087A4E0758}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-business-rules-data-integrity", "task-05-business-rules-data-integrity", "{B81E88C3-769F-46BD-B366-2B0A3843603C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-production-hosting-remote-database", "task-06-production-hosting-remote-database", "{43F09CEE-A591-48F3-91EB-7FB9EF22D858}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-ef-core-api-refactor-pack", "task-07-ef-core-api-refactor-pack", "{9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-interview-demo-pack", "task-08-interview-demo-pack", "{248236B0-9FD6-42B7-A343-7A358447135A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterApi", "TrainingCenterApi\TrainingCenterApi.csproj", "{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -254,6 +277,10 @@ Global
 		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -295,6 +322,16 @@ Global
 		{328CF59B-1C19-4A8B-B7B3-130BD4CE3B80} = {3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC}
 		{FB591BC0-B741-4E99-910D-17E106C79D62} = {12B5913F-941C-4E43-9C72-8CBD69EEB9C1}
 		{3E95D753-7A2E-4AF7-915F-9C9938142C7C} = {12B5913F-941C-4E43-9C72-8CBD69EEB9C1}
+		{7168466D-997C-4CDB-8789-0B77D3207A84} = {1F421612-D266-40B9-9B90-3BC406C757AB}
+		{BCA1D789-E4CE-4227-8499-BC25F72AB102} = {1F421612-D266-40B9-9B90-3BC406C757AB}
+		{DC587314-1C3B-4F87-9751-A93288D35680} = {1F421612-D266-40B9-9B90-3BC406C757AB}
+		{2C63DC7E-E9D6-49CC-8657-BDBFC990079F} = {1F421612-D266-40B9-9B90-3BC406C757AB}
+		{BBC52524-4938-4364-9DFD-47087A4E0758} = {1F421612-D266-40B9-9B90-3BC406C757AB}
+		{B81E88C3-769F-46BD-B366-2B0A3843603C} = {1F421612-D266-40B9-9B90-3BC406C757AB}
+		{43F09CEE-A591-48F3-91EB-7FB9EF22D858} = {1F421612-D266-40B9-9B90-3BC406C757AB}
+		{9A444E1D-93AF-4482-BFED-C39BBB7DDD2B} = {1F421612-D266-40B9-9B90-3BC406C757AB}
+		{248236B0-9FD6-42B7-A343-7A358447135A} = {1F421612-D266-40B9-9B90-3BC406C757AB}
+		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8} = {7168466D-997C-4CDB-8789-0B77D3207A84}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
