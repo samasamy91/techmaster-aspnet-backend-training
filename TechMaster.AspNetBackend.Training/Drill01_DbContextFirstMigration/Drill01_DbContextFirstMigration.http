@@ -1,0 +1,6 @@
+@Drill01_DbContextFirstMigration_HostAddress = http://localhost:5164
+
+GET {{Drill01_DbContextFirstMigration_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
