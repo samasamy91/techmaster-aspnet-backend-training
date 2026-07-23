@@ -1,0 +1,6 @@
+@Drill08_AuditFields_HostAddress = http://localhost:5233
+
+GET {{Drill08_AuditFields_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

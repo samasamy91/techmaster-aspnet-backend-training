@@ -240,16 +240,34 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill04_ManyToManyEnrollmen
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill05_PaymentSummary", "Drill05_PaymentSummary", "{7631F356-9B48-45A8-9282-0EB51B3F9456}"
+	ProjectSection(SolutionItems) = preProject
+		README01_5_3.md = README01_5_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill06_SeedData", "Drill06_SeedData", "{27695FBA-894C-4A13-8109-838204AA196D}"
+	ProjectSection(SolutionItems) = preProject
+		README01_6_3.md = README01_6_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill07_SoftDelete", "Drill07_SoftDelete", "{F135C37D-08EF-423A-BC77-A573F6C05F71}"
+	ProjectSection(SolutionItems) = preProject
+		README01_7_3.md = README01_7_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill08_AuditFields", "Drill08_AuditFields", "{309A3643-658A-4F7A-909B-602DE447AF59}"
+	ProjectSection(SolutionItems) = preProject
+		README01_8_3.md = README01_8_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill09_ProjectionDTO", "Drill09_ProjectionDTO", "{00E32190-52B0-4725-A941-EBF691FC9B65}"
+	ProjectSection(SolutionItems) = preProject
+		README01_9_3.md = README01_9_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill10_Pagination", "Drill10_Pagination", "{CA676F52-7060-4CCE-81D4-BD0D5D1F08A0}"
+	ProjectSection(SolutionItems) = preProject
+		README01_10_3.md = README01_10_3.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill01_DbContextFirstMigration", "Drill01_DbContextFirstMigration\Drill01_DbContextFirstMigration.csproj", "{9386D664-9C66-4228-8561-044D0D0755CE}"
 EndProject
@@ -260,6 +278,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill04_ManyToManyEnrollment", "Drill04_ManyToManyEnrollment\Drill04_ManyToManyEnrollment.csproj", "{FA721521-F541-4BD3-AFEF-CDF6F4908E39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill05_PaymentSummary", "Drill05_PaymentSummary\Drill05_PaymentSummary.csproj", "{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill06_SeedData", "Drill06_SeedData\Drill06_SeedData.csproj", "{302B7920-F90B-444A-A8F1-1949610CB8F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill07_SoftDelete", "Drill07_SoftDelete\Drill07_SoftDelete.csproj", "{D893C303-F7A5-488D-86F7-E29F6E60C981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill08_AuditFields", "Drill08_AuditFields\Drill08_AuditFields.csproj", "{14933FE9-8151-4EC3-8272-41CB8632B909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill09_ProjectionDTO", "Drill09_ProjectionDTO\Drill09_ProjectionDTO.csproj", "{A70A0C23-402F-40C7-B004-CED42F1935AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill10_Pagination", "Drill10_Pagination\Drill10_Pagination.csproj", "{2F0099E1-49D1-4538-8C3C-A95C7398CD05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -343,6 +371,26 @@ Global
 		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{302B7920-F90B-444A-A8F1-1949610CB8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302B7920-F90B-444A-A8F1-1949610CB8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302B7920-F90B-444A-A8F1-1949610CB8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302B7920-F90B-444A-A8F1-1949610CB8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D893C303-F7A5-488D-86F7-E29F6E60C981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D893C303-F7A5-488D-86F7-E29F6E60C981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D893C303-F7A5-488D-86F7-E29F6E60C981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D893C303-F7A5-488D-86F7-E29F6E60C981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14933FE9-8151-4EC3-8272-41CB8632B909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14933FE9-8151-4EC3-8272-41CB8632B909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14933FE9-8151-4EC3-8272-41CB8632B909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14933FE9-8151-4EC3-8272-41CB8632B909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70A0C23-402F-40C7-B004-CED42F1935AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70A0C23-402F-40C7-B004-CED42F1935AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70A0C23-402F-40C7-B004-CED42F1935AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70A0C23-402F-40C7-B004-CED42F1935AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -409,6 +457,11 @@ Global
 		{C57F8B99-6276-499A-89E9-E60A8F7310CA} = {BDFA20E6-53AD-4FC7-936B-CEC181608A0E}
 		{FA721521-F541-4BD3-AFEF-CDF6F4908E39} = {7395BA71-A530-4AD3-8D79-77E3DF5A268B}
 		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726} = {7631F356-9B48-45A8-9282-0EB51B3F9456}
+		{302B7920-F90B-444A-A8F1-1949610CB8F9} = {27695FBA-894C-4A13-8109-838204AA196D}
+		{D893C303-F7A5-488D-86F7-E29F6E60C981} = {F135C37D-08EF-423A-BC77-A573F6C05F71}
+		{14933FE9-8151-4EC3-8272-41CB8632B909} = {309A3643-658A-4F7A-909B-602DE447AF59}
+		{A70A0C23-402F-40C7-B004-CED42F1935AA} = {00E32190-52B0-4725-A941-EBF691FC9B65}
+		{2F0099E1-49D1-4538-8C3C-A95C7398CD05} = {CA676F52-7060-4CCE-81D4-BD0D5D1F08A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}

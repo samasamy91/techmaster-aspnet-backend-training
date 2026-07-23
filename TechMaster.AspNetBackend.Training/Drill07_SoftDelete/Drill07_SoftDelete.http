@@ -1,0 +1,6 @@
+@Drill07_SoftDelete_HostAddress = http://localhost:5099
+
+GET {{Drill07_SoftDelete_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,6 @@
+@Drill06_SeedData_HostAddress = http://localhost:5162
+
+GET {{Drill06_SeedData_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,6 @@
+@Drill09_ProjectionDTO_HostAddress = http://localhost:5248
+
+GET {{Drill09_ProjectionDTO_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
