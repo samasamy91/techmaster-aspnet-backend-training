@@ -1,0 +1,6 @@
+@Drill03_OneToManyInstructorTracks_HostAddress = http://localhost:5264
+
+GET {{Drill03_OneToManyInstructorTracks_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

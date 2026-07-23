@@ -235,6 +235,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill03_OneToManyInstructorTracks", "Drill03_OneToManyInstructorTracks", "{BDFA20E6-53AD-4FC7-936B-CEC181608A0E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill04_ManyToManyEnrollment", "Drill04_ManyToManyEnrollment", "{7395BA71-A530-4AD3-8D79-77E3DF5A268B}"
+	ProjectSection(SolutionItems) = preProject
+		README01_4_3.md = README01_4_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill05_PaymentSummary", "Drill05_PaymentSummary", "{7631F356-9B48-45A8-9282-0EB51B3F9456}"
 EndProject
@@ -251,6 +254,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill01_DbContextFirstMigration", "Drill01_DbContextFirstMigration\Drill01_DbContextFirstMigration.csproj", "{9386D664-9C66-4228-8561-044D0D0755CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill02_OneToOneStudentProfile", "Drill02_OneToOneStudentProfile\Drill02_OneToOneStudentProfile.csproj", "{6F9EC978-0A51-4327-817A-D263B81ACA2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill03_OneToManyInstructorTracks", "Drill03_OneToManyInstructorTracks\Drill03_OneToManyInstructorTracks.csproj", "{C57F8B99-6276-499A-89E9-E60A8F7310CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill04_ManyToManyEnrollment", "Drill04_ManyToManyEnrollment\Drill04_ManyToManyEnrollment.csproj", "{FA721521-F541-4BD3-AFEF-CDF6F4908E39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill05_PaymentSummary", "Drill05_PaymentSummary\Drill05_PaymentSummary.csproj", "{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -322,6 +331,18 @@ Global
 		{6F9EC978-0A51-4327-817A-D263B81ACA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F9EC978-0A51-4327-817A-D263B81ACA2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F9EC978-0A51-4327-817A-D263B81ACA2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C57F8B99-6276-499A-89E9-E60A8F7310CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C57F8B99-6276-499A-89E9-E60A8F7310CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C57F8B99-6276-499A-89E9-E60A8F7310CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C57F8B99-6276-499A-89E9-E60A8F7310CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA721521-F541-4BD3-AFEF-CDF6F4908E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA721521-F541-4BD3-AFEF-CDF6F4908E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA721521-F541-4BD3-AFEF-CDF6F4908E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA721521-F541-4BD3-AFEF-CDF6F4908E39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -385,6 +406,9 @@ Global
 		{CA676F52-7060-4CCE-81D4-BD0D5D1F08A0} = {BCA1D789-E4CE-4227-8499-BC25F72AB102}
 		{9386D664-9C66-4228-8561-044D0D0755CE} = {11DC8B18-2D19-46D6-A5AF-C9D5E9568468}
 		{6F9EC978-0A51-4327-817A-D263B81ACA2F} = {C02723C0-4C48-43A1-8C4E-F53F69C795ED}
+		{C57F8B99-6276-499A-89E9-E60A8F7310CA} = {BDFA20E6-53AD-4FC7-936B-CEC181608A0E}
+		{FA721521-F541-4BD3-AFEF-CDF6F4908E39} = {7395BA71-A530-4AD3-8D79-77E3DF5A268B}
+		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726} = {7631F356-9B48-45A8-9282-0EB51B3F9456}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
