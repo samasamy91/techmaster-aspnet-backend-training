@@ -1,0 +1,6 @@
+@RefactoredEnrollment_HostAddress = http://localhost:5113
+
+GET {{RefactoredEnrollment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
