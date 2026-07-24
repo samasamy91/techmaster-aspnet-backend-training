@@ -4,6 +4,6 @@
     {
         Pending,
         PartiallyPaid,
-        Done
+        Paid
     }
 }

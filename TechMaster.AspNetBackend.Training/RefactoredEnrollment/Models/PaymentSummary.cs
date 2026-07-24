@@ -12,11 +12,10 @@ namespace Drill05_PaymentSummary.Models
 
         public decimal TotalRequired { get; set; }
 
-        public decimal Amount { get; set; }
+        public decimal TotalPaid { get; set; }
 
-        public DateTime PaymentDate { get; set; }
+        public decimal RemainingAmount => TotalRequired - TotalPaid;
 
         public PaymentStatus PaymentStatus { get; set; }
-
     }
 }

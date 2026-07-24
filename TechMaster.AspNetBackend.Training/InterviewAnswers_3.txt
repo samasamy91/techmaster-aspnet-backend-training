@@ -1,0 +1,91 @@
+﻿# Task 08 - EF Core Interview Questions & Answers
+
+1-DbContext is the primary class in Entity Framework Core that manages the connection between the application and the database. It tracks entity changes, executes database queries, and saves modifications. 
+In my project, AppDbContext contains all DbSet properties and manages CRUD operations for Students, Instructors, TrainingTracks, Enrollments, and Payments.
+
+
+2-A DbSet represents a collection of entities of a specific type. Each DbSet is mapped to a database table, allowing Entity Framework Core to perform CRUD operations.
+
+Example: public DbSet<Student> Students { get; set; }
+This maps the Student entity to the Students table.
+
+
+3-A migration records changes made to the EF Core model and applies those changes to the database schema. 
+It keeps the database synchronized with the application's entity classes without manually writing SQL scripts.
+
+
+4-An Entity represents a database table and is managed by Entity Framework Core.
+A DTO (Data Transfer Object) is used to transfer only the required data between the API and the client. 
+DTOs improve security, reduce response size, and prevent exposing internal database structures.
+
+
+5-Returning EF entities directly may expose unnecessary fields, navigation properties, and internal implementation details. 
+It can also cause circular reference problems during JSON serialization. Using DTOs gives better control over the API response.
+
+
+6-A foreign key is a column that references the primary key of another table. 
+It establishes relationships between tables and enforces referential integrity.
+
+Example: Enrollment.StudentId → Student.StudentId
+
+
+7-A Student can enroll in many TrainingTracks, and a TrainingTrack can contain many Students. 
+This many-to-many relationship is implemented using the Enrollment entity, which stores additional business information such as enrollment date, status, progress percentage, and final result.
+
+
+8-Enrollment contains additional business data beyond just foreign keys, including enrollment status, enrollment date, progress percentage, and final result. 
+Since automatic many-to-many relationships cannot store extra attributes, a separate Enrollment entity is required.
+
+
+9-Include() is used to eagerly load related entities when querying the database.
+
+Example:
+_context.Enrollments
+    .Include(e => e.Student)
+    .Include(e => e.TrainingTrack);
+
+I used Include when I needed related data before applying business logic or loading navigation properties.
+
+
+10-Select() projects database entities into DTOs containing only the required fields. 
+This improves performance, reduces network traffic, and avoids returning unnecessary data.
+
+
+11-Pagination divides large datasets into smaller pages using Skip() and Take(). 
+It improves performance, reduces response size, and provides a better user experience.
+
+
+12-Before creating a new enrollment, I checked whether the student already had an active enrollment in the same training track using AnyAsync(). 
+If an active enrollment existed, the API returned a Bad Request response.
+
+
+13-Before creating an enrollment, I counted the current number of enrollments for the selected training track and compared it with the track's capacity. 
+If the capacity had been reached, the API rejected the request.
+
+
+14-I validated that the payment amount was greater than zero and confirmed that the referenced enrollment existed before creating a payment. 
+Invalid requests returned appropriate HTTP status codes.
+
+
+15-Soft delete marks a record as deleted by setting fields such as IsDeleted and DeletedAt instead of physically removing it from the database. 
+This preserves historical data and allows recovery or auditing if needed.
+
+
+16-A local database runs on the developer's own machine and is mainly used during development and testing. 
+A remote database is hosted on a server or cloud environment and is shared by deployed applications and multiple users.
+
+
+17-I stored the production connection string in configuration files or environment variables rather than hardcoding it. 
+The application reads the connection string from the configuration at startup.
+
+
+18-Connection strings may contain sensitive information such as server names, usernames, and passwords. 
+Publishing them on GitHub creates a security risk. Instead, secrets should be stored using environment variables, user secrets during development, or secure secret management services.
+
+
+19-One of the most challenging issues was a circular JSON serialization error caused by Entity Framework navigation properties referencing each other. 
+I resolved it by returning DTOs instead of EF entities and using Select() projections to shape the API responses.
+
+
+20-I would add JWT authentication and role-based authorization, implement repository and unit-of-work patterns, introduce logging with Serilog, 
+add FluentValidation for request validation, write unit and integration tests, improve reporting endpoints, and deploy the API to a cloud platform using a CI/CD pipeline.
