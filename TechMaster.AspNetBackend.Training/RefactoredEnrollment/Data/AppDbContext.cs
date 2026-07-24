@@ -1,8 +1,8 @@
-﻿using Drill02_OneToOneStudentProfile.Models;
+﻿
+using Drill02_OneToOneStudentProfile.Models;
 using Drill03_OneToManyInstructorTracks.Models;
 using Drill04_ManyToManyEnrollment.Models;
 using Drill05_PaymentSummary.Models;
-using Drill08_AuditFields.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Drill02_OneToOneStudentProfile.Data
@@ -160,47 +160,8 @@ namespace Drill02_OneToOneStudentProfile.Data
 
             base.OnModelCreating(modelBuilder);
         }
-        public override async Task<int> SaveChangesAsync(
-            CancellationToken cancellationToken = default)
-        {
-            var entries = ChangeTracker
-                .Entries<BaseEntity>();
-
-            foreach (var entry in entries)
-            {
-                if (entry.State == EntityState.Added)
-                {
-                    entry.Entity.CreatedAt = DateTime.UtcNow;
-                }
-
-                if (entry.State == EntityState.Modified)
-                {
-                    entry.Entity.UpdatedAt = DateTime.UtcNow;
-                }
-            }
-
-            return await base.SaveChangesAsync(cancellationToken);
-        }
-        public override int SaveChanges()
-        {
-            var entries = ChangeTracker
-                .Entries<BaseEntity>();
-
-            foreach (var entry in entries)
-            {
-                if (entry.State == EntityState.Added)
-                {
-                    entry.Entity.CreatedAt = DateTime.UtcNow;
-                }
-
-                if (entry.State == EntityState.Modified)
-                {
-                    entry.Entity.UpdatedAt = DateTime.UtcNow;
-                }
-            }
-
-            return base.SaveChanges();
-        }
+        
+        
 
     }
 }

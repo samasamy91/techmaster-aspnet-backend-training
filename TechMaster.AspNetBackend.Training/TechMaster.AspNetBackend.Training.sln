@@ -214,6 +214,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-requirements-to-erd
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-training-center-database-api", "task-03-training-center-database-api", "{2C63DC7E-E9D6-49CC-8657-BDBFC990079F}"
+	ProjectSection(SolutionItems) = preProject
+		README03_3.md = README03_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-querying-filtering-reporting", "task-04-querying-filtering-reporting", "{BBC52524-4938-4364-9DFD-47087A4E0758}"
 EndProject
@@ -224,6 +227,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-ef-core-api-refactor-pack", "task-07-ef-core-api-refactor-pack", "{9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-interview-demo-pack", "task-08-interview-demo-pack", "{248236B0-9FD6-42B7-A343-7A358447135A}"
+	ProjectSection(SolutionItems) = preProject
+		InterviewAnswers_3.txt = InterviewAnswers_3.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterApi", "TrainingCenterApi\TrainingCenterApi.csproj", "{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}"
 EndProject
@@ -295,6 +301,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill10_Pagination", "Drill10_Pagination\Drill10_Pagination.csproj", "{2F0099E1-49D1-4538-8C3C-A95C7398CD05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadEnrollmentOriginalCode", "BadEnrollmentOriginalCode\BadEnrollmentOriginalCode.csproj", "{F95AA692-5CA4-4E52-999F-7773B822F216}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredEnrollment", "RefactoredEnrollment\RefactoredEnrollment.csproj", "{BFCABC78-8F66-4324-ADF8-07BC307B531A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "postman", "postman", "{2146AE22-11D1-4B12-A39D-A4695934364A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "evidence", "evidence", "{7977E8B6-0CC4-4323-9D93-DEFCA40068B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.Api", "TrainingCenter.Api\TrainingCenter.Api.csproj", "{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -402,6 +416,14 @@ Global
 		{F95AA692-5CA4-4E52-999F-7773B822F216}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F95AA692-5CA4-4E52-999F-7773B822F216}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F95AA692-5CA4-4E52-999F-7773B822F216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFCABC78-8F66-4324-ADF8-07BC307B531A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCABC78-8F66-4324-ADF8-07BC307B531A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCABC78-8F66-4324-ADF8-07BC307B531A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCABC78-8F66-4324-ADF8-07BC307B531A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -474,6 +496,10 @@ Global
 		{A70A0C23-402F-40C7-B004-CED42F1935AA} = {00E32190-52B0-4725-A941-EBF691FC9B65}
 		{2F0099E1-49D1-4538-8C3C-A95C7398CD05} = {CA676F52-7060-4CCE-81D4-BD0D5D1F08A0}
 		{F95AA692-5CA4-4E52-999F-7773B822F216} = {9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}
+		{BFCABC78-8F66-4324-ADF8-07BC307B531A} = {9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}
+		{2146AE22-11D1-4B12-A39D-A4695934364A} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
+		{7977E8B6-0CC4-4323-9D93-DEFCA40068B9} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
+		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}

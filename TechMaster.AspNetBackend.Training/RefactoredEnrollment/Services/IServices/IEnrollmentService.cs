@@ -1,6 +1,6 @@
 ﻿namespace RefactoredEnrollment.Services.IServices
 {
-    public class IEnrollmentService
+    public interface IEnrollmentService
     {
     }
 }

@@ -19,6 +19,7 @@ namespace Drill04_ManyToManyEnrollment.Models
         public string Status { get; set; } = "Active";
 
         public DateTime EnrollmentDate { get; set; }
+        public bool IsDeleted { get; set; }
 
         public decimal? FinalGrade { get; set; }
         public PaymentSummary? PaymentSummary { get; set; }
