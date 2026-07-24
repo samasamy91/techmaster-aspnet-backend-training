@@ -207,6 +207,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-ef-core-modeling-drills", "task-01-ef-core-modeling-drills", "{BCA1D789-E4CE-4227-8499-BC25F72AB102}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-requirements-to-erd", "task-02-requirements-to-erd", "{DC587314-1C3B-4F87-9751-A93288D35680}"
+	ProjectSection(SolutionItems) = preProject
+		DesignDetails.md = DesignDetails.md
+		README02_3.md = README02_3.md
+		C:\Users\hp\Downloads\Task_02_ERD.drawio.pdf = C:\Users\hp\Downloads\Task_02_ERD.drawio.pdf
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-training-center-database-api", "task-03-training-center-database-api", "{2C63DC7E-E9D6-49CC-8657-BDBFC990079F}"
 EndProject
@@ -288,6 +293,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill09_ProjectionDTO", "Drill09_ProjectionDTO\Drill09_ProjectionDTO.csproj", "{A70A0C23-402F-40C7-B004-CED42F1935AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill10_Pagination", "Drill10_Pagination\Drill10_Pagination.csproj", "{2F0099E1-49D1-4538-8C3C-A95C7398CD05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadEnrollmentOriginalCode", "BadEnrollmentOriginalCode\BadEnrollmentOriginalCode.csproj", "{F95AA692-5CA4-4E52-999F-7773B822F216}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -391,6 +398,10 @@ Global
 		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F95AA692-5CA4-4E52-999F-7773B822F216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95AA692-5CA4-4E52-999F-7773B822F216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95AA692-5CA4-4E52-999F-7773B822F216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95AA692-5CA4-4E52-999F-7773B822F216}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -462,6 +473,7 @@ Global
 		{14933FE9-8151-4EC3-8272-41CB8632B909} = {309A3643-658A-4F7A-909B-602DE447AF59}
 		{A70A0C23-402F-40C7-B004-CED42F1935AA} = {00E32190-52B0-4725-A941-EBF691FC9B65}
 		{2F0099E1-49D1-4538-8C3C-A95C7398CD05} = {CA676F52-7060-4CCE-81D4-BD0D5D1F08A0}
+		{F95AA692-5CA4-4E52-999F-7773B822F216} = {9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
