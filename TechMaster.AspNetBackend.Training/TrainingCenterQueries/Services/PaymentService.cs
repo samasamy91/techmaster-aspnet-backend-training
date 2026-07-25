@@ -19,17 +19,29 @@ namespace TrainingCenter.Api.Services
         {
             return $"PAY-{DateTime.UtcNow:yyyyMMddHHmmss}-{Guid.NewGuid().ToString("N")[..6].ToUpper()}";
         }
-        public async Task<IEnumerable<PaymentResponse>> GetAllPayment(DateTime? fromDate, DateTime? toDate, PaymentStatus? status)
+        public async Task<IEnumerable<PaymentResponse>> GetAllPayment(DateTime? fromDate, DateTime? toDate, string? status)
         {
-            var query = context.Payments.Where(p => p.PaymentDate > fromDate && p.PaymentDate < toDate && p.PaymentStatus == status).AsQueryable();
+            //Query 13 Payment By Date Range
+            if (fromDate.HasValue && toDate.HasValue && fromDate > toDate)
+            {
+                throw new Exception("'from' date must be earlier than or equal to 'to' date.");
+            }
+            var query = context.Payments.Include(p=>p.Enrollment).ThenInclude(e=>e.Student).AsQueryable();
             if (fromDate.HasValue)
-                query = query.Where(p => p.PaymentDate >= fromDate);
+                query = query.Where(p => p.PaymentDate >= fromDate.Value);
 
             if (toDate.HasValue)
-                query = query.Where(p => p.PaymentDate <= toDate);
+                query = query.Where(p => p.PaymentDate <= toDate.Value);
 
-            if (status.HasValue)
-                query = query.Where(p => p.PaymentStatus == status);
+            if (!string.IsNullOrWhiteSpace(status))
+            {
+                if (!Enum.TryParse<PaymentStatus>(status, true, out var paymentStatus))
+                {
+                    throw new Exception("Invalid payment status.");
+                }
+                query = query.Where(p => p.PaymentStatus == paymentStatus);
+            }
+                
             return await context.Payments.OrderByDescending(p => p.PaymentDate).Select(p => new PaymentResponse
                 {
                     PaymentId = p.PaymentId,

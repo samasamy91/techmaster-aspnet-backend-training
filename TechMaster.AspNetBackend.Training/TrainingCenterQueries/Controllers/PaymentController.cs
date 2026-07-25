@@ -19,7 +19,7 @@ namespace TrainingCenter.Api.Controllers
         }
 
         [HttpGet("payments")]
-        public async Task<IActionResult> GetAll([FromQuery]DateTime? fromDate, [FromQuery] DateTime? toDate, PaymentStatus? status)
+        public async Task<IActionResult> GetAll([FromQuery]DateTime? fromDate, [FromQuery] DateTime? toDate, string? status)
         {
             var payments = await service.GetAllPayment(fromDate,toDate,status);
 

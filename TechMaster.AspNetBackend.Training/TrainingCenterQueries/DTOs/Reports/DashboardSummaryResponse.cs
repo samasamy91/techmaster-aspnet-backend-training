@@ -2,11 +2,10 @@
 {
     public class DashboardSummaryResponse
     {
-        public int TotalStudents { get; set; }
-        public int TotalInstructor {  get; set; }
-        public int TotalTrack {  get; set; }
+        public int StudentsCount { get; set; }
+        public int TracksCount { get; set; }
         public int ActiveEnrollments { get; set; }
-        public decimal TotalRevenue { get; set; }
-
+        public decimal Revenue { get; set; }
+        public int UnpaidCount { get; set; }
     }
 }

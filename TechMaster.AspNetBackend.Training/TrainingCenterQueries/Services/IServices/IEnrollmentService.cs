@@ -6,7 +6,7 @@ namespace TrainingCenter.Api.Services.IServices
 {
     public interface IEnrollmentService
     {
-        Task<IEnumerable<EnrollmentListItemResponse>> GetAllEnrollments(string? status, int? trackId, int? studentId);
+        Task<IEnumerable<EnrollmentDetailsResponse>> GetAllEnrollments(string? status, int? trackId, int? studentId, string? paymentStatus);
         Task<EnrollmentDetailsResponse?> GetEnrollmentById(int id);
         Task<EnrollmentDetailsResponse> CreateEnrollment(CreateEnrollmentRequest request);
         Task<bool> UpdateStatusEnrollment(int id, UpdateEnrollmentStatusRequest request);

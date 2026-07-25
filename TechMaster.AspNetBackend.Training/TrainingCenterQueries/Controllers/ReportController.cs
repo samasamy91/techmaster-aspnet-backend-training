@@ -75,5 +75,35 @@ namespace TrainingCenter.Api.Controllers
                 result,
                 "Tracks with available seats retrieved successfully."));
         }
+        //Query 16
+        [HttpGet("top-tracks")]
+        public async Task<IActionResult> GetTopTracks([FromQuery] int top = 5)
+        {
+            var result = await service.GetTopTracksAsync(top);
+
+            return Ok(ApiResponse<object>.SuccessResponse(
+                result,
+                "Top tracks retrieved successfully."));
+        }
+        //Query 17
+        [HttpGet("instructor-workload")]
+        public async Task<IActionResult> GetInstructorWorkload()
+        {
+            var result = await service.GetInstructorWorkload();
+
+            return Ok(ApiResponse<object>.SuccessResponse(
+                result,
+                "Instructor workload retrieved successfully."));
+        }
+        //Query 18
+        [HttpGet("students-without-payments")]
+        public async Task<IActionResult> GetStudentsWithoutPayments()
+        {
+            var result = await service.GetStudentsWithoutPayments();
+
+            return Ok(ApiResponse<object>.SuccessResponse(
+                result,
+                "Students without payments retrieved successfully."));
+        }
     }
 }

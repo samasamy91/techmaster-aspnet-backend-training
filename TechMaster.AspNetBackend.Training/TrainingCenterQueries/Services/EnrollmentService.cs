@@ -15,10 +15,12 @@ namespace TrainingCenter.Api.Services
         {
             this.context = context;
         }
-        public async Task<IEnumerable<EnrollmentListItemResponse>> GetAllEnrollments(string? status, int? trackId, int? studentId)
+        public async Task<IEnumerable<EnrollmentDetailsResponse>> GetAllEnrollments(string? status, int? trackId, int? studentId,string? paymentStatus)
         {
+            //Query 19 Advanced Enrollment Filter
+            IQueryable<Enrollment> query = context.Enrollments.Include(e => e.Student).Include(e => e.TrainingTrack).Include(e => e.Payments);
             //Query 8 Enrollment List With Details
-            var query = context.Enrollments.Include(e => e.Student).Include(e => e.TrainingTrack).AsQueryable();
+            //var query = context.Enrollments.Include(e => e.Student).Include(e => e.TrainingTrack).AsQueryable();
             
             //Query 9 Filter By Status
 
@@ -38,14 +40,22 @@ namespace TrainingCenter.Api.Services
             {
                 query = query.Where(e => e.StudentId == studentId);
             }
-            return await query.OrderByDescending(e=>e.EnrollmentDate).Select(e => new EnrollmentListItemResponse
+            //Query 19
+            if (!string.IsNullOrWhiteSpace(paymentStatus))
+            {
+                if (!Enum.TryParse<PaymentStatus>(paymentStatus, true, out var payStatus))
+                    throw new Exception("Invalid payment status.");
+
+                query = query.Where(e => e.Payments.Any(p => p.PaymentStatus == payStatus));
+            }
+            return await query.OrderByDescending(e=>e.EnrollmentDate).Select(e => new EnrollmentDetailsResponse
             {
                 EnrollmentId = e.EnrollmentId,
                 StudentName = e.Student.FullName,
                 TrackTitle = e.TrainingTrack.Title,
                 Status = e.Status,
-                EnrollmentDate = e.EnrollmentDate,
                 ProgressPercentage = e.ProgressPercentage,
+                FinalResult = e.FinalResult
             }).ToListAsync();
         }
         public async Task<EnrollmentDetailsResponse?> GetEnrollmentById(int id)
@@ -146,6 +156,7 @@ namespace TrainingCenter.Api.Services
                     FinalResult = e.FinalResult
                 }).ToListAsync();
         }
+        //Query 11 Track Students
         public async Task<IEnumerable<TrackStudentResponse>> GetTrackStudents(int trackId)
         {
             var trackExists =  await context.TrainingTracks.AnyAsync(t => t.TrainingTrackId == trackId && !t.IsDeleted);

@@ -17,9 +17,9 @@ namespace TrainingCenter.Api.Controllers
             this.service = service;
         }
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery]string? status, [FromQuery]int? trackId, [FromQuery]int? studentId)
+        public async Task<IActionResult> GetAll([FromQuery]string? status, [FromQuery]int? trackId, [FromQuery]int? studentId, [FromQuery] string? paymentStatus)
         {
-            var result = await service.GetAllEnrollments(status, trackId, studentId);
+            var result = await service.GetAllEnrollments(status, trackId, studentId,paymentStatus);
             return Ok(ApiResponse<object>.SuccessResponse(result, "Enrollments retrieved successfully"));
         }
         [HttpGet("enrollments/{id:int}")]
