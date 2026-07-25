@@ -7,6 +7,6 @@ namespace TrainingCenter.Api.DTOs.Enrollments
         [Required]
         public int StudentId { get; set; }
         [Required]
-        public int TrainingTrack {  get; set; }
+        public int TrainingTrackId {  get; set; }
     }
 }

@@ -305,8 +305,34 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredEnrollment", "RefactoredEnrollment\RefactoredEnrollment.csproj", "{BFCABC78-8F66-4324-ADF8-07BC307B531A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "postman", "postman", "{2146AE22-11D1-4B12-A39D-A4695934364A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\TechMasterDrive\Phase03\Task03_TrainingCenter.postman_collection.json = ..\..\..\TechMasterDrive\Phase03\Task03_TrainingCenter.postman_collection.json
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "evidence", "evidence", "{7977E8B6-0CC4-4323-9D93-DEFCA40068B9}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\F\screenshots\Screenshot 2026-07-24 183126.png = ..\..\..\..\F\screenshots\Screenshot 2026-07-24 183126.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060226.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060226.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060426.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060426.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060531.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060531.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060546.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060546.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060611.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060611.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060648.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060648.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060810.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060810.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060900.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060900.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060931.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 060931.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061022.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061022.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061126.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061126.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061202.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061202.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061437.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061437.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061651.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061651.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061812.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061812.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061936.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 061936.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062114.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062114.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062508.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062508.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062528.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062528.png
+		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062611.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062611.png
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.Api", "TrainingCenter.Api\TrainingCenter.Api.csproj", "{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}"
 EndProject

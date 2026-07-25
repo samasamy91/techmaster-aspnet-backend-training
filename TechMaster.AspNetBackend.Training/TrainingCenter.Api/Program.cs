@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TrainingCenter.Api.Data;
+using TrainingCenter.Api.Services;
+using TrainingCenter.Api.Services.IServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,13 @@ builder.Services.AddDbContext<AppDbContext>(options => options
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IInstructorService, InstructorService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<ITrackService, TrackService>();
+builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
+builder.Services.AddScoped<IReportService, ReportService>();
 
 var app = builder.Build();
 
