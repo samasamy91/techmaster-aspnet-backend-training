@@ -332,9 +332,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "evidence", "evidence", "{79
 		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062508.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062508.png
 		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062528.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062528.png
 		..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062611.png = ..\..\..\TechMasterDrive\Phase03\Screenshots\Task03\Screenshot 2026-07-25 062611.png
+		..\..\..\..\F\screenshots\Screenshot 2026-07-25 070014.png = ..\..\..\..\F\screenshots\Screenshot 2026-07-25 070014.png
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.Api", "TrainingCenter.Api\TrainingCenter.Api.csproj", "{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterQueries", "TrainingCenterQueries\TrainingCenterQueries.csproj", "{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -450,6 +453,10 @@ Global
 		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -526,6 +533,7 @@ Global
 		{2146AE22-11D1-4B12-A39D-A4695934364A} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
 		{7977E8B6-0CC4-4323-9D93-DEFCA40068B9} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
 		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
+		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B} = {BBC52524-4938-4364-9DFD-47087A4E0758}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
