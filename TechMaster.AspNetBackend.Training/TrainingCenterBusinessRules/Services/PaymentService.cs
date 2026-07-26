@@ -44,7 +44,11 @@ namespace TrainingCenter.Api.Services
             var enrollment = await context.Enrollments.FirstOrDefaultAsync(e => e.EnrollmentId == request.EnrollmentId);
             if (enrollment == null)
                 throw new BadHttpRequestException("Enrollment nor found");
-            
+            //Amount > 0
+            if(request.Amount <= 0)
+            {
+                throw new BadHttpRequestException("Payment amount must be greater than zero");
+            }
             var payment = new Payment
             {
                 EnrollmentId = request.EnrollmentId,
@@ -60,7 +64,23 @@ namespace TrainingCenter.Api.Services
             {
                 enrollment.Status = EnrollmentStatus.Active;
             }
-            context.Payments.Add(payment);
+            //No Overpayment
+            var totalPaid = enrollment.Payments.Where(p => p.PaymentStatus == PaymentStatus.Paid).Sum(p => p.Amount);
+            decimal remaining = enrollment.ProgressPercentage - totalPaid;
+            if(request.Amount > remaining)
+            {
+                throw new BadHttpRequestException("Payment exceeds remaining amount");
+            }
+            //Failed Payment
+            if(payment.PaymentStatus == PaymentStatus.Paid)
+            {
+                enrollment.Status = EnrollmentStatus.Active;
+            }
+            if (payment.PaymentStatus == PaymentStatus.Failed)
+            {
+                enrollment.Status = EnrollmentStatus.Pending;
+            }
+                context.Payments.Add(payment);
             await context.SaveChangesAsync();
             return new PaymentResponse
             {
