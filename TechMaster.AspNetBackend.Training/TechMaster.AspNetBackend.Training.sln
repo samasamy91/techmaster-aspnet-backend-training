@@ -224,6 +224,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-querying-filtering-
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-business-rules-data-integrity", "task-05-business-rules-data-integrity", "{B81E88C3-769F-46BD-B366-2B0A3843603C}"
+	ProjectSection(SolutionItems) = preProject
+		README05_3.md = README05_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-production-hosting-remote-database", "task-06-production-hosting-remote-database", "{43F09CEE-A591-48F3-91EB-7FB9EF22D858}"
 EndProject

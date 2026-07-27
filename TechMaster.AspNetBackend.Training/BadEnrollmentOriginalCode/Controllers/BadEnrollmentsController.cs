@@ -1,9 +1,10 @@
 ﻿
-using Drill02_OneToOneStudentProfile.Data;
-using Drill04_ManyToManyEnrollment.Models;
-using Drill05_PaymentSummary.Models;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TrainingCenter.Api.Data;
+using TrainingCenter.Api.Entities;
+using TrainingCenter.Api.Entities.Enums;
 [ApiController]
 [Route("api/[controller]")]
 public class BadEnrollmentsController : ControllerBase
@@ -21,7 +22,7 @@ public class BadEnrollmentsController : ControllerBase
         var data = _db.Enrollments
         .Include(e => e.Student)
         .Include(e => e.TrainingTrack)
-        .Include(e => e.PaymentSummary)
+        .Include(e => e.Payments)
         .ToList();
         return Ok(data);
     }
@@ -33,7 +34,7 @@ public class BadEnrollmentsController : ControllerBase
         // Problem: duplicate active enrollments are allowed.
         // Problem: track capacity is ignored.
         enrollment.EnrollmentDate = DateTime.Now;
-        enrollment.Status = "Active";
+        enrollment.Status = EnrollmentStatus.Active;
         _db.Enrollments.Add(enrollment);
         _db.SaveChanges();
         return Ok(enrollment);
@@ -43,21 +44,21 @@ public class BadEnrollmentsController : ControllerBase
     {
         // Problem: query duplicated and not async.
         var enrollment = _db.Enrollments
-        .Include(x => x.PaymentSummary)
-        .FirstOrDefault(x => x.Id == enrollmentId);
+        .Include(x => x.Payments)
+        .FirstOrDefault(x => x.EnrollmentId == enrollmentId);
         if (enrollment == null)
         {
             return Ok("not found"); // wrong status code
         }
         // Problem: no validation for negative or zero amount.
-        var payment = new PaymentSummary
+        var payment = new Payment
         {
             EnrollmentId = enrollmentId,
             Amount = amount,
             PaymentDate = DateTime.Now,
-            PaymentStatus = PaymentStatus.Done
+            PaymentStatus = PaymentStatus.Paid
         };
-        _db.PaymentSummary.Add(payment);
+        _db.Payments.Add(payment);
         _db.SaveChanges();
         return Ok(payment);
     }

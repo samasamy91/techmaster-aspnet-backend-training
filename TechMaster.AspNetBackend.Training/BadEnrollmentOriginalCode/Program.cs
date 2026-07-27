@@ -1,5 +1,5 @@
-using Drill02_OneToOneStudentProfile.Data;
 using Microsoft.EntityFrameworkCore;
+using TrainingCenter.Api.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
