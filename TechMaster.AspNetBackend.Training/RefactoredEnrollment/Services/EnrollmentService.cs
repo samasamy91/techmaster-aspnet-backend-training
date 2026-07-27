@@ -73,7 +73,42 @@ namespace TrainingCenter.Api.Services
                 Status = enrollment.Status,
             };
         }
-        
+        public async Task<PaymentResponse> Pay(int enrollmentId, decimal amount)
+        {
+            if (amount < 0)
+                throw new BadHttpRequestException("Payment amount must be greater than 0");
+            var enrollment = await context.Enrollments.Include(e => e.Payments).FirstOrDefaultAsync(e => e.EnrollmentId == enrollmentId && !e.IsDeleted);
+            if (enrollment == null)
+                throw new KeyNotFoundException("Enrollment not found");
+            Payment payment;
+            if(enrollment.Payments == null)
+            {
+                payment = new Payment
+                {
+                    EnrollmentId = enrollmentId,
+                    Amount = amount,
+                    PaymentDate = DateTime.UtcNow,
+                    PaymentStatus = PaymentStatus.Paid
+                };
+                context.Payments.Add(payment);
+            }
+            else
+            {
+                payment = (Payment)enrollment.Payments;
+                payment.Amount += amount;
+                payment.PaymentDate = DateTime.UtcNow;
+                payment.PaymentStatus = PaymentStatus.Paid;
+            }
+            await context.SaveChangesAsync();
+            return new PaymentResponse
+            {
+                Id = payment.PaymentId,
+                Amount = payment.Amount,
+                PaymentDate = payment.PaymentDate,
+                PaymentStatus = PaymentStatus.Paid,
+                EnrollmentId = payment.EnrollmentId
+            };
+        }
         
     }
 }
