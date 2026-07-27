@@ -1,16 +1,12 @@
-﻿using TrainingCenter.Api.DTOs.Enrollments;
+﻿using RefactoredEnrollment.DTOs.Enrollments;
+using TrainingCenter.Api.Common;
 using TrainingCenter.Api.Entities.Enums;
 
 namespace TrainingCenter.Api.Services.IServices
 {
     public interface IEnrollmentService
     {
-        Task<IEnumerable<EnrollmentDetailsResponse>> GetAllEnrollments(string? status,
-            int? trackId, int? studentId);
-        Task<EnrollmentDetailsResponse?> GetEnrollmentById(int id);
-        Task<EnrollmentDetailsResponse> CreateEnrollment(CreateEnrollmentRequest request);
-        Task<bool> UpdateStatusEnrollment(int id, UpdateEnrollmentStatusRequest request);
-        Task<IEnumerable<EnrollmentDetailsResponse>> GetStudentEnrollments(int studentId);
-        Task<IEnumerable<EnrollmentDetailsResponse>> GetTrackStudents(int trackId);
+        Task<PaginationResult<EnrollmentList>> GetAll(int page, int pageSize);
+        Task<EnrollmentResponse> Create(CreateEnrollmentRequest request);
     }
 }
