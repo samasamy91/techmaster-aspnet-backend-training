@@ -1,5 +1,5 @@
-using RefactoredEnrollment.Services;
-using RefactoredEnrollment.Services.IServices;
+using TrainingCenter.Api.Services;
+using TrainingCenter.Api.Services.IServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
 
