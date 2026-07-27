@@ -47,6 +47,13 @@ namespace TrainingCenter.Api.Services
             e.Status == EnrollmentStatus.Active);
             if (exists)
                 throw new BadHttpRequestException("Student already has active enrollment in this track");
+            
+            int activeStudents = await context.Enrollments.CountAsync(e=>e.TrainingTrackId == request.TrainingTrackId && 
+            e.Status == EnrollmentStatus.Active && !e.IsDeleted);
+
+            if (activeStudents >= track.Capacity)
+                throw new BadHttpRequestException("Training track has reached its capacity");
+
             var enrollment = new Enrollment
             {
                 StudentId = request.StudentId,
