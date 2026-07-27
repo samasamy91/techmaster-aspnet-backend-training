@@ -109,6 +109,15 @@ namespace TrainingCenter.Api.Services
                 EnrollmentId = payment.EnrollmentId
             };
         }
-        
+        public async Task<bool> Delete(int id)
+        {
+            var enrollment = await context.Enrollments.FirstOrDefaultAsync(e => e.EnrollmentId == id && !e.IsDeleted);
+            if (enrollment == null)
+                return false;
+            enrollment.IsDeleted = true;
+            enrollment.DeletedAt = DateTime.UtcNow;
+            await context.SaveChangesAsync();
+            return true;
+        }
     }
 }
