@@ -8,5 +8,7 @@ namespace TrainingCenter.Api.Services.IServices
     {
         Task<PaginationResult<EnrollmentList>> GetAll(int page, int pageSize);
         Task<EnrollmentResponse> Create(CreateEnrollmentRequest request);
+        Task<PaymentResponse> Pay(int enrollmentId, decimal amount);
+        Task<bool> Delete(int id);
     }
 }

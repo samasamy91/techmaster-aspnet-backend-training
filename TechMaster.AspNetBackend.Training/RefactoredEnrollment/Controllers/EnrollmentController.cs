@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RefactoredEnrollment.DTOs.Enrollments;
 using TrainingCenter.Api.Common;
-using TrainingCenter.Api.DTOs.Enrollments;
 using TrainingCenter.Api.Services;
 using TrainingCenter.Api.Services.IServices;
 
@@ -17,50 +17,52 @@ namespace TrainingCenter.Api.Controllers
             this.service = service;
         }
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery]string? status, [FromQuery]int? trackId, [FromQuery]int? studentId)
+        public async Task<IActionResult> GetAll(int page = 1, int pageSize = 10)
         {
-            var result = await service.GetAllEnrollments(status, trackId, studentId);
+            var result = await service.GetAll(page, pageSize);
             return Ok(ApiResponse<object>.SuccessResponse(result, "Enrollments retrieved successfully"));
-        }
-        [HttpGet("enrollments/{id:int}")]
-        public async Task<IActionResult> GetById(int id)
-        {
-            var enrollment = await service.GetEnrollmentById(id);
-            if(enrollment == null)
-            {
-                return NotFound(ApiResponse<string>.FailureResponse("Enrollment not found"));
-            }
-            return Ok(ApiResponse<object>.SuccessResponse(enrollment, "Enrollment retrieved successfully"));
-
         }
         [HttpPost]
         public async Task<IActionResult> Create(CreateEnrollmentRequest request)
         {
-            var enrollment = await service.CreateEnrollment(request);
-            return CreatedAtAction(nameof(GetById), new { id = enrollment.EnrollmentId },
-                ApiResponse<object>.SuccessResponse(enrollment, "Student enrolled successfully"));
+            try
+            {
+                var enrollment = await service.Create(request);
+                return CreatedAtAction(nameof(GetAll), new { id = enrollment.Id },
+                    ApiResponse<object>.SuccessResponse(enrollment, "Enrollment created successfully"));
+            }catch(KeyNotFoundException ex)
+            {
+                return NotFound(ApiResponse<string>.FailureResponse(ex.Message));
+            }
+            catch(BadHttpRequestException ex)
+            {
+                return BadRequest(ApiResponse<string>.FailureResponse(ex.Message));
+            }
         }
-        [HttpPut("enrollments/{id:int}/status")]
-        public async Task<IActionResult> UpdateStatus(int id,UpdateEnrollmentStatusRequest request)
+        [HttpPost("{enrollmentId}/payment")]
+        public async Task<IActionResult> Pay(int enrollmentId, PaymentRequest request)
         {
-            var updated = await service.UpdateStatusEnrollment(id, request);
-            if (!updated)
+            try
+            {
+                var payment = await service.Pay(enrollmentId, request.Amount);
+                return Ok(ApiResponse<object>.SuccessResponse(payment, "Payment processed successfully"));
+            }catch (KeyNotFoundException ex)
+            {
+                return NotFound(ApiResponse<string>.FailureResponse(ex.Message));
+            }catch(BadHttpRequestException ex)
+            {
+                return BadRequest(ApiResponse<string>.FailureResponse(ex.Message));
+            }
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await service.Delete(id);
+            if (!deleted)
             {
                 return NotFound(ApiResponse<string>.FailureResponse("Enrollment not found"));
             }
-            return Ok(ApiResponse<string>.SuccessResponse(null, "Enrollment status updated successfully"));
-        }
-        [HttpGet("students/{id:int}/enrollments")]
-        public async Task<IActionResult> GetStudentEnrollments(int id)
-        {
-            var result = await service.GetStudentEnrollments(id);
-            return Ok(ApiResponse<object>.SuccessResponse(result, "Student enrollment history successfully"));
-        }
-        [HttpGet("tracks/{id:int}/students")]
-        public async Task<IActionResult> GetTrackStudents(int id)
-        {
-            var result = await service.GetTrackStudents(id);
-            return Ok(ApiResponse<object>.SuccessResponse(result, "Track students retrieved successfully"));
+            return Ok(ApiResponse<string>.SuccessResponse("Enrollment deleted successfully"));
         }
     }
 }
