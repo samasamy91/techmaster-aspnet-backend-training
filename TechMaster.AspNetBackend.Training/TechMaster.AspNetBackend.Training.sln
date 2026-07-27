@@ -231,6 +231,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-production-hosting-remote-database", "task-06-production-hosting-remote-database", "{43F09CEE-A591-48F3-91EB-7FB9EF22D858}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-ef-core-api-refactor-pack", "task-07-ef-core-api-refactor-pack", "{9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}"
+	ProjectSection(SolutionItems) = preProject
+		README07_3.md = README07_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-interview-demo-pack", "task-08-interview-demo-pack", "{248236B0-9FD6-42B7-A343-7A358447135A}"
 	ProjectSection(SolutionItems) = preProject
@@ -346,6 +349,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterQueries", "TrainingCenterQueries\TrainingCenterQueries.csproj", "{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterBusinessRules", "TrainingCenterBusinessRules\TrainingCenterBusinessRules.csproj", "{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostingAndRemoteDatabase", "HostingAndRemoteDatabase\HostingAndRemoteDatabase.csproj", "{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -469,6 +474,10 @@ Global
 		{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -547,6 +556,7 @@ Global
 		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
 		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B} = {BBC52524-4938-4364-9DFD-47087A4E0758}
 		{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7} = {B81E88C3-769F-46BD-B366-2B0A3843603C}
+		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523} = {43F09CEE-A591-48F3-91EB-7FB9EF22D858}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
