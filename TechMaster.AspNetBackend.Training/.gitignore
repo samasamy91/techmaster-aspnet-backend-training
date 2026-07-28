@@ -19,3 +19,6 @@ packages/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Production configuration
+appsettings.Production.json
