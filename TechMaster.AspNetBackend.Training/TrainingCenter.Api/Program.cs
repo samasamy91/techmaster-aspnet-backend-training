@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TrainingCenter.Api.Data;
+using TrainingCenter.Api.Middlewares;
 using TrainingCenter.Api.Services;
 using TrainingCenter.Api.Services.IServices;
 
@@ -35,6 +36,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.MapControllers();
 
