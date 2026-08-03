@@ -43,8 +43,8 @@ namespace TrainingCenter.Api.Services
                     TrainingTrackId = t.TrainingTrackId,
                     TrackTitle = t.Title,
                     Capacity = t.Capacity,
-                    EnrolledStudents = t.Enrollments.Count,
-                    AvailableSeats = t.Capacity - t.Enrollments.Count
+                    EnrolledStudents = t.Enrollments.Count(e=>e.Status == EnrollmentStatus.Active),
+                    AvailableSeats = t.Capacity - t.Enrollments.Count(e=>e.Status == EnrollmentStatus.Active)
                 }).ToListAsync();
         }
         public async Task<RevenueSummaryResponse> GetRevenueSummary()
