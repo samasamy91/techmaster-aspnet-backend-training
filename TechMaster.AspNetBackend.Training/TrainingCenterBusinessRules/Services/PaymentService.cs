@@ -30,7 +30,7 @@ namespace TrainingCenter.Api.Services
 
             if (status.HasValue)
                 query = query.Where(p => p.PaymentStatus == status);
-            return await context.Payments.OrderByDescending(p => p.PaymentDate).Select(p => new PaymentResponse
+            return await query.OrderByDescending(p => p.PaymentDate).Select(p => new PaymentResponse
                 {
                     PaymentId = p.PaymentId,
                     Amount = p.Amount,
