@@ -41,15 +41,14 @@ namespace TrainingCenter.Api.Services
                 }
                 query = query.Where(p => p.PaymentStatus == paymentStatus);
             }
-                
-            return await context.Payments.OrderByDescending(p => p.PaymentDate).Select(p => new PaymentResponse
-                {
-                    PaymentId = p.PaymentId,
-                    Amount = p.Amount,
-                    PaymentDate = p.PaymentDate,
-                    PaymentStatus = p.PaymentStatus,
-                    ReferenceNumber = p.ReferenceNumber
-                }).ToListAsync();
+            return await query.Select(p => new PaymentResponse
+            {
+                PaymentId = p.PaymentId,
+                Amount = p.Amount,
+                PaymentDate = p.PaymentDate,
+                PaymentStatus = p.PaymentStatus,
+                ReferenceNumber = p.ReferenceNumber
+            }).ToListAsync();
         }
         public async Task<PaymentResponse> CreatePayment(CreatePaymentRequest request)
         {
