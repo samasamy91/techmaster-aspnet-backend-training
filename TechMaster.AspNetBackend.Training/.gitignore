@@ -23,4 +23,6 @@ Thumbs.db
 # Production configuration
 appsettings.Production.json
 
+
+appsettings.json
 .vs/
