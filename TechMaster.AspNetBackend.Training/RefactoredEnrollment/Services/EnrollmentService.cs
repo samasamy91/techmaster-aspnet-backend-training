@@ -39,6 +39,13 @@ namespace TrainingCenter.Api.Services
             var student = await context.Students.FirstOrDefaultAsync(s => s.StudentId == request.StudentId && !s.IsDeleted);
             if (student == null)
                 throw new KeyNotFoundException("Student not found");
+
+            if (student.IsDeleted)
+                throw new KeyNotFoundException("Student deleted.");
+
+            if (!student.IsActive)
+                throw new KeyNotFoundException("Student not active.");
+
             var track = await context.TrainingTracks.Include(t => t.Enrollments).FirstOrDefaultAsync(t => t.TrainingTrackId == request.TrainingTrackId);
             if (track == null)
                 throw new KeyNotFoundException("Training track not found");

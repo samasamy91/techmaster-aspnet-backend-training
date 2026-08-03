@@ -77,6 +77,12 @@ namespace TrainingCenter.Api.Services
             if (student == null)
                 throw new Exception("Student not found.");
 
+            if(student.IsDeleted)
+                throw new Exception("Student deleted.");
+            
+            if(!student.IsActive)
+                throw new Exception("Student not active.");
+
             var track = await context.TrainingTracks.Include(t => t.Enrollments).FirstOrDefaultAsync(t =>
                     t.TrainingTrackId == request.TrainingTrackId && !t.IsDeleted);
 
