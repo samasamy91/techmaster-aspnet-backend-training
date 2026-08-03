@@ -27,7 +27,7 @@ namespace TrainingCenter.Api.Entities
         public bool IsDeleted { get; set; } = false;
         public Instructor Instructor { get; set; } = null!;
         public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
-
+        public decimal Fee { get; set; }
 
     }
 }

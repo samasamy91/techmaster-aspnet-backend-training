@@ -33,7 +33,7 @@ namespace TrainingCenter.Api.Services
                     StudentName = e.Student.FullName,
                     TrackTitle = e.TrainingTrack.Title,
                     TotalPaid = e.Payments.Where(p => p.PaymentStatus == PaymentStatus.Paid).Sum(p => p.Amount),
-                    RemainingAmount = Math.Max(0, 1000 - e.Payments.Where(p => p.PaymentStatus == PaymentStatus.Paid).Sum(p => p.Amount))
+                    RemainingAmount = Math.Max(0, e.TrainingTrack.Fee - e.Payments.Where(p => p.PaymentStatus == PaymentStatus.Paid).Sum(p => p.Amount)) 
                 }).Where(x => x.RemainingAmount > 0).ToListAsync();
         }
         public async Task<IEnumerable<TrackCapacityResponse>> GetTrackCapacity()

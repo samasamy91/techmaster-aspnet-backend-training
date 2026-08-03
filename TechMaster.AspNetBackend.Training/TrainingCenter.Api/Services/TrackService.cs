@@ -91,6 +91,7 @@ namespace TrainingCenter.Api.Services
                 Title = request.Title,
                 Code = request.Code,
                 Level = request.Level,
+                Fee = request.Fee,
                 Description = request.Description,
                 Capacity = request.Capacity,
                 StartDate = request.StartDate,
