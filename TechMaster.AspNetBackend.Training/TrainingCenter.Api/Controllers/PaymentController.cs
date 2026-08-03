@@ -7,7 +7,7 @@ using TrainingCenter.Api.Services.IServices;
 
 namespace TrainingCenter.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/payments")]
     [ApiController]
     public class PaymentController : ControllerBase
     {

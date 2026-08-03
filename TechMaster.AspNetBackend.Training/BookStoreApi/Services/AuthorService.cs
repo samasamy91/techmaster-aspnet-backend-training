@@ -8,6 +8,7 @@ namespace BookStoreApi.Services
     public class AuthorService : IAuthorService
     {
         private readonly List<Author> authors = AuthorsData.authors;
+
         //public AuthorService()
         //{
         //    authors.AddRange(new[]
@@ -71,7 +72,7 @@ namespace BookStoreApi.Services
         }
         public bool Delete(int id)
         {
-            var author = authors.FirstOrDefault(a=>a.AuthorId == id);
+            var author = authors.FirstOrDefault(a => a.AuthorId == id);
             if (author == null)
                 return false;
             authors.Remove(author);

@@ -15,5 +15,6 @@ namespace TrainingCenter.Api.DTOs.Tracks
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int InstructorId { get; set; }
+        public decimal Fee { get; set; }
     }
 }

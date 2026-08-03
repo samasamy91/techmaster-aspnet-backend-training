@@ -75,6 +75,10 @@ namespace TrainingCenter.Api.Services
 
             if (track == null)
                 throw new Exception("Training track not found.");
+            if (track.Status == TrackStatus.Cancelled)
+                throw new Exception("Cannot enroll in a cancelled track");
+            if (track.Status == TrackStatus.Completed)
+                throw new Exception("Cannot enroll in a completed track");
 
             bool alreadyEnrolled = await context.Enrollments.AnyAsync(e =>
                     e.StudentId == request.StudentId && e.TrainingTrackId == request.TrainingTrackId && 
@@ -85,7 +89,7 @@ namespace TrainingCenter.Api.Services
 
             if (track.Enrollments.Count(e=>e.Status == EnrollmentStatus.Active) >= track.Capacity)
                 throw new Exception("Track capacity has been reached.");
-
+          
             var enrollment = new Enrollment
             {
                 StudentId = request.StudentId,

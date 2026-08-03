@@ -7,5 +7,6 @@
         public string Country { get; set; }
         public DateTime? BirthDate { get; set; }
         public DateTime CreatedAt { get; set; }
+
     }
 }
