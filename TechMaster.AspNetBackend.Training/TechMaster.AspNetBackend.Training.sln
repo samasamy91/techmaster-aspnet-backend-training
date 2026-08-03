@@ -229,6 +229,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-business-rules-data
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-production-hosting-remote-database", "task-06-production-hosting-remote-database", "{43F09CEE-A591-48F3-91EB-7FB9EF22D858}"
+	ProjectSection(SolutionItems) = preProject
+		README06_3.md = README06_3.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-ef-core-api-refactor-pack", "task-07-ef-core-api-refactor-pack", "{9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}"
 	ProjectSection(SolutionItems) = preProject

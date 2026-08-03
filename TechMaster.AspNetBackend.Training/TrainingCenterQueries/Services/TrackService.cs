@@ -78,7 +78,7 @@ namespace TrainingCenter.Api.Services
         
         public async Task<TrackDetailsResponse?> GetTrackById(int id)
         {
-            return await context.TrainingTracks.Include(t => t.Instructor).Include(t => t.Enrollments).Where(t => !t.IsDeleted).Select(t=>new TrackDetailsResponse
+            return await context.TrainingTracks.Include(t => t.Instructor).Include(t => t.Enrollments).Where(t => t.TrainingTrackId == id && !t.IsDeleted).Select(t=>new TrackDetailsResponse
             {
                 TrainingTrackId = t.TrainingTrackId,
                 Title = t.Title,
