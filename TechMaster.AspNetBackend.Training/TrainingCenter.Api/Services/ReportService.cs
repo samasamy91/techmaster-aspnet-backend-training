@@ -49,14 +49,12 @@ namespace TrainingCenter.Api.Services
         }
         public async Task<RevenueSummaryResponse> GetRevenueSummary()
         {
-            var payments = context.Payments.Where(p => p.PaymentStatus == PaymentStatus.Paid);
-            var totalRevenue = await payments.SumAsync(p => (decimal?)p.Amount) ?? 0;
-            var totalPayments = await payments.CountAsync();
             return new RevenueSummaryResponse
             {
-                TotalRevenue = totalRevenue,
-                TotalPayments = totalPayments,
-                AveragePayment = totalPayments == 0 ? 0 : totalRevenue / totalPayments
+                TotalRevenue = await context.Payments.Where(p => p.PaymentStatus == PaymentStatus.Paid).SumAsync(p => (decimal?)p.Amount) ?? 0,
+                PaidCount = await context.Payments.CountAsync(p => p.PaymentStatus == PaymentStatus.Paid),
+                PendingCount = await context.Payments.CountAsync(p => p.PaymentStatus == PaymentStatus.Pending),
+                FailedCount = await context.Payments.CountAsync(p => p.PaymentStatus == PaymentStatus.Failed)
             };
         }
         public async Task<IEnumerable<RevenueByTrackResponse>> GetRevenueByTrack()
