@@ -43,7 +43,7 @@ namespace TrainingCenter.Api.Services
         {
             var enrollment = await context.Enrollments.FirstOrDefaultAsync(e => e.EnrollmentId == request.EnrollmentId);
             if (enrollment == null)
-                throw new Exception("Enrollment nor found");
+                throw new Exception("Enrollment not found");
             var payment = new Payment
             {
                 EnrollmentId = request.EnrollmentId,
@@ -54,6 +54,10 @@ namespace TrainingCenter.Api.Services
                 ReferenceNumber = GenerateReferenceNumber(),
                 Notes = request.Notes
             };
+            if (payment.PaymentStatus == PaymentStatus.Paid)
+            {
+                payment.Enrollment.Status = EnrollmentStatus.Active;
+            }
             context.Payments.Add(payment);
             await context.SaveChangesAsync();
             return new PaymentResponse
@@ -83,6 +87,10 @@ namespace TrainingCenter.Api.Services
             if (payment == null)
                 return false;
             payment.PaymentStatus = request.PaymentStatus;
+            if (payment.PaymentStatus == PaymentStatus.Paid)
+            {
+                payment.Enrollment.Status = EnrollmentStatus.Active;
+            }
             await context.SaveChangesAsync();
             return true;
         }

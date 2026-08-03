@@ -45,7 +45,8 @@ namespace TrainingCenter.Api.Services
         }
         public async Task<EnrollmentDetailsResponse?> GetEnrollmentById(int id)
         {
-            return await context.Enrollments.Include(e => e.Student).Include(e => e.TrainingTrack).Where(e => e.EnrollmentId == id).Select(e => new EnrollmentDetailsResponse
+            return await context.Enrollments.Include(e => e.Student).Include(e => e.TrainingTrack).Where(e => e.EnrollmentId == id)
+                .Select(e => new EnrollmentDetailsResponse
             {
                 EnrollmentId = e.EnrollmentId,
                 StudentName = e.Student.FullName,
@@ -76,12 +77,13 @@ namespace TrainingCenter.Api.Services
                 throw new Exception("Training track not found.");
 
             bool alreadyEnrolled = await context.Enrollments.AnyAsync(e =>
-                    e.StudentId == request.StudentId && e.TrainingTrackId == request.TrainingTrackId);
+                    e.StudentId == request.StudentId && e.TrainingTrackId == request.TrainingTrackId && 
+                    e.Status == EnrollmentStatus.Active);
 
             if (alreadyEnrolled)
-                throw new Exception("Student is already enrolled in this track.");
+                throw new Exception("Student already has active enrollment in this track.");
 
-            if (track.Enrollments.Count >= track.Capacity)
+            if (track.Enrollments.Count(e=>e.Status == EnrollmentStatus.Active) >= track.Capacity)
                 throw new Exception("Track capacity has been reached.");
 
             var enrollment = new Enrollment
@@ -89,7 +91,7 @@ namespace TrainingCenter.Api.Services
                 StudentId = request.StudentId,
                 TrainingTrackId = request.TrainingTrackId,
                 EnrollmentDate = DateTime.UtcNow,
-                Status = EnrollmentStatus.Active,
+                Status = EnrollmentStatus.Pending,
                 ProgressPercentage = 0,
                 CreatedAt = DateTime.UtcNow
             };
@@ -122,6 +124,9 @@ namespace TrainingCenter.Api.Services
                         request.Status == EnrollmentStatus.Active ||
                         request.Status == EnrollmentStatus.Cancelled,
 
+                    EnrollmentStatus.Completed =>
+                        request.Status == EnrollmentStatus.Active ||
+                        request.Status == EnrollmentStatus.Cancelled,
                     _ => false
                 };
 
