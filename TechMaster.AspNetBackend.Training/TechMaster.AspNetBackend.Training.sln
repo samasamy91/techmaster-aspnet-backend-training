@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "phase-02-web-api-basics", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "phase-03-database-and-ef-core", "phase-03-database-and-ef-core", "{1F421612-D266-40B9-9B90-3BC406C757AB}"
 	ProjectSection(SolutionItems) = preProject
-		README_3.md = README_3.md
+		phase-03-database-and-ef-core\README_3.md = phase-03-database-and-ef-core\README_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "phase-04-auth-and-architecture", "phase-04-auth-and-architecture", "{70D5CB64-BEF0-4D05-952A-BB4A31235A65}"
@@ -18,134 +18,109 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "final-capstone", "final-cap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-00-setup", "task-00-setup", "{8A23ED36-C277-4B87-AB0D-B8EDB2F84719}"
 	ProjectSection(SolutionItems) = preProject
-		README00_1.md = README00_1.md
+		phase-01-backend-foundations\task-00-setup\README00_1.md = phase-01-backend-foundations\task-00-setup\README00_1.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-csharp-drills", "task-01-csharp-drills", "{C4442D49-FAB2-4F55-88E1-784F78726413}"
 	ProjectSection(SolutionItems) = preProject
-		README01_1.md = README01_1.md
+		phase-01-backend-foundations\task-01-csharp-drills\README01_1.md = phase-01-backend-foundations\task-01-csharp-drills\README01_1.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-bank-account-system", "task-02-bank-account-system", "{7D998A09-4069-45A2-A7C1-5A8765291C24}"
 	ProjectSection(SolutionItems) = preProject
-		README02_1.md = README02_1.md
+		phase-01-backend-foundations\task-02-bank-account-system\README02_1.md = phase-01-backend-foundations\task-02-bank-account-system\README02_1.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-employee-management", "task-03-employee-management", "{9A12EEEE-DFDC-4F43-8836-25EBF914E22A}"
 	ProjectSection(SolutionItems) = preProject
-		README03_1.txt = README03_1.txt
+		phase-01-backend-foundations\task-03-employee-management\README03_1.txt = phase-01-backend-foundations\task-03-employee-management\README03_1.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-product-catalog-linq", "task-04-product-catalog-linq", "{49DE1708-8E41-4780-9AB7-B7806545080C}"
 	ProjectSection(SolutionItems) = preProject
-		README04_1.txt = README04_1.txt
+		phase-01-backend-foundations\task-04-product-catalog-linq\README04_1.txt = phase-01-backend-foundations\task-04-product-catalog-linq\README04_1.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-debug-refactor-pack", "task-05-debug-refactor-pack", "{3A236EC0-0B34-49D9-8C11-D3C42BCD0293}"
 	ProjectSection(SolutionItems) = preProject
-		README05_1.txt = README05_1.txt
+		phase-01-backend-foundations\task-05-debug-refactor-pack\README05_1.txt = phase-01-backend-foundations\task-05-debug-refactor-pack\README05_1.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-sql-erd-starter", "task-06-sql-erd-starter", "{C13196F6-6F7F-482A-8B49-B9E23A015CAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-interview-answers", "task-07-interview-answers", "{33A7234C-CEE7-4DE8-BF62-FD177DFC6E1B}"
 	ProjectSection(SolutionItems) = preProject
-		InterviewAnswers.txt = InterviewAnswers.txt
+		phase-01-backend-foundations\task-07-interview-answers\InterviewAnswers.txt = phase-01-backend-foundations\task-07-interview-answers\InterviewAnswers.txt
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01.CSharpDrills", "Task01.CSharpDrills\Task01.CSharpDrills.csproj", "{8B6FBFB7-67DF-4F2F-9BC3-68766A17F924}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountSystem", "BankAccountSystem\BankAccountSystem.csproj", "{85C5F145-16BB-4B32-8AF9-39C003322114}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement", "EmployeeManagement\EmployeeManagement.csproj", "{81B653F3-E718-4162-8541-16BA706C77AA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogLinq", "ProductCatalogLinq\ProductCatalogLinq.csproj", "{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "original-bad-code", "original-bad-code\original-bad-code.csproj", "{E9130865-19FA-4A2B-8740-754E3C3CCF34}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactored", "Refactored\Refactored.csproj", "{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06A-LibraryManagement", "Task06A-LibraryManagement", "{E882CCB0-66A6-4839-A203-0FFB09D40D01}"
 	ProjectSection(SolutionItems) = preProject
-		LibraryManagement.sql = LibraryManagement.sql
-		Queries.sql = Queries.sql
-		README06A_1.txt = README06A_1.txt
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06A-LibraryManagement\LibraryManagement.sql = phase-01-backend-foundations\task-06-sql-erd-starter\Task06A-LibraryManagement\LibraryManagement.sql
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06A-LibraryManagement\Queries.sql = phase-01-backend-foundations\task-06-sql-erd-starter\Task06A-LibraryManagement\Queries.sql
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06A-LibraryManagement\README06A_1.txt = phase-01-backend-foundations\task-06-sql-erd-starter\Task06A-LibraryManagement\README06A_1.txt
 		C:\Users\hp\Downloads\Scenario A - Library Management System.drawio (1).pdf = C:\Users\hp\Downloads\Scenario A - Library Management System.drawio (1).pdf
-		SeedData.sql = SeedData.sql
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06A-LibraryManagement\SeedData.sql = phase-01-backend-foundations\task-06-sql-erd-starter\Task06A-LibraryManagement\SeedData.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06B-SimpleStore", "Task06B-SimpleStore", "{DA9A2DF8-29F8-4A96-8EA8-8ACD19A4A072}"
 	ProjectSection(SolutionItems) = preProject
-		QueriesB.sql = QueriesB.sql
-		README06B_1.txt = README06B_1.txt
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06B-SimpleStore\QueriesB.sql = phase-01-backend-foundations\task-06-sql-erd-starter\Task06B-SimpleStore\QueriesB.sql
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06B-SimpleStore\README06B_1.txt = phase-01-backend-foundations\task-06-sql-erd-starter\Task06B-SimpleStore\README06B_1.txt
 		C:\Users\hp\Downloads\Scenario B - Simple Store & Orders System.drawio.pdf = C:\Users\hp\Downloads\Scenario B - Simple Store & Orders System.drawio.pdf
-		SeedDataB.sql = SeedDataB.sql
-		SimpleStore.sql = SimpleStore.sql
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06B-SimpleStore\SeedDataB.sql = phase-01-backend-foundations\task-06-sql-erd-starter\Task06B-SimpleStore\SeedDataB.sql
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06B-SimpleStore\SimpleStore.sql = phase-01-backend-foundations\task-06-sql-erd-starter\Task06B-SimpleStore\SimpleStore.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06C- TrainingCenterRegistration", "Task06C- TrainingCenterRegistration", "{713820CA-81ED-4E42-862B-83D15655D7CA}"
 	ProjectSection(SolutionItems) = preProject
-		QueriesC.sql = QueriesC.sql
-		README06C_1.txt = README06C_1.txt
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06C-TrainingCenterRegistration\QueriesC.sql = phase-01-backend-foundations\task-06-sql-erd-starter\Task06C-TrainingCenterRegistration\QueriesC.sql
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06C-TrainingCenterRegistration\README06C_1.txt = phase-01-backend-foundations\task-06-sql-erd-starter\Task06C-TrainingCenterRegistration\README06C_1.txt
 		C:\Users\hp\Downloads\Scenario C - Training Center Registration System.drawio.pdf = C:\Users\hp\Downloads\Scenario C - Training Center Registration System.drawio.pdf
-		SeedDataC.sql = SeedDataC.sql
-		TrainingCenter.sql = TrainingCenter.sql
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06C-TrainingCenterRegistration\SeedDataC.sql = phase-01-backend-foundations\task-06-sql-erd-starter\Task06C-TrainingCenterRegistration\SeedDataC.sql
+		phase-01-backend-foundations\task-06-sql-erd-starter\Task06C-TrainingCenterRegistration\TrainingCenter.sql = phase-01-backend-foundations\task-06-sql-erd-starter\Task06C-TrainingCenterRegistration\TrainingCenter.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-00-api-setup", "task-00-api-setup", "{D2363AEE-31D1-44B2-B7FE-936E6E5911E9}"
 	ProjectSection(SolutionItems) = preProject
-		README00_2.md = README00_2.md
+		phase-02-web-api-basics\task-00-api-setup\README00_2.md = phase-02-web-api-basics\task-00-api-setup\README00_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-rest-routing-drills", "task-01-rest-routing-drills", "{8356867F-AB3B-43DA-8670-7234615FEA4E}"
 	ProjectSection(SolutionItems) = preProject
-		README01_2.md = README01_2.md
+		phase-02-web-api-basics\task-01-rest-routing-drills\README01_2.md = phase-02-web-api-basics\task-01-rest-routing-drills\README01_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-student-management-api", "task-02-student-management-api", "{07C632DD-459D-4D26-AB73-CCD0E83C8F07}"
 	ProjectSection(SolutionItems) = preProject
-		README02_2.md = README02_2.md
+		phase-02-web-api-basics\task-02-student-management-api\README02_2.md = phase-02-web-api-basics\task-02-student-management-api\README02_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-products-categories-api", "task-03-products-categories-api", "{B6770E0A-CE15-42AA-9846-B785E19958A9}"
 	ProjectSection(SolutionItems) = preProject
-		README03_2.md = README03_2.md
+		phase-02-web-api-basics\task-03-products-categories-api\README03_2.md = phase-02-web-api-basics\task-03-products-categories-api\README03_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-book-store-api", "task-04-book-store-api", "{57254EC2-D2AF-46A0-B196-66ED7BA9F8EA}"
 	ProjectSection(SolutionItems) = preProject
-		README04_2.md = README04_2.md
+		phase-02-web-api-basics\task-04-book-store-api\README04_2.md = phase-02-web-api-basics\task-04-book-store-api\README04_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-postman-swagger-evidence", "task-05-postman-swagger-evidence", "{9D9DE862-0864-416C-B07D-1FA133C3E1C3}"
 	ProjectSection(SolutionItems) = preProject
-		README05_2.md = README05_2.md
+		phase-02-web-api-basics\task-05-postman-swagger-evidence\README05_2.md = phase-02-web-api-basics\task-05-postman-swagger-evidence\README05_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-api-standards-refactor-pack", "task-06-api-standards-refactor-pack", "{12B5913F-941C-4E43-9C72-8CBD69EEB9C1}"
 	ProjectSection(SolutionItems) = preProject
-		README06_2.md = README06_2.md
+		phase-02-web-api-basics\task-06-api-standards-refactor-pack\README06_2.md = phase-02-web-api-basics\task-06-api-standards-refactor-pack\README06_2.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-interview-answers", "task-07-interview-answers", "{90956488-B566-4FB3-8AEF-724FC0AD1741}"
 	ProjectSection(SolutionItems) = preProject
-		InterviewAnswers_2.txt = InterviewAnswers_2.txt
+		phase-02-web-api-basics\task-07-interview-answers\InterviewAnswers_2.txt = phase-02-web-api-basics\task-07-interview-answers\InterviewAnswers_2.txt
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagementAPI", "StudentManagementAPI\StudentManagementAPI.csproj", "{57F39DF8-1042-4284-833C-DA7253960DEE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRoutingDrills", "ApiRoutingDrills\ApiRoutingDrills.csproj", "{C60DE103-FD7B-4459-8BAC-97695CB674B3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagement", "StudentManagement\StudentManagement.csproj", "{57DC6F09-0846-4941-B991-FC92E0DDE3E5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsCategoriesApi", "ProductsCategoriesApi\ProductsCategoriesApi.csproj", "{25F43963-309C-411A-BBEB-E0C1D332DF70}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreApi", "BookStoreApi\BookStoreApi.csproj", "{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Evidence", "Evidence", "{3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC}"
 EndProject
@@ -195,126 +170,96 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{328C
 		..\..\..\..\F\screenshots\Screenshot 2026-07-15 211049.png = ..\..\..\..\F\screenshots\Screenshot 2026-07-15 211049.png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginalBadCode", "OriginalBadCode\OriginalBadCode.csproj", "{FB591BC0-B741-4E99-910D-17E106C79D62}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredApi", "RefactoredApi\RefactoredApi.csproj", "{3E95D753-7A2E-4AF7-915F-9C9938142C7C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-00-workspace-environment-setup", "task-00-workspace-environment-setup", "{7168466D-997C-4CDB-8789-0B77D3207A84}"
 	ProjectSection(SolutionItems) = preProject
-		README00_3.md = README00_3.md
+		phase-03-database-and-ef-core\task-00-workspace-environment-setup\README00_3.md = phase-03-database-and-ef-core\task-00-workspace-environment-setup\README00_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-ef-core-modeling-drills", "task-01-ef-core-modeling-drills", "{BCA1D789-E4CE-4227-8499-BC25F72AB102}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-requirements-to-erd", "task-02-requirements-to-erd", "{DC587314-1C3B-4F87-9751-A93288D35680}"
 	ProjectSection(SolutionItems) = preProject
-		DesignDetails.md = DesignDetails.md
-		README02_3.md = README02_3.md
+		phase-03-database-and-ef-core\task-02-requirements-to-erd\DesignDetails.md = phase-03-database-and-ef-core\task-02-requirements-to-erd\DesignDetails.md
+		phase-03-database-and-ef-core\task-02-requirements-to-erd\README02_3.md = phase-03-database-and-ef-core\task-02-requirements-to-erd\README02_3.md
 		C:\Users\hp\Downloads\Task_02_ERD.drawio.pdf = C:\Users\hp\Downloads\Task_02_ERD.drawio.pdf
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-training-center-database-api", "task-03-training-center-database-api", "{2C63DC7E-E9D6-49CC-8657-BDBFC990079F}"
 	ProjectSection(SolutionItems) = preProject
-		README03_3.md = README03_3.md
+		phase-03-database-and-ef-core\task-03-training-center-database-api\README03_3.md = phase-03-database-and-ef-core\task-03-training-center-database-api\README03_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-querying-filtering-reporting", "task-04-querying-filtering-reporting", "{BBC52524-4938-4364-9DFD-47087A4E0758}"
 	ProjectSection(SolutionItems) = preProject
-		README04_3.md = README04_3.md
+		phase-03-database-and-ef-core\task-04-querying-filtering-reporting\README04_3.md = phase-03-database-and-ef-core\task-04-querying-filtering-reporting\README04_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-business-rules-data-integrity", "task-05-business-rules-data-integrity", "{B81E88C3-769F-46BD-B366-2B0A3843603C}"
 	ProjectSection(SolutionItems) = preProject
-		README05_3.md = README05_3.md
+		phase-03-database-and-ef-core\task-05-business-rules-data-integrity\README05_3.md = phase-03-database-and-ef-core\task-05-business-rules-data-integrity\README05_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-production-hosting-remote-database", "task-06-production-hosting-remote-database", "{43F09CEE-A591-48F3-91EB-7FB9EF22D858}"
 	ProjectSection(SolutionItems) = preProject
-		README06_3.md = README06_3.md
+		phase-03-database-and-ef-core\task-06-production-hosting-remote-database\README06_3.md = phase-03-database-and-ef-core\task-06-production-hosting-remote-database\README06_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-ef-core-api-refactor-pack", "task-07-ef-core-api-refactor-pack", "{9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}"
 	ProjectSection(SolutionItems) = preProject
-		README07_3.md = README07_3.md
+		phase-03-database-and-ef-core\task-07-ef-core-api-refactor-pack\README07_3.md = phase-03-database-and-ef-core\task-07-ef-core-api-refactor-pack\README07_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-interview-demo-pack", "task-08-interview-demo-pack", "{248236B0-9FD6-42B7-A343-7A358447135A}"
 	ProjectSection(SolutionItems) = preProject
-		InterviewAnswers_3.txt = InterviewAnswers_3.txt
+		phase-03-database-and-ef-core\task-08-interview-demo-pack\InterviewAnswers_3.txt = phase-03-database-and-ef-core\task-08-interview-demo-pack\InterviewAnswers_3.txt
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterApi", "TrainingCenterApi\TrainingCenterApi.csproj", "{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill01_DbContextFirstMigration", "Drill01_DbContextFirstMigration", "{11DC8B18-2D19-46D6-A5AF-C9D5E9568468}"
 	ProjectSection(SolutionItems) = preProject
-		README01_1_3.md = README01_1_3.md
+		phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill01_DbContextFirstMigration\README01_1_3.md = phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill01_DbContextFirstMigration\README01_1_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill02_OneToOneStudentProfile", "Drill02_OneToOneStudentProfile", "{C02723C0-4C48-43A1-8C4E-F53F69C795ED}"
 	ProjectSection(SolutionItems) = preProject
-		README01_2_3.md = README01_2_3.md
+		phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill02_OneToOneStudentProfile\README01_2_3.md = phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill02_OneToOneStudentProfile\README01_2_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill03_OneToManyInstructorTracks", "Drill03_OneToManyInstructorTracks", "{BDFA20E6-53AD-4FC7-936B-CEC181608A0E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill04_ManyToManyEnrollment", "Drill04_ManyToManyEnrollment", "{7395BA71-A530-4AD3-8D79-77E3DF5A268B}"
 	ProjectSection(SolutionItems) = preProject
-		README01_4_3.md = README01_4_3.md
+		phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill04_ManyToManyEnrollment\README01_4_3.md = phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill04_ManyToManyEnrollment\README01_4_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill05_PaymentSummary", "Drill05_PaymentSummary", "{7631F356-9B48-45A8-9282-0EB51B3F9456}"
 	ProjectSection(SolutionItems) = preProject
-		README01_5_3.md = README01_5_3.md
+		phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill05_PaymentSummary\README01_5_3.md = phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill05_PaymentSummary\README01_5_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill06_SeedData", "Drill06_SeedData", "{27695FBA-894C-4A13-8109-838204AA196D}"
 	ProjectSection(SolutionItems) = preProject
-		README01_6_3.md = README01_6_3.md
+		phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill06_SeedData\README01_6_3.md = phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill06_SeedData\README01_6_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill07_SoftDelete", "Drill07_SoftDelete", "{F135C37D-08EF-423A-BC77-A573F6C05F71}"
 	ProjectSection(SolutionItems) = preProject
-		README01_7_3.md = README01_7_3.md
+		phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill07_SoftDelete\README01_7_3.md = phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill07_SoftDelete\README01_7_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill08_AuditFields", "Drill08_AuditFields", "{309A3643-658A-4F7A-909B-602DE447AF59}"
 	ProjectSection(SolutionItems) = preProject
-		README01_8_3.md = README01_8_3.md
+		phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill08_AuditFields\README01_8_3.md = phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill08_AuditFields\README01_8_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill09_ProjectionDTO", "Drill09_ProjectionDTO", "{00E32190-52B0-4725-A941-EBF691FC9B65}"
 	ProjectSection(SolutionItems) = preProject
-		README01_9_3.md = README01_9_3.md
+		phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill09_ProjectionDTO\README01_9_3.md = phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill09_ProjectionDTO\README01_9_3.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill10_Pagination", "Drill10_Pagination", "{CA676F52-7060-4CCE-81D4-BD0D5D1F08A0}"
 	ProjectSection(SolutionItems) = preProject
-		README01_10_3.md = README01_10_3.md
+		phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill10_Pagination\README01_10_3.md = phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill10_Pagination\README01_10_3.md
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill01_DbContextFirstMigration", "Drill01_DbContextFirstMigration\Drill01_DbContextFirstMigration.csproj", "{9386D664-9C66-4228-8561-044D0D0755CE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill02_OneToOneStudentProfile", "Drill02_OneToOneStudentProfile\Drill02_OneToOneStudentProfile.csproj", "{6F9EC978-0A51-4327-817A-D263B81ACA2F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill03_OneToManyInstructorTracks", "Drill03_OneToManyInstructorTracks\Drill03_OneToManyInstructorTracks.csproj", "{C57F8B99-6276-499A-89E9-E60A8F7310CA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill04_ManyToManyEnrollment", "Drill04_ManyToManyEnrollment\Drill04_ManyToManyEnrollment.csproj", "{FA721521-F541-4BD3-AFEF-CDF6F4908E39}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill05_PaymentSummary", "Drill05_PaymentSummary\Drill05_PaymentSummary.csproj", "{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill06_SeedData", "Drill06_SeedData\Drill06_SeedData.csproj", "{302B7920-F90B-444A-A8F1-1949610CB8F9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill07_SoftDelete", "Drill07_SoftDelete\Drill07_SoftDelete.csproj", "{D893C303-F7A5-488D-86F7-E29F6E60C981}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill08_AuditFields", "Drill08_AuditFields\Drill08_AuditFields.csproj", "{14933FE9-8151-4EC3-8272-41CB8632B909}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill09_ProjectionDTO", "Drill09_ProjectionDTO\Drill09_ProjectionDTO.csproj", "{A70A0C23-402F-40C7-B004-CED42F1935AA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill10_Pagination", "Drill10_Pagination\Drill10_Pagination.csproj", "{2F0099E1-49D1-4538-8C3C-A95C7398CD05}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadEnrollmentOriginalCode", "BadEnrollmentOriginalCode\BadEnrollmentOriginalCode.csproj", "{F95AA692-5CA4-4E52-999F-7773B822F216}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredEnrollment", "RefactoredEnrollment\RefactoredEnrollment.csproj", "{BFCABC78-8F66-4324-ADF8-07BC307B531A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "postman", "postman", "{2146AE22-11D1-4B12-A39D-A4695934364A}"
 	ProjectSection(SolutionItems) = preProject
@@ -347,13 +292,65 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "evidence", "evidence", "{79
 		..\..\..\..\F\screenshots\Screenshot 2026-07-25 070014.png = ..\..\..\..\F\screenshots\Screenshot 2026-07-25 070014.png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.Api", "TrainingCenter.Api\TrainingCenter.Api.csproj", "{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01.CSharpDrills", "phase-01-backend-foundations\task-01-csharp-drills\Task01.CSharpDrills\Task01.CSharpDrills.csproj", "{12EA1BF1-249A-DFDC-D55C-DAE482459303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterQueries", "TrainingCenterQueries\TrainingCenterQueries.csproj", "{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountSystem", "phase-01-backend-foundations\task-02-bank-account-system\BankAccountSystem\BankAccountSystem.csproj", "{253560A8-4E11-5AE3-477C-62A45C83F7D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterBusinessRules", "TrainingCenterBusinessRules\TrainingCenterBusinessRules.csproj", "{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement", "phase-01-backend-foundations\task-03-employee-management\EmployeeManagement\EmployeeManagement.csproj", "{C6F8A90D-ED72-47C0-5AD6-2A6E365D2DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostingAndRemoteDatabase", "HostingAndRemoteDatabase\HostingAndRemoteDatabase.csproj", "{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogLinq", "phase-01-backend-foundations\task-04-product-catalog-linq\ProductCatalogLinq\ProductCatalogLinq.csproj", "{C8B80450-1658-DD13-25D3-44C4EBAED761}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "original-bad-code", "phase-01-backend-foundations\task-05-debug-refactor-pack\original-bad-code\original-bad-code.csproj", "{4845DBDD-1E0D-1A81-7FAE-8C09F94E19A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactored", "phase-01-backend-foundations\task-05-debug-refactor-pack\Refactored\Refactored.csproj", "{7C0B306B-E0EF-F469-2D9C-0CC346CD3B34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagementAPI", "phase-02-web-api-basics\task-00-api-setup\StudentManagementAPI\StudentManagementAPI.csproj", "{8C10CDA6-C2B4-78F5-4701-3356FBFFB37E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRoutingDrills", "phase-02-web-api-basics\task-01-rest-routing-drills\ApiRoutingDrills\ApiRoutingDrills.csproj", "{929CE73E-C941-B0E4-D2A7-CD0D978788BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagement", "phase-02-web-api-basics\task-02-student-management-api\StudentManagement\StudentManagement.csproj", "{2E867AAD-6B5A-41B4-2E85-7384D159F154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsCategoriesApi", "phase-02-web-api-basics\task-03-products-categories-api\ProductsCategoriesApi\ProductsCategoriesApi.csproj", "{DD7A1A91-F3FB-7D80-523D-124ED8238A69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreApi", "phase-02-web-api-basics\task-04-book-store-api\BookStoreApi\BookStoreApi.csproj", "{B1FD1463-CE3B-4D9F-9328-126963792E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginalBadCode", "phase-02-web-api-basics\task-06-api-standards-refactor-pack\OriginalBadCode\OriginalBadCode.csproj", "{C9EC48DB-769E-A22A-44B6-CF5493784255}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredApi", "phase-02-web-api-basics\task-06-api-standards-refactor-pack\RefactoredApi\RefactoredApi.csproj", "{527C566E-B645-C1ED-C0D6-7E3BFC169C60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterApi", "phase-03-database-and-ef-core\task-00-workspace-environment-setup\TrainingCenterApi\TrainingCenterApi.csproj", "{4DBAE812-134F-3AAA-A5DD-C61271A81A7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill01_DbContextFirstMigration", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill01_DbContextFirstMigration\Drill01_DbContextFirstMigration\Drill01_DbContextFirstMigration.csproj", "{43A8FC34-7B23-D6AB-4A2C-43EA6C779EA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill02_OneToOneStudentProfile", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill02_OneToOneStudentProfile\Drill02_OneToOneStudentProfile\Drill02_OneToOneStudentProfile.csproj", "{F0605889-BF7F-21DC-7E0E-BA11077EE52A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill03_OneToManyInstructorTracks", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill03_OneToManyInstructorTracks\Drill03_OneToManyInstructorTracks\Drill03_OneToManyInstructorTracks.csproj", "{B5F42091-D92F-7314-278F-C7373C792AC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill04_ManyToManyEnrollment", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill04_ManyToManyEnrollment\Drill04_ManyToManyEnrollment\Drill04_ManyToManyEnrollment.csproj", "{0770AF36-379C-395F-D769-39B660629CE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill05_PaymentSummary", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill05_PaymentSummary\Drill05_PaymentSummary\Drill05_PaymentSummary.csproj", "{F3150CA9-D973-6F3A-BDF4-AF1BF50F0262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill06_SeedData", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill06_SeedData\Drill06_SeedData\Drill06_SeedData.csproj", "{73EE0278-16C2-E6F1-8CDE-19E47886A7D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill07_SoftDelete", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill07_SoftDelete\Drill07_SoftDelete\Drill07_SoftDelete.csproj", "{FD8BE877-2D27-7C83-A996-EF8B185ED663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill08_AuditFields", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill08_AuditFields\Drill08_AuditFields\Drill08_AuditFields.csproj", "{25B5AD39-D352-8403-77CA-D4EE8C050A56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill09_ProjectionDTO", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill09_ProjectionDTO\Drill09_ProjectionDTO\Drill09_ProjectionDTO.csproj", "{76F07021-3226-512E-505B-75D417213F60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill10_Pagination", "phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill10_Pagination\Drill10_Pagination\Drill10_Pagination.csproj", "{3F418AC5-4AEA-066F-A9F1-937413353641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenter.Api", "phase-03-database-and-ef-core\task-03-training-center-database-api\TrainingCenter.Api\TrainingCenter.Api.csproj", "{7D3F4BBD-0FD5-8257-04B9-E77FA232644F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterQueries", "phase-03-database-and-ef-core\task-04-querying-filtering-reporting\TrainingCenterQueries\TrainingCenterQueries.csproj", "{3021F75A-B2EE-033A-D4FE-43DE4AE530CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterBusinessRules", "phase-03-database-and-ef-core\task-05-business-rules-data-integrity\TrainingCenterBusinessRules\TrainingCenterBusinessRules.csproj", "{6D71059A-BEA1-2A29-2CA0-2C1C546348FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostingAndRemoteDatabase", "phase-03-database-and-ef-core\task-06-production-hosting-remote-database\HostingAndRemoteDatabase\HostingAndRemoteDatabase.csproj", "{16458773-443A-3948-8ED2-C1F74CFCD243}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadEnrollmentOriginalCode", "phase-03-database-and-ef-core\task-07-ef-core-api-refactor-pack\BadEnrollmentOriginalCode\BadEnrollmentOriginalCode.csproj", "{5997F6EA-D757-8C3C-5EE8-A15D14956CB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredEnrollment", "phase-03-database-and-ef-core\task-07-ef-core-api-refactor-pack\RefactoredEnrollment\RefactoredEnrollment.csproj", "{556D593E-4A57-12AA-A3D9-A98C788BDBBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -361,126 +358,126 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8B6FBFB7-67DF-4F2F-9BC3-68766A17F924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B6FBFB7-67DF-4F2F-9BC3-68766A17F924}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B6FBFB7-67DF-4F2F-9BC3-68766A17F924}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B6FBFB7-67DF-4F2F-9BC3-68766A17F924}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85C5F145-16BB-4B32-8AF9-39C003322114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85C5F145-16BB-4B32-8AF9-39C003322114}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85C5F145-16BB-4B32-8AF9-39C003322114}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85C5F145-16BB-4B32-8AF9-39C003322114}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81B653F3-E718-4162-8541-16BA706C77AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81B653F3-E718-4162-8541-16BA706C77AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81B653F3-E718-4162-8541-16BA706C77AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81B653F3-E718-4162-8541-16BA706C77AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9130865-19FA-4A2B-8740-754E3C3CCF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9130865-19FA-4A2B-8740-754E3C3CCF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9130865-19FA-4A2B-8740-754E3C3CCF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9130865-19FA-4A2B-8740-754E3C3CCF34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{57F39DF8-1042-4284-833C-DA7253960DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57F39DF8-1042-4284-833C-DA7253960DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57F39DF8-1042-4284-833C-DA7253960DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57F39DF8-1042-4284-833C-DA7253960DEE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C60DE103-FD7B-4459-8BAC-97695CB674B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C60DE103-FD7B-4459-8BAC-97695CB674B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C60DE103-FD7B-4459-8BAC-97695CB674B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C60DE103-FD7B-4459-8BAC-97695CB674B3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{57DC6F09-0846-4941-B991-FC92E0DDE3E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57DC6F09-0846-4941-B991-FC92E0DDE3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57DC6F09-0846-4941-B991-FC92E0DDE3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57DC6F09-0846-4941-B991-FC92E0DDE3E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25F43963-309C-411A-BBEB-E0C1D332DF70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB591BC0-B741-4E99-910D-17E106C79D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB591BC0-B741-4E99-910D-17E106C79D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB591BC0-B741-4E99-910D-17E106C79D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB591BC0-B741-4E99-910D-17E106C79D62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E95D753-7A2E-4AF7-915F-9C9938142C7C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9386D664-9C66-4228-8561-044D0D0755CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9386D664-9C66-4228-8561-044D0D0755CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9386D664-9C66-4228-8561-044D0D0755CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9386D664-9C66-4228-8561-044D0D0755CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F9EC978-0A51-4327-817A-D263B81ACA2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F9EC978-0A51-4327-817A-D263B81ACA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F9EC978-0A51-4327-817A-D263B81ACA2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F9EC978-0A51-4327-817A-D263B81ACA2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C57F8B99-6276-499A-89E9-E60A8F7310CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C57F8B99-6276-499A-89E9-E60A8F7310CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C57F8B99-6276-499A-89E9-E60A8F7310CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C57F8B99-6276-499A-89E9-E60A8F7310CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA721521-F541-4BD3-AFEF-CDF6F4908E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA721521-F541-4BD3-AFEF-CDF6F4908E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA721521-F541-4BD3-AFEF-CDF6F4908E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA721521-F541-4BD3-AFEF-CDF6F4908E39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726}.Release|Any CPU.Build.0 = Release|Any CPU
-		{302B7920-F90B-444A-A8F1-1949610CB8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{302B7920-F90B-444A-A8F1-1949610CB8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{302B7920-F90B-444A-A8F1-1949610CB8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{302B7920-F90B-444A-A8F1-1949610CB8F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D893C303-F7A5-488D-86F7-E29F6E60C981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D893C303-F7A5-488D-86F7-E29F6E60C981}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D893C303-F7A5-488D-86F7-E29F6E60C981}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D893C303-F7A5-488D-86F7-E29F6E60C981}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14933FE9-8151-4EC3-8272-41CB8632B909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14933FE9-8151-4EC3-8272-41CB8632B909}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14933FE9-8151-4EC3-8272-41CB8632B909}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14933FE9-8151-4EC3-8272-41CB8632B909}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A70A0C23-402F-40C7-B004-CED42F1935AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A70A0C23-402F-40C7-B004-CED42F1935AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A70A0C23-402F-40C7-B004-CED42F1935AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A70A0C23-402F-40C7-B004-CED42F1935AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F0099E1-49D1-4538-8C3C-A95C7398CD05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F95AA692-5CA4-4E52-999F-7773B822F216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F95AA692-5CA4-4E52-999F-7773B822F216}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F95AA692-5CA4-4E52-999F-7773B822F216}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F95AA692-5CA4-4E52-999F-7773B822F216}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFCABC78-8F66-4324-ADF8-07BC307B531A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFCABC78-8F66-4324-ADF8-07BC307B531A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFCABC78-8F66-4324-ADF8-07BC307B531A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFCABC78-8F66-4324-ADF8-07BC307B531A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12EA1BF1-249A-DFDC-D55C-DAE482459303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12EA1BF1-249A-DFDC-D55C-DAE482459303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12EA1BF1-249A-DFDC-D55C-DAE482459303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12EA1BF1-249A-DFDC-D55C-DAE482459303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{253560A8-4E11-5AE3-477C-62A45C83F7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{253560A8-4E11-5AE3-477C-62A45C83F7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{253560A8-4E11-5AE3-477C-62A45C83F7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{253560A8-4E11-5AE3-477C-62A45C83F7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F8A90D-ED72-47C0-5AD6-2A6E365D2DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F8A90D-ED72-47C0-5AD6-2A6E365D2DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F8A90D-ED72-47C0-5AD6-2A6E365D2DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F8A90D-ED72-47C0-5AD6-2A6E365D2DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8B80450-1658-DD13-25D3-44C4EBAED761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B80450-1658-DD13-25D3-44C4EBAED761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B80450-1658-DD13-25D3-44C4EBAED761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B80450-1658-DD13-25D3-44C4EBAED761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4845DBDD-1E0D-1A81-7FAE-8C09F94E19A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4845DBDD-1E0D-1A81-7FAE-8C09F94E19A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4845DBDD-1E0D-1A81-7FAE-8C09F94E19A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4845DBDD-1E0D-1A81-7FAE-8C09F94E19A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C0B306B-E0EF-F469-2D9C-0CC346CD3B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C0B306B-E0EF-F469-2D9C-0CC346CD3B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C0B306B-E0EF-F469-2D9C-0CC346CD3B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0B306B-E0EF-F469-2D9C-0CC346CD3B34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C10CDA6-C2B4-78F5-4701-3356FBFFB37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C10CDA6-C2B4-78F5-4701-3356FBFFB37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C10CDA6-C2B4-78F5-4701-3356FBFFB37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C10CDA6-C2B4-78F5-4701-3356FBFFB37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929CE73E-C941-B0E4-D2A7-CD0D978788BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929CE73E-C941-B0E4-D2A7-CD0D978788BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929CE73E-C941-B0E4-D2A7-CD0D978788BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929CE73E-C941-B0E4-D2A7-CD0D978788BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E867AAD-6B5A-41B4-2E85-7384D159F154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E867AAD-6B5A-41B4-2E85-7384D159F154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E867AAD-6B5A-41B4-2E85-7384D159F154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E867AAD-6B5A-41B4-2E85-7384D159F154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD7A1A91-F3FB-7D80-523D-124ED8238A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD7A1A91-F3FB-7D80-523D-124ED8238A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD7A1A91-F3FB-7D80-523D-124ED8238A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD7A1A91-F3FB-7D80-523D-124ED8238A69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1FD1463-CE3B-4D9F-9328-126963792E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FD1463-CE3B-4D9F-9328-126963792E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FD1463-CE3B-4D9F-9328-126963792E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FD1463-CE3B-4D9F-9328-126963792E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9EC48DB-769E-A22A-44B6-CF5493784255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9EC48DB-769E-A22A-44B6-CF5493784255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9EC48DB-769E-A22A-44B6-CF5493784255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9EC48DB-769E-A22A-44B6-CF5493784255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{527C566E-B645-C1ED-C0D6-7E3BFC169C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{527C566E-B645-C1ED-C0D6-7E3BFC169C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{527C566E-B645-C1ED-C0D6-7E3BFC169C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{527C566E-B645-C1ED-C0D6-7E3BFC169C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DBAE812-134F-3AAA-A5DD-C61271A81A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBAE812-134F-3AAA-A5DD-C61271A81A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBAE812-134F-3AAA-A5DD-C61271A81A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBAE812-134F-3AAA-A5DD-C61271A81A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43A8FC34-7B23-D6AB-4A2C-43EA6C779EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A8FC34-7B23-D6AB-4A2C-43EA6C779EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A8FC34-7B23-D6AB-4A2C-43EA6C779EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A8FC34-7B23-D6AB-4A2C-43EA6C779EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0605889-BF7F-21DC-7E0E-BA11077EE52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0605889-BF7F-21DC-7E0E-BA11077EE52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0605889-BF7F-21DC-7E0E-BA11077EE52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0605889-BF7F-21DC-7E0E-BA11077EE52A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5F42091-D92F-7314-278F-C7373C792AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5F42091-D92F-7314-278F-C7373C792AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5F42091-D92F-7314-278F-C7373C792AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5F42091-D92F-7314-278F-C7373C792AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0770AF36-379C-395F-D769-39B660629CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0770AF36-379C-395F-D769-39B660629CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0770AF36-379C-395F-D769-39B660629CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0770AF36-379C-395F-D769-39B660629CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3150CA9-D973-6F3A-BDF4-AF1BF50F0262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3150CA9-D973-6F3A-BDF4-AF1BF50F0262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3150CA9-D973-6F3A-BDF4-AF1BF50F0262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3150CA9-D973-6F3A-BDF4-AF1BF50F0262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73EE0278-16C2-E6F1-8CDE-19E47886A7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73EE0278-16C2-E6F1-8CDE-19E47886A7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73EE0278-16C2-E6F1-8CDE-19E47886A7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73EE0278-16C2-E6F1-8CDE-19E47886A7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8BE877-2D27-7C83-A996-EF8B185ED663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8BE877-2D27-7C83-A996-EF8B185ED663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8BE877-2D27-7C83-A996-EF8B185ED663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8BE877-2D27-7C83-A996-EF8B185ED663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25B5AD39-D352-8403-77CA-D4EE8C050A56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25B5AD39-D352-8403-77CA-D4EE8C050A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25B5AD39-D352-8403-77CA-D4EE8C050A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25B5AD39-D352-8403-77CA-D4EE8C050A56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F07021-3226-512E-505B-75D417213F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F07021-3226-512E-505B-75D417213F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76F07021-3226-512E-505B-75D417213F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F07021-3226-512E-505B-75D417213F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F418AC5-4AEA-066F-A9F1-937413353641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F418AC5-4AEA-066F-A9F1-937413353641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F418AC5-4AEA-066F-A9F1-937413353641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F418AC5-4AEA-066F-A9F1-937413353641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D3F4BBD-0FD5-8257-04B9-E77FA232644F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3F4BBD-0FD5-8257-04B9-E77FA232644F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3F4BBD-0FD5-8257-04B9-E77FA232644F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3F4BBD-0FD5-8257-04B9-E77FA232644F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3021F75A-B2EE-033A-D4FE-43DE4AE530CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3021F75A-B2EE-033A-D4FE-43DE4AE530CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3021F75A-B2EE-033A-D4FE-43DE4AE530CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3021F75A-B2EE-033A-D4FE-43DE4AE530CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D71059A-BEA1-2A29-2CA0-2C1C546348FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D71059A-BEA1-2A29-2CA0-2C1C546348FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D71059A-BEA1-2A29-2CA0-2C1C546348FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D71059A-BEA1-2A29-2CA0-2C1C546348FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16458773-443A-3948-8ED2-C1F74CFCD243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16458773-443A-3948-8ED2-C1F74CFCD243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16458773-443A-3948-8ED2-C1F74CFCD243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16458773-443A-3948-8ED2-C1F74CFCD243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5997F6EA-D757-8C3C-5EE8-A15D14956CB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5997F6EA-D757-8C3C-5EE8-A15D14956CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5997F6EA-D757-8C3C-5EE8-A15D14956CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5997F6EA-D757-8C3C-5EE8-A15D14956CB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556D593E-4A57-12AA-A3D9-A98C788BDBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556D593E-4A57-12AA-A3D9-A98C788BDBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556D593E-4A57-12AA-A3D9-A98C788BDBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556D593E-4A57-12AA-A3D9-A98C788BDBBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -494,12 +491,6 @@ Global
 		{3A236EC0-0B34-49D9-8C11-D3C42BCD0293} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{C13196F6-6F7F-482A-8B49-B9E23A015CAC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{33A7234C-CEE7-4DE8-BF62-FD177DFC6E1B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{8B6FBFB7-67DF-4F2F-9BC3-68766A17F924} = {C4442D49-FAB2-4F55-88E1-784F78726413}
-		{85C5F145-16BB-4B32-8AF9-39C003322114} = {7D998A09-4069-45A2-A7C1-5A8765291C24}
-		{81B653F3-E718-4162-8541-16BA706C77AA} = {9A12EEEE-DFDC-4F43-8836-25EBF914E22A}
-		{F6FABB66-0ABD-4261-BCC2-6BBFE06C7954} = {49DE1708-8E41-4780-9AB7-B7806545080C}
-		{E9130865-19FA-4A2B-8740-754E3C3CCF34} = {3A236EC0-0B34-49D9-8C11-D3C42BCD0293}
-		{862A6278-26F6-40CD-AF6F-EAB8DD3D9A0C} = {3A236EC0-0B34-49D9-8C11-D3C42BCD0293}
 		{E882CCB0-66A6-4839-A203-0FFB09D40D01} = {C13196F6-6F7F-482A-8B49-B9E23A015CAC}
 		{DA9A2DF8-29F8-4A96-8EA8-8ACD19A4A072} = {C13196F6-6F7F-482A-8B49-B9E23A015CAC}
 		{713820CA-81ED-4E42-862B-83D15655D7CA} = {C13196F6-6F7F-482A-8B49-B9E23A015CAC}
@@ -511,17 +502,10 @@ Global
 		{9D9DE862-0864-416C-B07D-1FA133C3E1C3} = {DEDB3C4A-5A26-40D8-AEE8-D743574CD9DE}
 		{12B5913F-941C-4E43-9C72-8CBD69EEB9C1} = {DEDB3C4A-5A26-40D8-AEE8-D743574CD9DE}
 		{90956488-B566-4FB3-8AEF-724FC0AD1741} = {DEDB3C4A-5A26-40D8-AEE8-D743574CD9DE}
-		{57F39DF8-1042-4284-833C-DA7253960DEE} = {D2363AEE-31D1-44B2-B7FE-936E6E5911E9}
-		{C60DE103-FD7B-4459-8BAC-97695CB674B3} = {8356867F-AB3B-43DA-8670-7234615FEA4E}
-		{57DC6F09-0846-4941-B991-FC92E0DDE3E5} = {07C632DD-459D-4D26-AB73-CCD0E83C8F07}
-		{25F43963-309C-411A-BBEB-E0C1D332DF70} = {B6770E0A-CE15-42AA-9846-B785E19958A9}
-		{E3DF464B-DD56-4BBD-BB3C-4E848847FA27} = {57254EC2-D2AF-46A0-B196-66ED7BA9F8EA}
 		{3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC} = {9D9DE862-0864-416C-B07D-1FA133C3E1C3}
 		{40463952-54C0-4006-A278-CFC3A6D0C891} = {3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC}
 		{B6EA3F18-D4A3-4328-97FC-A5E29659D4B7} = {3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC}
 		{328CF59B-1C19-4A8B-B7B3-130BD4CE3B80} = {3BAE42F0-1C32-47AB-A9EB-D2D0358A51FC}
-		{FB591BC0-B741-4E99-910D-17E106C79D62} = {12B5913F-941C-4E43-9C72-8CBD69EEB9C1}
-		{3E95D753-7A2E-4AF7-915F-9C9938142C7C} = {12B5913F-941C-4E43-9C72-8CBD69EEB9C1}
 		{7168466D-997C-4CDB-8789-0B77D3207A84} = {1F421612-D266-40B9-9B90-3BC406C757AB}
 		{BCA1D789-E4CE-4227-8499-BC25F72AB102} = {1F421612-D266-40B9-9B90-3BC406C757AB}
 		{DC587314-1C3B-4F87-9751-A93288D35680} = {1F421612-D266-40B9-9B90-3BC406C757AB}
@@ -531,7 +515,6 @@ Global
 		{43F09CEE-A591-48F3-91EB-7FB9EF22D858} = {1F421612-D266-40B9-9B90-3BC406C757AB}
 		{9A444E1D-93AF-4482-BFED-C39BBB7DDD2B} = {1F421612-D266-40B9-9B90-3BC406C757AB}
 		{248236B0-9FD6-42B7-A343-7A358447135A} = {1F421612-D266-40B9-9B90-3BC406C757AB}
-		{6CF31B60-D4D9-44EF-BBC9-1EB310B15BC8} = {7168466D-997C-4CDB-8789-0B77D3207A84}
 		{11DC8B18-2D19-46D6-A5AF-C9D5E9568468} = {BCA1D789-E4CE-4227-8499-BC25F72AB102}
 		{C02723C0-4C48-43A1-8C4E-F53F69C795ED} = {BCA1D789-E4CE-4227-8499-BC25F72AB102}
 		{BDFA20E6-53AD-4FC7-936B-CEC181608A0E} = {BCA1D789-E4CE-4227-8499-BC25F72AB102}
@@ -542,24 +525,38 @@ Global
 		{309A3643-658A-4F7A-909B-602DE447AF59} = {BCA1D789-E4CE-4227-8499-BC25F72AB102}
 		{00E32190-52B0-4725-A941-EBF691FC9B65} = {BCA1D789-E4CE-4227-8499-BC25F72AB102}
 		{CA676F52-7060-4CCE-81D4-BD0D5D1F08A0} = {BCA1D789-E4CE-4227-8499-BC25F72AB102}
-		{9386D664-9C66-4228-8561-044D0D0755CE} = {11DC8B18-2D19-46D6-A5AF-C9D5E9568468}
-		{6F9EC978-0A51-4327-817A-D263B81ACA2F} = {C02723C0-4C48-43A1-8C4E-F53F69C795ED}
-		{C57F8B99-6276-499A-89E9-E60A8F7310CA} = {BDFA20E6-53AD-4FC7-936B-CEC181608A0E}
-		{FA721521-F541-4BD3-AFEF-CDF6F4908E39} = {7395BA71-A530-4AD3-8D79-77E3DF5A268B}
-		{4CAD47A0-A07D-41A0-BFA4-4A62CE6CC726} = {7631F356-9B48-45A8-9282-0EB51B3F9456}
-		{302B7920-F90B-444A-A8F1-1949610CB8F9} = {27695FBA-894C-4A13-8109-838204AA196D}
-		{D893C303-F7A5-488D-86F7-E29F6E60C981} = {F135C37D-08EF-423A-BC77-A573F6C05F71}
-		{14933FE9-8151-4EC3-8272-41CB8632B909} = {309A3643-658A-4F7A-909B-602DE447AF59}
-		{A70A0C23-402F-40C7-B004-CED42F1935AA} = {00E32190-52B0-4725-A941-EBF691FC9B65}
-		{2F0099E1-49D1-4538-8C3C-A95C7398CD05} = {CA676F52-7060-4CCE-81D4-BD0D5D1F08A0}
-		{F95AA692-5CA4-4E52-999F-7773B822F216} = {9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}
-		{BFCABC78-8F66-4324-ADF8-07BC307B531A} = {9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}
 		{2146AE22-11D1-4B12-A39D-A4695934364A} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
 		{7977E8B6-0CC4-4323-9D93-DEFCA40068B9} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
-		{8A29CF5B-1D8F-4629-A6DD-EA0656BCEC98} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
-		{1DD604C1-E7C5-4C3B-9FEA-C799A25D8A7B} = {BBC52524-4938-4364-9DFD-47087A4E0758}
-		{0C1A6167-9C64-4D8A-ABE2-4DB6BE100FF7} = {B81E88C3-769F-46BD-B366-2B0A3843603C}
-		{2E2B964B-E76A-4DA5-A59F-B9151D5C5523} = {43F09CEE-A591-48F3-91EB-7FB9EF22D858}
+		{12EA1BF1-249A-DFDC-D55C-DAE482459303} = {C4442D49-FAB2-4F55-88E1-784F78726413}
+		{253560A8-4E11-5AE3-477C-62A45C83F7D7} = {7D998A09-4069-45A2-A7C1-5A8765291C24}
+		{C6F8A90D-ED72-47C0-5AD6-2A6E365D2DAD} = {9A12EEEE-DFDC-4F43-8836-25EBF914E22A}
+		{C8B80450-1658-DD13-25D3-44C4EBAED761} = {49DE1708-8E41-4780-9AB7-B7806545080C}
+		{4845DBDD-1E0D-1A81-7FAE-8C09F94E19A6} = {3A236EC0-0B34-49D9-8C11-D3C42BCD0293}
+		{7C0B306B-E0EF-F469-2D9C-0CC346CD3B34} = {3A236EC0-0B34-49D9-8C11-D3C42BCD0293}
+		{8C10CDA6-C2B4-78F5-4701-3356FBFFB37E} = {D2363AEE-31D1-44B2-B7FE-936E6E5911E9}
+		{929CE73E-C941-B0E4-D2A7-CD0D978788BC} = {8356867F-AB3B-43DA-8670-7234615FEA4E}
+		{2E867AAD-6B5A-41B4-2E85-7384D159F154} = {07C632DD-459D-4D26-AB73-CCD0E83C8F07}
+		{DD7A1A91-F3FB-7D80-523D-124ED8238A69} = {B6770E0A-CE15-42AA-9846-B785E19958A9}
+		{B1FD1463-CE3B-4D9F-9328-126963792E50} = {57254EC2-D2AF-46A0-B196-66ED7BA9F8EA}
+		{C9EC48DB-769E-A22A-44B6-CF5493784255} = {12B5913F-941C-4E43-9C72-8CBD69EEB9C1}
+		{527C566E-B645-C1ED-C0D6-7E3BFC169C60} = {12B5913F-941C-4E43-9C72-8CBD69EEB9C1}
+		{4DBAE812-134F-3AAA-A5DD-C61271A81A7F} = {7168466D-997C-4CDB-8789-0B77D3207A84}
+		{43A8FC34-7B23-D6AB-4A2C-43EA6C779EA5} = {11DC8B18-2D19-46D6-A5AF-C9D5E9568468}
+		{F0605889-BF7F-21DC-7E0E-BA11077EE52A} = {C02723C0-4C48-43A1-8C4E-F53F69C795ED}
+		{B5F42091-D92F-7314-278F-C7373C792AC7} = {BDFA20E6-53AD-4FC7-936B-CEC181608A0E}
+		{0770AF36-379C-395F-D769-39B660629CE5} = {7395BA71-A530-4AD3-8D79-77E3DF5A268B}
+		{F3150CA9-D973-6F3A-BDF4-AF1BF50F0262} = {7631F356-9B48-45A8-9282-0EB51B3F9456}
+		{73EE0278-16C2-E6F1-8CDE-19E47886A7D3} = {27695FBA-894C-4A13-8109-838204AA196D}
+		{FD8BE877-2D27-7C83-A996-EF8B185ED663} = {F135C37D-08EF-423A-BC77-A573F6C05F71}
+		{25B5AD39-D352-8403-77CA-D4EE8C050A56} = {309A3643-658A-4F7A-909B-602DE447AF59}
+		{76F07021-3226-512E-505B-75D417213F60} = {00E32190-52B0-4725-A941-EBF691FC9B65}
+		{3F418AC5-4AEA-066F-A9F1-937413353641} = {CA676F52-7060-4CCE-81D4-BD0D5D1F08A0}
+		{7D3F4BBD-0FD5-8257-04B9-E77FA232644F} = {2C63DC7E-E9D6-49CC-8657-BDBFC990079F}
+		{3021F75A-B2EE-033A-D4FE-43DE4AE530CB} = {BBC52524-4938-4364-9DFD-47087A4E0758}
+		{6D71059A-BEA1-2A29-2CA0-2C1C546348FE} = {B81E88C3-769F-46BD-B366-2B0A3843603C}
+		{16458773-443A-3948-8ED2-C1F74CFCD243} = {43F09CEE-A591-48F3-91EB-7FB9EF22D858}
+		{5997F6EA-D757-8C3C-5EE8-A15D14956CB9} = {9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}
+		{556D593E-4A57-12AA-A3D9-A98C788BDBBA} = {9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
