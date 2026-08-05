@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "phase-03-database-and-ef-co
 		phase-03-database-and-ef-core\README_3.md = phase-03-database-and-ef-core\README_3.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "phase-04-auth-and-architecture", "phase-04-auth-and-architecture", "{70D5CB64-BEF0-4D05-952A-BB4A31235A65}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "phase-04-secure-professional-backend", "phase-04-secure-professional-backend", "{70D5CB64-BEF0-4D05-952A-BB4A31235A65}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "final-capstone", "final-capstone", "{0A63AEDE-81EC-4082-B2A6-9B58CE1CB066}"
 EndProject
@@ -54,6 +54,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-interview-answers",
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task06A-LibraryManagement", "Task06A-LibraryManagement", "{E882CCB0-66A6-4839-A203-0FFB09D40D01}"
 	ProjectSection(SolutionItems) = preProject
@@ -352,6 +355,31 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadEnrollmentOriginalCode",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredEnrollment", "phase-03-database-and-ef-core\task-07-ef-core-api-refactor-pack\RefactoredEnrollment\RefactoredEnrollment.csproj", "{556D593E-4A57-12AA-A3D9-A98C788BDBBA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-00-sprint-setup", "task-00-sprint-setup", "{7031479C-9D1A-4779-B8F4-4BEBA62B4E5B}"
+	ProjectSection(SolutionItems) = preProject
+		phase-04-secure-professional-backend\task-00-sprint-setup\README00_4.md = phase-04-secure-professional-backend\task-00-sprint-setup\README00_4.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-auth-foundation", "task-01-auth-foundation", "{245774BB-BA8A-4ABB-9A4D-F783B799AEE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-role-stories-access-control", "task-02-role-stories-access-control", "{3007FD30-39E7-4CB8-9E50-123C1FE3527C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-secure-platform-upgrade", "task-03-secure-platform-upgrade", "{02A94936-9648-4A63-AF9F-3AF6D7BC2E77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-professional-architecture-refactor", "task-04-professional-architecture-refactor", "{37254BC0-4981-4B8D-95DA-90112CEFF524}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-validation-errors-logging", "task-05-validation-errors-logging", "{E53056A6-E8CC-4A92-BECF-F8DA722B1837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-production-redeployment", "task-06-production-redeployment", "{FD0B8D1B-E1EC-4934-A79F-7603317A4A2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-audit-activity-timeline", "task-07-audit-activity-timeline", "{736E5EB0-EC39-4485-8810-80C2997D40B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-bad-auth-refactor-pack", "task-08-bad-auth-refactor-pack", "{FF0FCE97-EECC-4D5C-BB2F-CC6440E24C04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-09-demo-linkedin-showcase", "task-09-demo-linkedin-showcase", "{CA8BD65F-752C-4E30-9ACE-592F2F962DF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialTrainingCenterApi", "phase-04-secure-professional-backend\task-00-sprint-setup\InitialTrainingCenterApi\InitialTrainingCenterApi.csproj", "{750FF7B3-CD8F-7EE9-3E5C-05A35C7FD615}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -478,6 +506,10 @@ Global
 		{556D593E-4A57-12AA-A3D9-A98C788BDBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{556D593E-4A57-12AA-A3D9-A98C788BDBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{556D593E-4A57-12AA-A3D9-A98C788BDBBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750FF7B3-CD8F-7EE9-3E5C-05A35C7FD615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750FF7B3-CD8F-7EE9-3E5C-05A35C7FD615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750FF7B3-CD8F-7EE9-3E5C-05A35C7FD615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750FF7B3-CD8F-7EE9-3E5C-05A35C7FD615}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -557,6 +589,17 @@ Global
 		{16458773-443A-3948-8ED2-C1F74CFCD243} = {43F09CEE-A591-48F3-91EB-7FB9EF22D858}
 		{5997F6EA-D757-8C3C-5EE8-A15D14956CB9} = {9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}
 		{556D593E-4A57-12AA-A3D9-A98C788BDBBA} = {9A444E1D-93AF-4482-BFED-C39BBB7DDD2B}
+		{7031479C-9D1A-4779-B8F4-4BEBA62B4E5B} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{245774BB-BA8A-4ABB-9A4D-F783B799AEE1} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{3007FD30-39E7-4CB8-9E50-123C1FE3527C} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{02A94936-9648-4A63-AF9F-3AF6D7BC2E77} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{37254BC0-4981-4B8D-95DA-90112CEFF524} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{E53056A6-E8CC-4A92-BECF-F8DA722B1837} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{FD0B8D1B-E1EC-4934-A79F-7603317A4A2C} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{736E5EB0-EC39-4485-8810-80C2997D40B8} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{FF0FCE97-EECC-4D5C-BB2F-CC6440E24C04} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{CA8BD65F-752C-4E30-9ACE-592F2F962DF5} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
+		{750FF7B3-CD8F-7EE9-3E5C-05A35C7FD615} = {7031479C-9D1A-4779-B8F4-4BEBA62B4E5B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
