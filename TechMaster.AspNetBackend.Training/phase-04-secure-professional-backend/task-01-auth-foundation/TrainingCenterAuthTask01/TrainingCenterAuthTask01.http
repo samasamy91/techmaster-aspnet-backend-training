@@ -1,0 +1,6 @@
+@TrainingCenterAuthTask01_HostAddress = http://localhost:5005
+
+GET {{TrainingCenterAuthTask01_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
