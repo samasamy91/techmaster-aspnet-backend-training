@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TrainingCenterAuthTask01.Entities.Enums;
 
 namespace TrainingCenterAuthTask01.DTOs.Auth
 {
     public class RegisterRequest
     {
         [Required]
+        [MaxLength(100)]
         public string FullName {  get; set; }
         [Required]
         [EmailAddress]
@@ -15,6 +17,6 @@ namespace TrainingCenterAuthTask01.DTOs.Auth
         [Required]
         public string ConfirmPassword { get; set; }
         [Required]
-        public string Role {  get; set; }
+        public UserRole Role {  get; set; }
     }
 }

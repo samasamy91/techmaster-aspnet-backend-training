@@ -8,7 +8,6 @@ using TrainingCenter.Api.Data;
 using TrainingCenter.Api.Middlewares;
 using TrainingCenter.Api.Services;
 using TrainingCenter.Api.Services.IServices;
-using TrainingCenterAuthTask01.Data;
 using TrainingCenterAuthTask01.Entities;
 using TrainingCenterAuthTask01.Security;
 using TrainingCenterAuthTask01.Services;
@@ -47,10 +46,11 @@ builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<PasswordHasher>();
 
 //Jwt
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection(JwtSettings.SectionName));
-var jwtSettings = builder.Configuration.GetSection(JwtSettings.SectionName).Get<JwtSettings>();
+var jwtSettings = builder.Configuration.GetSection(JwtSettings.SectionName).Get<JwtSettings>()!;
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -63,7 +63,7 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = jwtSettings!.Issuer,
+        ValidIssuer = jwtSettings.Issuer,
         ValidAudience = jwtSettings.Audience,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey))
     };
@@ -73,12 +73,7 @@ builder.Services.AddAuthentication(options =>
 
 var app = builder.Build();
 
-//roles
-using(var scope = app.Services.CreateScope())
-{
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-    await IdentitySeeder.SeedRoles(roleManager);
-}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -2,293 +2,297 @@
 
 ## Overview
 
-This task introduces authentication and identity management to the Training Center Registration API using **ASP.NET Core Identity** and **JWT (JSON Web Tokens)**. The goal is to allow real users to securely register, authenticate, and access protected endpoints while following professional backend security practices.
+This task introduces authentication and authorization to the Training Center Registration API. A custom authentication system was implemented using ASP.NET Core, Entity Framework Core, JWT (JSON Web Tokens), and secure password hashing.
+
+The goal is to allow authenticated users to securely register, log in, receive JWT access tokens, access protected endpoints, and manage their passwords.
 
 ---
 
 # Objectives
 
-* Implement ASP.NET Core Identity.
-* Create an `ApplicationUser` entity.
-* Securely hash passwords.
-* Authenticate users using JWT.
-* Support role-based authentication.
-* Prevent anonymous access to protected endpoints.
-* Provide authenticated user information.
-* Allow authenticated users to change their passwords.
+* Build a secure authentication foundation.
+* Create a custom User entity.
+* Implement secure password hashing.
+* Generate JWT access tokens.
+* Protect API endpoints.
+* Return safe authentication responses.
+* Track user login activity.
 
 ---
 
-# Technologies
+# Business Scenario
+
+TechMaster Academy requires real user authentication before accessing the API.
+
+Each user has:
+
+* Login credentials
+* Secure password hash
+* Assigned role
+* Active status
+* Audit information
+
+Anonymous access is no longer allowed for protected endpoints.
+
+---
+
+# Technologies Used
 
 * ASP.NET Core Web API
-* ASP.NET Core Identity
 * Entity Framework Core
 * SQL Server
 * JWT Authentication
+* Password Hashing
 * Swagger
 * Postman
 
 ---
 
-# Authentication Flow
+# User Entity
 
-## 1. User Registration
+The authentication system is built around the custom **User** entity.
 
-A new user registers by sending:
-
-```http
-POST /api/auth/register
-```
-
-Request Body
-
-```json
-{
-  "fullName": "Mohamed Ayman",
-  "email": "mohamed@example.com",
-  "password": "P@ssw0rd123",
-  "confirmPassword": "P@ssw0rd123",
-  "role": "Student"
-}
-```
-
-### Registration Validation
-
-* Full name is required.
-* Email must be unique.
-* Password and Confirm Password must match.
-* Password is never stored as plain text.
-* User is created with `IsActive = true`.
-* `CreatedAt` is automatically assigned.
-* Students cannot register themselves as Admin.
-
----
-
-## 2. Login
-
-```http
-POST /api/auth/login
-```
-
-Request
-
-```json
-{
-  "email": "mohamed@example.com",
-  "password": "P@ssw0rd123"
-}
-```
-
-The login process performs the following:
-
-1. Find the user by email.
-2. Verify that the account is active.
-3. Verify the password hash using ASP.NET Core Identity.
-4. Update `LastLoginAt`.
-5. Generate a JWT access token.
-6. Return a safe authentication response.
-
-Example Response
-
-```json
-{
-  "success": true,
-  "message": "Login successful.",
-  "data": {
-    "userId": "xxxxxxxx",
-    "fullName": "Mohamed Ayman",
-    "email": "mohamed@example.com",
-    "role": "Student",
-    "accessToken": "JWT_TOKEN",
-    "expiresAt": "2026-08-10T12:00:00Z"
-  }
-}
-```
-
----
-
-## 3. Current User
-
-```http
-GET /api/auth/me
-```
-
-Requires a valid Bearer Token.
-
-Returns the authenticated user's information.
-
-Example
-
-```json
-{
-  "success": true,
-  "data": {
-    "userId": "xxxxxxxx",
-    "fullName": "Mohamed Ayman",
-    "email": "mohamed@example.com",
-    "role": "Student",
-    "linkedStudentId": 3,
-    "linkedInstructorId": null
-  }
-}
-```
-
----
-
-## 4. Change Password
-
-```http
-POST /api/auth/change-password
-```
-
-Authenticated users can change their password by providing:
-
-* Current Password
-* New Password
-* Confirm Password
-
-The current password is verified before updating the password hash.
-
----
-
-## 5. Logout
-
-```http
-POST /api/auth/logout
-```
-
-Since JWT authentication is stateless, logout currently returns a successful response without storing server-side sessions.
-
----
-
-# JWT Authentication
-
-After successful login, the API generates a JWT containing only safe identity information.
-
-Included Claims
-
-* User Id (`sub` / `NameIdentifier`)
-* Email
-* Role
-* JWT Id (`jti`)
-* Expiration (`exp`)
-
-Sensitive information is **never** included in the token.
-
-The following are never stored inside JWT:
-
-* Password
-* Password Hash
-* Database Connection String
-* Private Notes
-* API Keys
-* Payment Details
+| Property     | Description                  |
+| ------------ | ---------------------------- |
+| Id           | User identifier              |
+| FullName     | User full name               |
+| Email        | Unique email address         |
+| HashPassword | Encrypted password           |
+| Role         | User role                    |
+| IsActive     | Account status               |
+| CreatedAt    | Creation date                |
+| UpdatedAt    | Last update                  |
+| LastLoginAt  | Last login time              |
+| StudentId    | Linked student (optional)    |
+| InstructorId | Linked instructor (optional) |
 
 ---
 
 # User Roles
 
-The application uses ASP.NET Core Identity Roles.
-
-Available Roles
+The project uses a Role enum.
 
 * Admin
 * Instructor
 * Student
 
-Roles are stored using Identity tables:
-
-* AspNetUsers
-* AspNetRoles
-* AspNetUserRoles
+Students are not allowed to register as Admin.
 
 ---
 
-# Database Tables
+# DTOs
 
-Identity automatically creates the following tables:
+## RegisterRequest
 
-* AspNetUsers
-* AspNetRoles
-* AspNetUserRoles
-* AspNetUserClaims
-* AspNetRoleClaims
-* AspNetUserLogins
-* AspNetUserTokens
+* FullName
+* Email
+* Password
+* ConfirmPassword
+* Role
+
+## LoginRequest
+
+* Email
+* Password
+
+## ChangePasswordRequest
+
+* CurrentPassword
+* NewPassword
+* ConfirmPassword
+
+## AuthResponse
+
+* UserId
+* FullName
+* Email
+* Role
+* AccessToken
+* ExpiresAt
+
+## CurrentUserResponse
+
+* UserId
+* FullName
+* Email
+* Role
+* LinkedStudentId
+* LinkedInstructorId
+
+---
+
+# Authentication Flow
+
+## Register
+
+1. Receive registration request.
+2. Validate request.
+3. Check duplicate email.
+4. Validate passwords.
+5. Prevent Admin self-registration.
+6. Hash password.
+7. Save user.
+8. Return safe response.
+
+---
+
+## Login
+
+1. Receive credentials.
+2. Find user by email.
+3. Verify account is active.
+4. Verify password hash.
+5. Update LastLoginAt.
+6. Generate JWT.
+7. Return access token.
+
+---
+
+## Current User
+
+The authenticated user is identified using JWT claims.
+
+The endpoint returns:
+
+* User ID
+* Full Name
+* Email
+* Role
+* Linked Student
+* Linked Instructor
+
+---
+
+## Change Password
+
+The authenticated user can:
+
+* Verify current password
+* Enter new password
+* Confirm password
+* Update hashed password
+* Save update timestamp
+
+---
+
+# JWT Claims
+
+The generated JWT contains:
+
+* NameIdentifier (User Id)
+* Email
+* Role
+* Expiration
+
+Sensitive information is never included inside the token.
 
 ---
 
 # Security Features
 
-* Password hashing using ASP.NET Core Identity.
-* Unique email validation.
-* JWT authentication.
-* Role-based authentication support.
-* Active account verification.
-* Last login tracking.
-* Secure API responses.
-* Protected endpoints require authentication.
+* Password hashing
+* JWT Authentication
+* Protected endpoints
+* Unique email validation
+* Active account validation
+* Safe authentication responses
+* Password confirmation validation
+* Audit fields
 
 ---
 
-# Implemented Endpoints
+# API Endpoints
 
-| Method | Endpoint                    | Description                      |
-| ------ | --------------------------- | -------------------------------- |
-| POST   | `/api/auth/register`        | Register a new user              |
-| POST   | `/api/auth/login`           | Authenticate user and return JWT |
-| GET    | `/api/auth/me`              | Get current authenticated user   |
-| POST   | `/api/auth/change-password` | Change current user's password   |
-| POST   | `/api/auth/logout`          | Logout (stateless JWT)           |
+| Method | Endpoint                  | Description                |
+| ------ | ------------------------- | -------------------------- |
+| POST   | /api/auth/register        | Register new user          |
+| POST   | /api/auth/login           | Login user                 |
+| GET    | /api/auth/me              | Current authenticated user |
+| POST   | /api/auth/change-password | Change password            |
+| POST   | /api/auth/logout          | Logout (JWT client-side)   |
+| POST   | /api/auth/refresh-token   | Planned for next task      |
+
+---
+
+# Validation Rules
+
+* Email must be unique.
+* Passwords must match.
+* Password is never stored in plain text.
+* Inactive users cannot login.
+* Students cannot register as Admin.
+* Invalid credentials return safe error messages.
+
+---
+
+# Testing
+
+The authentication module was tested using:
+
+* Swagger UI
+* Postman
+
+Verified scenarios:
+
+* Successful registration
+* Duplicate email
+* Invalid login
+* Successful login
+* JWT generation
+* Protected endpoint access
+* Current user endpoint
+* Change password
+* Unauthorized access
+* Invalid token
 
 ---
 
 # Project Structure
 
 ```
-Security/
+Authentication
 │
-├── JwtSettings.cs
-├── JwtService.cs
-└── IJwtService.cs
-
-Entities/
-└── ApplicationUser.cs
-
-Controllers/
-└── AuthController.cs
-
-Services/
-├── AuthService.cs
-└── IAuthService.cs
-
-DTOs/
-└── Auth/
-    ├── RegisterRequest.cs
-    ├── LoginRequest.cs
-    ├── ChangePasswordRequest.cs
-    ├── AuthResponse.cs
-    └── CurrentUserResponse.cs
+├── Controllers
+│     └── AuthController
+│
+├── DTOs
+│     ├── RegisterRequest
+│     ├── LoginRequest
+│     ├── ChangePasswordRequest
+│     ├── AuthResponse
+│     └── CurrentUserResponse
+│
+├── Entities
+│     ├── User
+│     └── UserRole
+│
+├── Security
+│     ├── PasswordHasher
+│     ├── JwtSettings
+│     ├── JwtService
+│     └── IJwtService
+│
+└── Services
+      ├── IAuthService
+      └── AuthService
 ```
 
 ---
 
-# Evidence
+# Future Improvements
 
-The following evidence was prepared for submission:
-
-* Swagger screenshot – Register endpoint
-* Swagger screenshot – Login endpoint
-* Postman Register request
-* Postman Login request
-* Postman Current User request
-* JWT token decoded showing claims
-* SQL Server Identity tables
-* Authentication flow demonstration
+* Refresh Token support
+* Token revocation
+* Email verification
+* Forgot password
+* Password reset
+* Account lockout
+* Refresh token persistence
 
 ---
 
-# Result
+# Status
 
-Task 01 establishes a secure authentication foundation for the Training Center Registration API. Users authenticate using ASP.NET Core Identity and JWT, passwords are securely hashed, role information is included in JWT claims, and protected endpoints can identify the currently authenticated user while following secure backend development practices.
+**Completed**
+
+Task 01 successfully establishes the authentication foundation for Phase 04 by implementing secure registration, login, JWT authentication, password hashing, protected endpoints, and current user management.

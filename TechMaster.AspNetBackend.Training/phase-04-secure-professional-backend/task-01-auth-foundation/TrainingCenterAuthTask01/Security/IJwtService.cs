@@ -5,6 +5,6 @@ namespace TrainingCenterAuthTask01.Security
 {
     public interface IJwtService
     {
-        Task<TokenResponse> GenerateToken(ApplicationUser user);
+        TokenResponse GenerateToken(User user);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TrainingCenterAuthTask01.Entities.Enums;
 
 namespace TrainingCenterAuthTask01.DTOs.Auth
 {
@@ -6,10 +7,9 @@ namespace TrainingCenterAuthTask01.DTOs.Auth
     {
         public string AccessToken {  get; set; }
         public DateTime ExpiresAt { get; set; }
-        public string UserId { get; set; }
+        public int UserId { get; set; }
         public string FullName { get; set; }
-        [EmailAddress]
         public string Email { get; set; }
-        public string Role { get; set; }
+        public UserRole Role { get; set; }
     }
 }

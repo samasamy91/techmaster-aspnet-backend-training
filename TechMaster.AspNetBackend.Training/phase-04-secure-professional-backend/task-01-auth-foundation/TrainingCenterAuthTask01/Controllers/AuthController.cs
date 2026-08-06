@@ -18,14 +18,12 @@ namespace TrainingCenterAuthTask01.Controllers
             this.authService = authService;
         }
         [HttpPost("register")]
-        [AllowAnonymous]
         public async Task<IActionResult> Register(DTOs.Auth.RegisterRequest request)
         {
             var result = await authService.Register(request);
             return Ok(ApiResponse<AuthResponse>.SuccessResponse(result, "User registered successfully"));
         }
         [HttpPost("login")]
-        [AllowAnonymous]
         public async Task<IActionResult> Login(DTOs.Auth.LoginRequest request)
         {
             var result = await authService.Login(request);

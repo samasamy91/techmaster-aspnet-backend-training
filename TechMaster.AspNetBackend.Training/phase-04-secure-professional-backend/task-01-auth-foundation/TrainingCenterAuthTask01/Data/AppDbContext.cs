@@ -5,12 +5,13 @@ using TrainingCenterAuthTask01.Entities;
 
 namespace TrainingCenter.Api.Data
 {
-    public class AppDbContext : IdentityDbContext<ApplicationUser>
+    public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
+        public DbSet<User> Users => Set<User>();
         public DbSet<Student> Students => Set<Student>();
         public DbSet<Instructor> Instructors => Set<Instructor>();
         public DbSet<TrainingTrack> TrainingTracks => Set<TrainingTrack>();

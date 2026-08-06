@@ -11,41 +11,36 @@ namespace TrainingCenterAuthTask01.Security
 {
     public class JwtService : IJwtService
     {
-        private readonly JwtSettings settings;
-        private readonly UserManager<ApplicationUser> userManager;
-        public JwtService(IOptions<JwtSettings> options,UserManager<ApplicationUser> userManager)
+        private readonly JwtSettings jwtSettings;
+       
+        public JwtService(IOptions<JwtSettings> options)
         {
-            settings = options.Value;
-            this.userManager = userManager;
+            jwtSettings = options.Value;
         } 
-        public async Task<TokenResponse> GenerateToken(ApplicationUser user)
+        public TokenResponse GenerateToken(User user)
         {
-            var roles = await userManager.GetRolesAsync(user);
-           
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey));
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var expiration = DateTime.UtcNow.AddMinutes(jwtSettings.ExpirationMinutes);
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id),
-                new Claim(JwtRegisteredClaimNames.Email, user.Email!),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim(ClaimTypes.Role,user.Role.ToString()),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
-            foreach (var role in roles)
-            {
-                claims.Add(new Claim(ClaimTypes.Role, role));
-            }
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(settings.SecretKey));
-            var credentials = new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
-            var expires = DateTime.UtcNow.AddMinutes(settings.ExpirationMinutes);
+            
             var token = new JwtSecurityToken(
-                issuer: settings.Issuer,
-                audience: settings.Audience,
+                issuer: jwtSettings.Issuer,
+                audience: jwtSettings.Audience,
                 claims: claims,
-                expires: expires,
+                expires: expiration,
                 signingCredentials: credentials
                 );
             return new TokenResponse
             {
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
-                Expiration = expires
+                Expiration = expiration
             };
         }
     }

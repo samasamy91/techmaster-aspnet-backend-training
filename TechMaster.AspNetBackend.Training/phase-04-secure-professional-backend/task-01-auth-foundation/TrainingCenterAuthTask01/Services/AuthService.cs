@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using System.Security.Claims;
+using TrainingCenter.Api.Data;
 using TrainingCenterAuthTask01.DTOs.Auth;
 using TrainingCenterAuthTask01.Entities;
+using TrainingCenterAuthTask01.Entities.Enums;
 using TrainingCenterAuthTask01.Security;
 using TrainingCenterAuthTask01.Services.IServices;
 
@@ -9,87 +13,86 @@ namespace TrainingCenterAuthTask01.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly UserManager<ApplicationUser> userManager;
-        private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly AppDbContext context;
+        private readonly PasswordHasher passwordHasher;
         private readonly IJwtService jwtService;
 
-        public AuthService(UserManager<ApplicationUser> userManager,SignInManager<ApplicationUser> signInManager,
-            IJwtService jwtService)
+        public AuthService(AppDbContext context,PasswordHasher passwordHasher,IJwtService jwtService)
         {
-            this.userManager = userManager;
-            this.signInManager = signInManager;
+            this.context = context;
+            this.passwordHasher = passwordHasher;
             this.jwtService = jwtService;
         }
         public async Task<AuthResponse> Register(RegisterRequest request)
         {
             if (request.Password != request.ConfirmPassword)
                 throw new BadHttpRequestException("Passwords dont match");
-            var emailExists = await userManager.FindByEmailAsync(request.Email);
-            if (emailExists != null)
+            var emailExists = await context.Users.AnyAsync(u => u.Email == request.Email);
+            if (emailExists)
                 throw new BadHttpRequestException("Email already exists");
-            if (request.Role != "Student")
-                throw new BadHttpRequestException("Only student registration is allowed");
-            var user = new ApplicationUser
+            if (request.Role == UserRole.Admin)
+                throw new BadHttpRequestException("Students cannot register as Admin");
+            var user = new User
             {
                 Email = request.Email,
                 FullName = request.FullName,
-                UserName = request.Email,
+                HashPassword = passwordHasher.Hash(request.Password),
+                Role = request.Role,
                 IsActive = true,
                 CreatedAt = DateTime.UtcNow,
             };
-            var result = await userManager.CreateAsync(user, request.Password);
-            if (!result.Succeeded)
-                throw new BadHttpRequestException(result.Errors.First().Description);
-            await userManager.AddToRoleAsync(user, "Student");
+            context.Users.Add(user);
+            await context.SaveChangesAsync();
             return new AuthResponse
             {
                 UserId = user.Id,
                 FullName = user.FullName,
                 Email = user.Email,
-                Role = "Student",
-                AccessToken = "",
-                ExpiresAt = DateTime.UtcNow,
+                Role = user.Role,
+                
             };
         }
         public async Task<AuthResponse> Login(LoginRequest request)
         {
-            var user = await userManager.FindByEmailAsync(request.Email);
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Email.ToLower() == request.Email.ToLower());
             if (user == null)
                 throw new BadHttpRequestException("Invalid email or password");
             if (!user.IsActive)
                 throw new BadHttpRequestException("User Account is inactive");
-            var validPassword = await userManager.CheckPasswordAsync(user, request.Password);
-            if (!validPassword)
+           
+            if (!passwordHasher.Verify(request.Password, user.HashPassword))
                 throw new BadHttpRequestException("Invalid Password");
-            var roles = await userManager.GetRolesAsync(user);
             user.LastLoginAt = DateTime.UtcNow;
-            await userManager.UpdateAsync(user);
-            var token = await jwtService.GenerateToken(user);
+            await context.SaveChangesAsync();
+            var token = jwtService.GenerateToken(user);
             return new AuthResponse
             {
                 UserId = user.Id,
-                FullName = user.FullName,
+                FullName= user.FullName,
                 Email = user.Email,
-                Role = roles.FirstOrDefault() ?? "",
+                Role = user.Role,
                 AccessToken = token.Token,
-                ExpiresAt = token.Expiration,
+                ExpiresAt = token.Expiration
             };
         }
         public async Task<CurrentUserResponse?> GetCurrentUser(ClaimsPrincipal principal)
         {
             var userId = principal.FindFirstValue(ClaimTypes.NameIdentifier);
             if (string.IsNullOrEmpty(userId))
-                throw new BadHttpRequestException("Invalid token");
-            var user = await userManager.FindByIdAsync(userId);
-            if(user == null)
-                return null;
-            var roles = await userManager.GetRolesAsync(user);
+                throw new BadHttpRequestException("Invalid Token");
+
+            if(!int.TryParse(userId, out int id))
+                throw new BadHttpRequestException("Invalid user id");
+            var user = await context.Users.FindAsync(id);
+            if (user == null)
+                throw new BadHttpRequestException("User not found");
+
             return new CurrentUserResponse
             {
                 UserId = user.Id,
                 FullName = user.FullName,
                 Email = user.Email,
-                Role = roles.FirstOrDefault() ?? "",
+                Role = user.Role,
                 LinkedStudentId = user.StudentId,
                 LinkkedInstructorId = user.InstructorId
             };
@@ -99,15 +102,19 @@ namespace TrainingCenterAuthTask01.Services
             var userId = principal.FindFirstValue(ClaimTypes.NameIdentifier);
             if (string.IsNullOrEmpty(userId))
                 throw new BadHttpRequestException("Invalid token");
-            if (request.NewPassword != request.ConfirmPassword)
-                throw new BadHttpRequestException("Passwords dont match");
-            var user = await userManager.FindByIdAsync(userId);
+            if (!int.TryParse(userId, out int id))
+                throw new BadHttpRequestException("Invalid user id");
+            var user = await context.Users.FindAsync(id);
             if (user == null)
                 throw new BadHttpRequestException("User not found");
-            var result = await userManager.ChangePasswordAsync(user, request.CurrentPassword, request.NewPassword);
+            if(!passwordHasher.Verify(request.CurrentPassword,user.HashPassword))
+                throw new BadHttpRequestException("Current password not correct");
+            if(request.NewPassword != request.ConfirmPassword)
+                throw new BadHttpRequestException("Passwords dont match");
+            user.HashPassword = passwordHasher.Hash(request.NewPassword);
+            user.UpdatedAt = DateTime.UtcNow;
+            await context.SaveChangesAsync();
             
-            if (!result.Succeeded)
-                throw new BadHttpRequestException(result.Errors.First().Description);
         }
         public Task Logout()
         {
