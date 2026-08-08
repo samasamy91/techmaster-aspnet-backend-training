@@ -374,6 +374,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-secure-platform-upg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-professional-architecture-refactor", "task-04-professional-architecture-refactor", "{37254BC0-4981-4B8D-95DA-90112CEFF524}"
+	ProjectSection(SolutionItems) = preProject
+		README04_4.md = README04_4.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-validation-errors-logging", "task-05-validation-errors-logging", "{E53056A6-E8CC-4A92-BECF-F8DA722B1837}"
 EndProject
@@ -394,6 +397,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drill03_OneToManyInstructorTracks", "..\..\E\TechMaster\TechMaster.AspNetBackend.Training\TechMaster.AspNetBackend.Training\phase-03-database-and-ef-core\task-01-ef-core-modeling-drills\Drill03_OneToManyInstructorTracks\Drill03_OneToManyInstructorTracks\Drill03_OneToManyInstructorTracks.csproj", "{EC961328-4349-583C-F77C-9A2C1F6C9C49}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurePlatformUpgrade", "phase-04-secure-professional-backend\task-03-secure-platform-upgrade\SecurePlatformUpgrade\SecurePlatformUpgrade.csproj", "{55A71974-7D42-72D0-5022-A41907DFA440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfessionalArchitectureTrainingCenter", "phase-04-secure-professional-backend\task-04-professional-architecture-refactor\ProfessionalArchitectureTrainingCenter\ProfessionalArchitectureTrainingCenter.csproj", "{95655A68-5179-1A21-19E7-C604FA8EF06A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -537,6 +542,10 @@ Global
 		{55A71974-7D42-72D0-5022-A41907DFA440}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55A71974-7D42-72D0-5022-A41907DFA440}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55A71974-7D42-72D0-5022-A41907DFA440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95655A68-5179-1A21-19E7-C604FA8EF06A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95655A68-5179-1A21-19E7-C604FA8EF06A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95655A68-5179-1A21-19E7-C604FA8EF06A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95655A68-5179-1A21-19E7-C604FA8EF06A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -630,6 +639,7 @@ Global
 		{CD4D1DD3-0519-695C-556A-F5F11EBA8976} = {3007FD30-39E7-4CB8-9E50-123C1FE3527C}
 		{EC961328-4349-583C-F77C-9A2C1F6C9C49} = {BDFA20E6-53AD-4FC7-936B-CEC181608A0E}
 		{55A71974-7D42-72D0-5022-A41907DFA440} = {02A94936-9648-4A63-AF9F-3AF6D7BC2E77}
+		{95655A68-5179-1A21-19E7-C604FA8EF06A} = {37254BC0-4981-4B8D-95DA-90112CEFF524}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}

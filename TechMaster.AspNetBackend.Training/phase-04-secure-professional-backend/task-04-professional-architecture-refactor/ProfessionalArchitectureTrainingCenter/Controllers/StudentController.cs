@@ -1,0 +1,109 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using SecurePlatformUpgrade.DTOs.Students;
+using System.Security.Claims;
+using TrainingCenter.Api.Common;
+using TrainingCenter.Api.DTOs.Students;
+using TrainingCenter.Api.Services.IServices;
+
+namespace TrainingCenter.Api.Controllers
+{
+    [Route("api/students")]
+    [ApiController]
+    public class StudentController : ControllerBase
+    {
+        private readonly IStudentService studentService;
+        public StudentController(IStudentService studentService)
+        {
+            this.studentService = studentService;
+        }
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAllStudent([FromQuery] string? search,
+            [FromQuery]bool? isActive, [FromQuery] PagedRequest request)
+        {
+            var students = await studentService.GetAllStudent(search, isActive, request.PageNumber, request.PageSize);
+            return Ok(ApiResponse<object>.SuccessResponse(students, "Students retrieved successfully"));
+        }
+        [HttpGet("{id:int}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var email = User.FindFirst(ClaimTypes.Email)?.Value;
+            if (email == null)
+                return Unauthorized(ApiResponse<string>.FailureResponse("Not authorized"));
+            var student = await studentService.GetStudentById(id);
+            if (student == null)
+                return NotFound(ApiResponse<string>.FailureResponse("Student not found."));
+            return Ok(ApiResponse<object>.SuccessResponse(student,"Student retrieved successfully."));
+        }
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Create(CreateStudentRequest request)
+        {
+            var student = await studentService.CreateStudent(request);
+            return CreatedAtAction(
+                nameof(GetById),
+                new { id = student.StudentId },
+                ApiResponse<object>.SuccessResponse(
+                    student,
+                    "Student created successfully."));
+        }
+        [HttpPut("{id:int}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Update(int id,UpdateStudentRequest request)
+        {
+            var updated = await studentService.UpdateStudent(id, request);
+            if (!updated)
+                return NotFound(ApiResponse<string>.FailureResponse("Student not found."));
+            return Ok(ApiResponse<string>.SuccessResponse(
+                null,
+                "Student updated successfully."));
+        }
+        [HttpDelete("{id:int}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await studentService.DeleteStudent(id);
+            if (!deleted)
+                return NotFound(ApiResponse<string>.FailureResponse("Student not found."));
+            return Ok(ApiResponse<string>.SuccessResponse(
+                null,
+                "Student deleted successfully."));
+        }
+        [HttpGet("my-profile")]
+        [Authorize(Roles ="Student")]
+        public async Task<IActionResult> GetCurrentStudent()
+        {
+            var email = User.FindFirst(ClaimTypes.Email)?.Value;
+            if (email == null)
+                return Unauthorized(ApiResponse<string>.FailureResponse("Not authorized"));
+            var student = await studentService.GetCurrentStudent(email!);
+            if (student == null)
+                return NotFound(ApiResponse<string>.FailureResponse("Not Found"));
+            return Ok(ApiResponse<object>.SuccessResponse(student, "Profile retrieved successfully"));
+        }
+        [HttpPut("me")]
+        [Authorize(Roles ="Student")]
+        public async Task<IActionResult> UpdateMyProfile(UpdateMyStudentProfile request)
+        {
+            try
+            {
+                var result = await studentService.UpdateMyProfile(request, User);
+                if (result == null)
+                    return NotFound(ApiResponse<string>.FailureResponse("Student profile not found"));
+                return Ok(ApiResponse<object>.SuccessResponse(result, "Profile updated successfully"));
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden, ApiResponse<string>.FailureResponse(ex.Message));
+            }
+            catch (BadHttpRequestException ex)
+            {
+                return BadRequest(ApiResponse<string>.FailureResponse(ex.Message));
+            }
+        }
+    }
+
+}
