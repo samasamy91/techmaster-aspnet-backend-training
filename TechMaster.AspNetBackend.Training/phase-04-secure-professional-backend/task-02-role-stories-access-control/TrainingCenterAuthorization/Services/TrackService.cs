@@ -177,42 +177,73 @@ namespace TrainingCenter.Api.Services
             await context.SaveChangesAsync();
             return true;
         }
+        private async Task<object> GetStudentsForTrack(int trackId)
+        {
+            return await context.Enrollments
+                .Where(e => e.TrainingTrackId == trackId)
+                .Select(e => new
+                {
+                    e.StudentId,
+                    e.Student.FullName,
+                    e.Student.Email,
+                    e.Status,
+                    e.EnrollmentDate
+                })
+                .ToListAsync();
+        }
         public async Task<object?> GetTrackStudents(int trackId,ClaimsPrincipal user)
         {
+            if (user.IsInRole("Admin"))
+            {
+                return await GetStudentsForTrack(trackId);
+            }
+            var email = user.FindFirst(ClaimTypes.Email)?.Value;
+            if (string.IsNullOrEmpty(email))
+                throw new UnauthorizedAccessException("Invalid instructor token.");
+
+            var instructor = await context.Instructors
+                .FirstOrDefaultAsync(i => i.Email.ToLower() == email.ToLower());
+
+            if (instructor == null)
+                throw new UnauthorizedAccessException("Instructor is not linked to an instructor record.");
             var track = await context.TrainingTracks.Include(t => t.Enrollments).ThenInclude(e => e.Student).FirstOrDefaultAsync(t => t.TrainingTrackId == trackId);
             if (track == null) 
                 return null;
-            var role = user.FindFirst(ClaimTypes.Role)?.Value;
-            if(role == "Admin")
-            {
-                return track.Enrollments.Where(e => e.Student != null).Select(e => new
-                {
-                    StudentId = e.Student.StudentId,
-                    FullName = e.Student.FullName,
-                    Email = e.Student.Email,
-                    EnrollmentId = e.EnrollmentId,
-                    Status = e.Status,
-                    EnrollmentDate = e.EnrollmentDate
-                }).ToList();
-            }
-            if(role == "Instructor")
-            {
-                var instructorId = user.FindFirst("InstructorId")?.Value;
-                if (string.IsNullOrEmpty(instructorId))
-                    return null;
-                if (track.InstructorId.ToString() != instructorId)
-                    throw new UnauthorizedAccessException("You can only view students in your own tracks ");
-                return track.Enrollments.Where(e => e.Student != null).Select(e => new
-                {
-                    StudentId = e.Student.StudentId,
-                    FullName = e.Student.FullName,
-                    Email = e.Student.Email,
-                    EnrollmentId = e.EnrollmentId,
-                    Status = e.Status,
-                    EnrollmentDate = e.EnrollmentDate
-                }).ToList();
-            }
-            throw new UnauthorizedAccessException("Access denied");
+             if (track.InstructorId != instructor.InstructorId)
+                throw new UnauthorizedAccessException("You are not authorized to access this track.");
+
+            return await GetStudentsForTrack(trackId);
+            //    var role = user.FindFirst(ClaimTypes.Role)?.Value;
+            //    if(role == "Admin")
+            //       {
+            //        return track.Enrollments.Where(e => e.Student != null).Select(e => new
+            //        {
+            //            StudentId = e.Student.StudentId,
+            //            FullName = e.Student.FullName,
+            //            Email = e.Student.Email,
+            //            EnrollmentId = e.EnrollmentId,
+            //            Status = e.Status,
+            //            EnrollmentDate = e.EnrollmentDate
+            //        }).ToList();
+            //    }
+            //    if(role == "Instructor")
+            //    {
+            //        var instructorId = user.FindFirst("InstructorId")?.Value;
+            //        if (string.IsNullOrEmpty(instructorId))
+            //            return null;
+            //        if (track.InstructorId.ToString() != instructorId)
+            //            throw new UnauthorizedAccessException("You can only view students in your own tracks ");
+            //        return track.Enrollments.Where(e => e.Student != null).Select(e => new
+            //        {
+            //            StudentId = e.Student.StudentId,
+            //            FullName = e.Student.FullName,
+            //            Email = e.Student.Email,
+            //            EnrollmentId = e.EnrollmentId,
+            //            Status = e.Status,
+            //            EnrollmentDate = e.EnrollmentDate
+            //        }).ToList();
+            //    }
+            //    throw new UnauthorizedAccessException("Access denied");
         }
     }
 }

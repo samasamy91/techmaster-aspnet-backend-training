@@ -104,6 +104,7 @@ namespace TrainingCenter.Api.Controllers
         [Authorize(Roles ="Admin,Instructor")]
         public async Task<IActionResult> GetTracksStudents(int id)
         {
+
             try
             {
                 var result = await service.GetTrackStudents(id, User);
