@@ -1,0 +1,6 @@
+@TrainingCenterAuthorization_HostAddress = http://localhost:5035
+
+GET {{TrainingCenterAuthorization_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

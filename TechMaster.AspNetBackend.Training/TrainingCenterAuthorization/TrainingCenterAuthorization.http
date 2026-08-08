@@ -1,6 +1,0 @@
-@TrainingCenterAuthorization_HostAddress = http://localhost:5234
-
-GET {{TrainingCenterAuthorization_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

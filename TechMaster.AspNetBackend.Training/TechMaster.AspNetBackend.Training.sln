@@ -366,6 +366,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-01-auth-foundation", "
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-02-role-stories-access-control", "task-02-role-stories-access-control", "{3007FD30-39E7-4CB8-9E50-123C1FE3527C}"
+	ProjectSection(SolutionItems) = preProject
+		phase-04-secure-professional-backend\task-02-role-stories-access-control\README02_4.md = phase-04-secure-professional-backend\task-02-role-stories-access-control\README02_4.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-secure-platform-upgrade", "task-03-secure-platform-upgrade", "{02A94936-9648-4A63-AF9F-3AF6D7BC2E77}"
 EndProject
@@ -384,6 +387,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialTrainingCenterApi", "phase-04-secure-professional-backend\task-00-sprint-setup\InitialTrainingCenterApi\InitialTrainingCenterApi.csproj", "{750FF7B3-CD8F-7EE9-3E5C-05A35C7FD615}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterAuthTask01", "phase-04-secure-professional-backend\task-01-auth-foundation\TrainingCenterAuthTask01\TrainingCenterAuthTask01.csproj", "{9ACA9D91-7EEB-9725-B788-C7B063DD1566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterAuthorization", "phase-04-secure-professional-backend\task-02-role-stories-access-control\TrainingCenterAuthorization\TrainingCenterAuthorization.csproj", "{CD4D1DD3-0519-695C-556A-F5F11EBA8976}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -519,6 +524,10 @@ Global
 		{9ACA9D91-7EEB-9725-B788-C7B063DD1566}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ACA9D91-7EEB-9725-B788-C7B063DD1566}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ACA9D91-7EEB-9725-B788-C7B063DD1566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4D1DD3-0519-695C-556A-F5F11EBA8976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4D1DD3-0519-695C-556A-F5F11EBA8976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4D1DD3-0519-695C-556A-F5F11EBA8976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4D1DD3-0519-695C-556A-F5F11EBA8976}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -610,6 +619,7 @@ Global
 		{CA8BD65F-752C-4E30-9ACE-592F2F962DF5} = {70D5CB64-BEF0-4D05-952A-BB4A31235A65}
 		{750FF7B3-CD8F-7EE9-3E5C-05A35C7FD615} = {7031479C-9D1A-4779-B8F4-4BEBA62B4E5B}
 		{9ACA9D91-7EEB-9725-B788-C7B063DD1566} = {245774BB-BA8A-4ABB-9A4D-F783B799AEE1}
+		{CD4D1DD3-0519-695C-556A-F5F11EBA8976} = {3007FD30-39E7-4CB8-9E50-123C1FE3527C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
