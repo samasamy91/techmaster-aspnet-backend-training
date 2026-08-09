@@ -171,29 +171,5 @@ namespace TrainingCenterAuthTask01.Services
             return Task.CompletedTask;
         }
 
-        Task<AuthResponse> IAuthService.Register(RegisterRequest request)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<AuthResponse> IAuthService.Login(LoginRequest request)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task IAuthService.Logout()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<CurrentUserResponse?> IAuthService.GetCurrentUser(ClaimsPrincipal principal)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task IAuthService.ChangePassword(ClaimsPrincipal principal, ChangePasswordRequest request)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

@@ -47,7 +47,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseMiddleware<GlobalExceptionMiddlewares>();
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseAuthentication();
 

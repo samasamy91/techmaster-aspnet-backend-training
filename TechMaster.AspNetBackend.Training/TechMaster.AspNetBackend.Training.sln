@@ -375,7 +375,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-03-secure-platform-upg
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-04-professional-architecture-refactor", "task-04-professional-architecture-refactor", "{37254BC0-4981-4B8D-95DA-90112CEFF524}"
 	ProjectSection(SolutionItems) = preProject
-		README04_4.md = README04_4.md
+		phase-04-secure-professional-backend\task-04-professional-architecture-refactor\README04_4.md = phase-04-secure-professional-backend\task-04-professional-architecture-refactor\README04_4.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-validation-errors-logging", "task-05-validation-errors-logging", "{E53056A6-E8CC-4A92-BECF-F8DA722B1837}"
@@ -399,6 +399,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurePlatformUpgrade", "phase-04-secure-professional-backend\task-03-secure-platform-upgrade\SecurePlatformUpgrade\SecurePlatformUpgrade.csproj", "{55A71974-7D42-72D0-5022-A41907DFA440}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfessionalArchitectureTrainingCenter", "phase-04-secure-professional-backend\task-04-professional-architecture-refactor\ProfessionalArchitectureTrainingCenter\ProfessionalArchitectureTrainingCenter.csproj", "{95655A68-5179-1A21-19E7-C604FA8EF06A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfessionalArchitecture", "phase-04-secure-professional-backend\task-04-professional-architecture-refactor\ProfessionalArchitecture\ProfessionalArchitecture.csproj", "{1D473AAF-A32B-52DE-C8FF-56C5E77D71FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -546,6 +548,10 @@ Global
 		{95655A68-5179-1A21-19E7-C604FA8EF06A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95655A68-5179-1A21-19E7-C604FA8EF06A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95655A68-5179-1A21-19E7-C604FA8EF06A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D473AAF-A32B-52DE-C8FF-56C5E77D71FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D473AAF-A32B-52DE-C8FF-56C5E77D71FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D473AAF-A32B-52DE-C8FF-56C5E77D71FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D473AAF-A32B-52DE-C8FF-56C5E77D71FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -640,6 +646,7 @@ Global
 		{EC961328-4349-583C-F77C-9A2C1F6C9C49} = {BDFA20E6-53AD-4FC7-936B-CEC181608A0E}
 		{55A71974-7D42-72D0-5022-A41907DFA440} = {02A94936-9648-4A63-AF9F-3AF6D7BC2E77}
 		{95655A68-5179-1A21-19E7-C604FA8EF06A} = {37254BC0-4981-4B8D-95DA-90112CEFF524}
+		{1D473AAF-A32B-52DE-C8FF-56C5E77D71FF} = {37254BC0-4981-4B8D-95DA-90112CEFF524}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
