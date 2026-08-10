@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace HostingAndRemoteDatabase.Migrations
+namespace TrainingCenterDeployment.Migrations
 {
     /// <inheritdoc />
-    public partial class AddLocalFirst : Migration
+    public partial class ProductionRedeplyment : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -50,6 +50,28 @@ namespace HostingAndRemoteDatabase.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    HashPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<int>(type: "int", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LastLoginAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    StudentId = table.Column<int>(type: "int", nullable: true),
+                    InstructorId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "TrainingTracks",
                 columns: table => new
                 {
@@ -65,7 +87,8 @@ namespace HostingAndRemoteDatabase.Migrations
                     Status = table.Column<int>(type: "int", nullable: false),
                     InstructorId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
+                    Fee = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -88,7 +111,7 @@ namespace HostingAndRemoteDatabase.Migrations
                     TrainingTrackId = table.Column<int>(type: "int", nullable: false),
                     EnrollmentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
-                    ProgressPercentage = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ProgressPercentage = table.Column<decimal>(type: "decimal(5,2)", precision: 5, scale: 2, nullable: false),
                     FinalResult = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -104,6 +127,39 @@ namespace HostingAndRemoteDatabase.Migrations
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Enrollments_TrainingTracks_TrainingTrackId",
+                        column: x => x.TrainingTrackId,
+                        principalTable: "TrainingTracks",
+                        principalColumn: "TrainingTrackId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TrackSessions",
+                columns: table => new
+                {
+                    TrackSessionId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TrainingTrackId = table.Column<int>(type: "int", nullable: false),
+                    SessionDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MeetionLink = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsCompleted = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedByInstructorId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TrackSessions", x => x.TrackSessionId);
+                    table.ForeignKey(
+                        name: "FK_TrackSessions_Instructors_CreatedByInstructorId",
+                        column: x => x.CreatedByInstructorId,
+                        principalTable: "Instructors",
+                        principalColumn: "InstructorId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_TrackSessions_TrainingTracks_TrainingTrackId",
                         column: x => x.TrainingTrackId,
                         principalTable: "TrainingTracks",
                         principalColumn: "TrainingTrackId",
@@ -136,10 +192,9 @@ namespace HostingAndRemoteDatabase.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Enrollments_StudentId_TrainingTrackId",
+                name: "IX_Enrollments_StudentId",
                 table: "Enrollments",
-                columns: new[] { "StudentId", "TrainingTrackId" },
-                unique: true);
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Enrollments_TrainingTrackId",
@@ -170,6 +225,16 @@ namespace HostingAndRemoteDatabase.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_TrackSessions_CreatedByInstructorId",
+                table: "TrackSessions",
+                column: "CreatedByInstructorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TrackSessions_TrainingTrackId",
+                table: "TrackSessions",
+                column: "TrainingTrackId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_TrainingTracks_Code",
                 table: "TrainingTracks",
                 column: "Code",
@@ -186,6 +251,12 @@ namespace HostingAndRemoteDatabase.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Payments");
+
+            migrationBuilder.DropTable(
+                name: "TrackSessions");
+
+            migrationBuilder.DropTable(
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Enrollments");

@@ -3,17 +3,20 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TrainingCenter.Api.Data;
 
 #nullable disable
 
-namespace HostingAndRemoteDatabase.Migrations
+namespace DeploymentTrainingCenter.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260810024413_DeployementCenter")]
+    partial class DeployementCenter
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,6 +24,51 @@ namespace HostingAndRemoteDatabase.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("SecurePlatformUpgrade.Entities.TrackSession", b =>
+                {
+                    b.Property<int>("TrackSessionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TrackSessionId"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedByInstructorId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MeetionLink")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SessionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TrainingTrackId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("TrackSessionId");
+
+                    b.HasIndex("CreatedByInstructorId");
+
+                    b.HasIndex("TrainingTrackId");
+
+                    b.ToTable("TrackSessions");
+                });
 
             modelBuilder.Entity("TrainingCenter.Api.Entities.Enrollment", b =>
                 {
@@ -41,7 +89,8 @@ namespace HostingAndRemoteDatabase.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<decimal>("ProgressPercentage")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(5, 2)
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -57,10 +106,9 @@ namespace HostingAndRemoteDatabase.Migrations
 
                     b.HasKey("EnrollmentId");
 
-                    b.HasIndex("TrainingTrackId");
+                    b.HasIndex("StudentId");
 
-                    b.HasIndex("StudentId", "TrainingTrackId")
-                        .IsUnique();
+                    b.HasIndex("TrainingTrackId");
 
                     b.ToTable("Enrollments");
                 });
@@ -222,6 +270,10 @@ namespace HostingAndRemoteDatabase.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<decimal>("Fee")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<int>("InstructorId")
                         .HasColumnType("int");
 
@@ -250,6 +302,71 @@ namespace HostingAndRemoteDatabase.Migrations
                     b.HasIndex("InstructorId");
 
                     b.ToTable("TrainingTracks");
+                });
+
+            modelBuilder.Entity("TrainingCenterAuthTask01.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HashPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("InstructorId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastLoginAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("StudentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("SecurePlatformUpgrade.Entities.TrackSession", b =>
+                {
+                    b.HasOne("TrainingCenter.Api.Entities.Instructor", "CreatedByInstructor")
+                        .WithMany()
+                        .HasForeignKey("CreatedByInstructorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("TrainingCenter.Api.Entities.TrainingTrack", "TrainingTrack")
+                        .WithMany()
+                        .HasForeignKey("TrainingTrackId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("CreatedByInstructor");
+
+                    b.Navigation("TrainingTrack");
                 });
 
             modelBuilder.Entity("TrainingCenter.Api.Entities.Enrollment", b =>
