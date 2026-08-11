@@ -385,10 +385,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-05-validation-errors-l
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-production-redeployment", "task-06-production-redeployment", "{FD0B8D1B-E1EC-4934-A79F-7603317A4A2C}"
 	ProjectSection(SolutionItems) = preProject
-		README06_4.md = README06_4.md
+		phase-04-secure-professional-backend\task-06-production-redeployment\README06_4.md = phase-04-secure-professional-backend\task-06-production-redeployment\README06_4.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-audit-activity-timeline", "task-07-audit-activity-timeline", "{736E5EB0-EC39-4485-8810-80C2997D40B8}"
+	ProjectSection(SolutionItems) = preProject
+		README07_4.md = README07_4.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-bad-auth-refactor-pack", "task-08-bad-auth-refactor-pack", "{FF0FCE97-EECC-4D5C-BB2F-CC6440E24C04}"
 EndProject
@@ -408,7 +411,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfessionalArchitecture", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationTrainingCenter", "phase-04-secure-professional-backend\task-05-validation-errors-logging\ValidationTrainingCenter\ValidationTrainingCenter.csproj", "{BB35251B-32F6-32A2-5405-F010AC928AA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterDeployment", "TrainingCenterDeployment\TrainingCenterDeployment.csproj", "{DDFAECAB-D1BC-463F-8C7B-D281C02E3116}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterDeployment", "phase-04-secure-professional-backend\task-06-production-redeployment\TrainingCenterDeployment\TrainingCenterDeployment.csproj", "{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityTrainingCenter", "ActivityTrainingCenter\ActivityTrainingCenter.csproj", "{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -560,10 +565,14 @@ Global
 		{BB35251B-32F6-32A2-5405-F010AC928AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB35251B-32F6-32A2-5405-F010AC928AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB35251B-32F6-32A2-5405-F010AC928AA0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DDFAECAB-D1BC-463F-8C7B-D281C02E3116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDFAECAB-D1BC-463F-8C7B-D281C02E3116}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDFAECAB-D1BC-463F-8C7B-D281C02E3116}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDFAECAB-D1BC-463F-8C7B-D281C02E3116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -659,7 +668,8 @@ Global
 		{55A71974-7D42-72D0-5022-A41907DFA440} = {02A94936-9648-4A63-AF9F-3AF6D7BC2E77}
 		{1D473AAF-A32B-52DE-C8FF-56C5E77D71FF} = {37254BC0-4981-4B8D-95DA-90112CEFF524}
 		{BB35251B-32F6-32A2-5405-F010AC928AA0} = {E53056A6-E8CC-4A92-BECF-F8DA722B1837}
-		{DDFAECAB-D1BC-463F-8C7B-D281C02E3116} = {FD0B8D1B-E1EC-4934-A79F-7603317A4A2C}
+		{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF} = {FD0B8D1B-E1EC-4934-A79F-7603317A4A2C}
+		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2} = {736E5EB0-EC39-4485-8810-80C2997D40B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
