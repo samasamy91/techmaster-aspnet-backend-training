@@ -394,6 +394,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-audit-activity-time
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-bad-auth-refactor-pack", "task-08-bad-auth-refactor-pack", "{FF0FCE97-EECC-4D5C-BB2F-CC6440E24C04}"
+	ProjectSection(SolutionItems) = preProject
+		README08_4.md = README08_4.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-09-demo-linkedin-showcase", "task-09-demo-linkedin-showcase", "{CA8BD65F-752C-4E30-9ACE-592F2F962DF5}"
 EndProject
