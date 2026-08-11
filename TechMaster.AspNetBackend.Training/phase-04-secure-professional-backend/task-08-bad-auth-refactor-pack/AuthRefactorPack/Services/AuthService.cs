@@ -62,7 +62,6 @@ namespace TrainingCenterAuthTask01.Services
                 if (string.IsNullOrWhiteSpace(request.Specialization))
                     throw new BusinessRuleException("Specialization required for instructor");
             }
-            var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
             using var transaction = await context.Database.BeginTransactionAsync();
             var user = new User
             {
@@ -92,19 +91,26 @@ namespace TrainingCenterAuthTask01.Services
         public async Task<AuthResponse> Login(LoginRequest request)
         {
             var user = await context.Users.FirstOrDefaultAsync(u => u.Email.ToLower() == request.Email.ToLower());
+
             if (user == null)
             {
                 logger.LogWarning("Login failed for email: {Email}", request.Email);
+                await logService.Log(null,"Login Failed","User",null,"Login attempt failed.");
                 throw new BusinessRuleException("Invalid email or password");
             }
 
+
             if (!user.IsActive)
+            {
+                await logService.Log(null,"Login Failed","User",user.Id,"Login attempt for inactive user.");
                 throw new BusinessRuleException("User Account is inactive");
+            }
 
             if (!passwordHasher.Verify(request.Password, user.HashPassword))
             {
                 logger.LogWarning("Login failed for email: {Email}", request.Email);
-                throw new BusinessRuleException("Invalid Password");
+                await logService.Log(null, "Login Failed", "User", user.Id, "Login attempt failed due to invalid credenials");
+                throw new BusinessRuleException("Invalid email or Password");
             }
 
             user.LastLoginAt = DateTime.UtcNow;
