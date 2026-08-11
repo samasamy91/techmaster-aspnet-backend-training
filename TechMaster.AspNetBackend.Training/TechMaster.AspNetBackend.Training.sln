@@ -390,7 +390,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-06-production-redeploy
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-audit-activity-timeline", "task-07-audit-activity-timeline", "{736E5EB0-EC39-4485-8810-80C2997D40B8}"
 	ProjectSection(SolutionItems) = preProject
-		README07_4.md = README07_4.md
+		phase-04-secure-professional-backend\task-07-audit-activity-timeline\README07_4.md = phase-04-secure-professional-backend\task-07-audit-activity-timeline\README07_4.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-bad-auth-refactor-pack", "task-08-bad-auth-refactor-pack", "{FF0FCE97-EECC-4D5C-BB2F-CC6440E24C04}"
@@ -413,7 +413,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationTrainingCenter", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenterDeployment", "phase-04-secure-professional-backend\task-06-production-redeployment\TrainingCenterDeployment\TrainingCenterDeployment.csproj", "{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityTrainingCenter", "ActivityTrainingCenter\ActivityTrainingCenter.csproj", "{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityTrainingCenter", "phase-04-secure-professional-backend\task-07-audit-activity-timeline\ActivityTrainingCenter\ActivityTrainingCenter.csproj", "{2A05058F-1079-114C-D028-5B382699BAB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthRefactorPack", "AuthRefactorPack\AuthRefactorPack.csproj", "{07C3CF46-7C42-4477-825F-6F58CE3728E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -569,10 +571,14 @@ Global
 		{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A05058F-1079-114C-D028-5B382699BAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A05058F-1079-114C-D028-5B382699BAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A05058F-1079-114C-D028-5B382699BAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A05058F-1079-114C-D028-5B382699BAB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07C3CF46-7C42-4477-825F-6F58CE3728E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C3CF46-7C42-4477-825F-6F58CE3728E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C3CF46-7C42-4477-825F-6F58CE3728E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C3CF46-7C42-4477-825F-6F58CE3728E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -669,7 +675,8 @@ Global
 		{1D473AAF-A32B-52DE-C8FF-56C5E77D71FF} = {37254BC0-4981-4B8D-95DA-90112CEFF524}
 		{BB35251B-32F6-32A2-5405-F010AC928AA0} = {E53056A6-E8CC-4A92-BECF-F8DA722B1837}
 		{52CA35B7-6D05-2B94-1BB6-4F159A25B8AF} = {FD0B8D1B-E1EC-4934-A79F-7603317A4A2C}
-		{0C386A0A-F014-495E-9BE0-B11D1B8C08F2} = {736E5EB0-EC39-4485-8810-80C2997D40B8}
+		{2A05058F-1079-114C-D028-5B382699BAB7} = {736E5EB0-EC39-4485-8810-80C2997D40B8}
+		{07C3CF46-7C42-4477-825F-6F58CE3728E6} = {FF0FCE97-EECC-4D5C-BB2F-CC6440E24C04}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D64D4F6-44BB-4885-A767-D96000DA6F12}
