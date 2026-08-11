@@ -395,10 +395,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-07-audit-activity-time
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-bad-auth-refactor-pack", "task-08-bad-auth-refactor-pack", "{FF0FCE97-EECC-4D5C-BB2F-CC6440E24C04}"
 	ProjectSection(SolutionItems) = preProject
-		README08_4.md = README08_4.md
+		phase-04-secure-professional-backend\task-08-bad-auth-refactor-pack\README08_4.md = phase-04-secure-professional-backend\task-08-bad-auth-refactor-pack\README08_4.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-09-demo-linkedin-showcase", "task-09-demo-linkedin-showcase", "{CA8BD65F-752C-4E30-9ACE-592F2F962DF5}"
+	ProjectSection(SolutionItems) = preProject
+		phase-04-secure-professional-backend\task-09-demo-linkedin-showcase\README09_4.md = phase-04-secure-professional-backend\task-09-demo-linkedin-showcase\README09_4.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialTrainingCenterApi", "phase-04-secure-professional-backend\task-00-sprint-setup\InitialTrainingCenterApi\InitialTrainingCenterApi.csproj", "{750FF7B3-CD8F-7EE9-3E5C-05A35C7FD615}"
 EndProject

@@ -21,7 +21,7 @@ namespace TrainingCenterAuthTask01.Security
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expiration = DateTime.UtcNow.AddMinutes(jwtSettings.ExpirationMinutes);
+            var expiration = DateTime.UtcNow.AddHours(jwtSettings.ExpirationHours);
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
