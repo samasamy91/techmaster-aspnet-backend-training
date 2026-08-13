@@ -1,0 +1,68 @@
+Phase 4 - Interview Answers
+--------------------------
+
+1-The login process starts from the AuthController. The controller receives the LoginRequest and sends it to AuthService. 
+The AuthService searches for the user by email using Entity Framework Core asynchronously.
+If the user does not exist, the login fails. Then it checks if the account is active. After that, it verifies the entered password against the stored BCrypt password hash. 
+If the password is correct, LastLoginAt is updated, a JWT token is generated using JwtService, the successful login is added to the activity log, and an AuthResponse containing the user information and access token is returned.
+
+---
+
+2-The password hash is stored in the User entity in the HashPassword property. I never store the user's plain-text password. 
+During registration, the password is hashed using my PasswordHasher service with BCrypt. During login, PasswordHasher.
+Verify compares the entered password with the stored hash. The password is never returned in the API response.
+
+---
+
+3-The JWT contains claims such as the user's ID, email, role, and a unique JTI. It also contains the issuer, audience, expiration time, and is signed using the configured JWT secret key. 
+The role claim is important because it is used by ASP.NET Core authorization to determine whether the user can access role-protected endpoints. 
+The JWT secret key is kept private and is not included in the public README or repository.
+
+---
+
+4-I use authentication and authorization together. The JWT identifies the currently authenticated user through claims. 
+The application gets the user ID from the ClaimsPrincipal instead of trusting only an ID supplied by the client. I can then retrieve the user's linked StudentId and use it when checking student-specific data. 
+I also protect endpoints with role-based authorization. For example, Admin-only endpoints use [Authorize(Roles = "Admin")], so a Student cannot access them.
+
+---
+
+5-I moved the business logic from the controllers into service classes to make the application cleaner and easier to maintain. 
+Controllers should mainly handle HTTP requests and responses. The services handle business rules, database operations, authentication, password verification, JWT generation, and activity logging. 
+This also makes the application easier to test and extend.
+
+---
+
+6-The service layer contains the business logic of the application. For authentication, AuthService handles registration, duplicate email checking, password validation, 
+password hashing, role validation, login, checking whether users are active, password verification, JWT generation, getting the current user, changing passwords, and authentication activity logging. 
+Other services handle the business logic for their own features.
+
+---
+
+7-One example is that users cannot register themselves as Admin. In AuthService.Register, I validate the requested role and reject the registration if the role is Admin. 
+Another example is the password policy. The registration service checks that the password is at least eight characters and contains an uppercase letter, lowercase letter, and digit. I also check that inactive users cannot log in.
+
+---
+
+8-My global exception middleware provides centralized error handling. Instead of putting try/catch blocks in every controller, 
+exceptions can be handled by the middleware. Known business and application exceptions are converted into appropriate API responses. 
+Unexpected exceptions are handled centrally so that sensitive exception details and stack traces are not exposed to the client. 
+This also keeps the API error responses consistent.
+
+---
+
+9-I implemented an ActivityLog system to provide an audit trail. Important actions include user registration, user login, track creation, 
+enrollment requests, enrollment status updates, payment creation, and payment status updates. 
+Login failures are also recorded using application logging. The ActivityLog stores information such as UserId, UserRole, Action, EntityName, EntityId, Description, CreatedAt, and optional IP address and metadata. 
+The purpose is to make important system actions traceable and allow administrators to know what happened and when.
+
+---
+
+10-The production API uses a remote SQL Server database instead of depending on my local database. 
+The production connection string should be configured through the hosting provider's environment or application settings rather than committing the real password to GitHub. 
+I do not expose database passwords, JWT signing keys, or hosting credentials in the repository, README, or screenshots.
+
+---
+
+11-I showcased the features that I actually implemented and tested. These include the project architecture, JWT authentication, registration and login, protected endpoints, Admin, 
+Instructor, and Student authorization, wrong-role rejection, activity logs, remote database usage, production deployment, Swagger documentation, and Postman testing. 
+I made sure not to expose passwords, connection strings, JWT signing keys, or hosting credentials. The showcase represents the actual work completed during Phase 04.

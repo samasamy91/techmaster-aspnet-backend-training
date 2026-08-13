@@ -400,6 +400,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-08-bad-auth-refactor-p
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-09-demo-linkedin-showcase", "task-09-demo-linkedin-showcase", "{CA8BD65F-752C-4E30-9ACE-592F2F962DF5}"
 	ProjectSection(SolutionItems) = preProject
+		phase-04-secure-professional-backend\task-09-demo-linkedin-showcase\Interview Answers_4.txt = phase-04-secure-professional-backend\task-09-demo-linkedin-showcase\Interview Answers_4.txt
 		phase-04-secure-professional-backend\task-09-demo-linkedin-showcase\README09_4.md = phase-04-secure-professional-backend\task-09-demo-linkedin-showcase\README09_4.md
 	EndProjectSection
 EndProject
